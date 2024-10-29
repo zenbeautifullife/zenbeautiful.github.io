@@ -1,0 +1,45 @@
+a {
+    transition: all 0.3s ease-in-out;
+}
+
+a, a:focus, a:active, a:hover {
+    text-decoration: none;
+}
+
+a, a:focus, a:active {
+    color: #227b89;
+}
+
+a:hover {
+    color: #87aeb4;
+}
+
+a[href*='tel'], a[href*='mailto'] {
+    white-space: nowrap;
+}
+
+.link-hover {
+    color: #87aeb4;
+}
+
+.link-active {
+    color: #151515;
+}
+
+.privacy-link {
+    display: inline-block;
+}
+
+.privacy-link:hover {
+    color: #151515;
+}
+
+* + .privacy-link {
+    margin-top: 35px;
+}
+
+.brand-logo-title{
+    font-size: 30px;
+    color: white;
+    font-family: Britannic Bold;
+}

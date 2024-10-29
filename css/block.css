@@ -1,0 +1,130 @@
+/*
+* Blocks
+*/
+.block-center, .block-sm, .block-lg {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block-sm {
+    max-width: 560px;
+}
+
+.block-lg {
+    max-width: 768px;
+}
+
+.block-center {
+    padding: 10px;
+}
+
+.block-center:hover .block-center-header {
+    background-color: #87aeb4;
+}
+
+.block-center-title {
+    background-color: #ffffff;
+}
+
+@media (max-width: 1599.98px) {
+    .block-center {
+        padding: 20px;
+    }
+    .block-center:hover .block-center-header {
+        background-color: #ffffff;
+    }
+    .block-center-header {
+        background-color: #87aeb4;
+    }
+}
+
+.block-bordered-left {
+    position: relative;
+}
+
+@media (min-width: 1200px) {
+    .block-bordered-left {
+        padding: 0 65px;
+    }
+    .block-bordered-left:before {
+        position: absolute;
+        content: '';
+        left: -15px;
+        height: 100%;
+        width: 2px;
+        background: #C4C4C4;
+    }
+}
+
+.block-decorate-img {
+    position: relative;
+    max-width: 540px;
+    padding-left: 40px;
+    padding-bottom: 50px;
+    text-align: right;
+}
+
+.block-decorate-img > * {
+    position: relative;
+    z-index: 1;
+}
+
+.block-decorate-img:before {
+    position: absolute;
+    content: '';
+    top: 20px;
+    right: 60px;
+    left: 0;
+    bottom: 0;
+    background: url("../images/bg-dot.png");
+    opacity: .2;
+    z-index: 0;
+}
+
+@media (min-width: 992px) {
+    .block-decorate-img {
+        padding-bottom: 70px;
+    }
+}
+
+.block-decorate-img.block-decorate-img-modern {
+    max-width: 100%;
+}
+
+.block-decorate-img.block-decorate-img-modern .block-decorate-inner {
+    display: inline-block;
+    position: relative;
+}
+
+.block-decorate-img.block-decorate-img-modern .block-decorate-inner .block-video-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.block-decorate-img.block-decorate-img-modern .block-decorate-inner .block-video-button a .icon {
+    color: #87aeb4;
+}
+
+.block-decorate-img.block-decorate-img-modern img {
+    border-radius: 7px;
+}
+
+@media (min-width: 992px) {
+    .block-decorate-img.block-decorate-img-modern {
+        padding-bottom: 70px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .row-decorate > * + *:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 0;
+        left: -20px;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        transform: rotate(30deg);
+    }
+}

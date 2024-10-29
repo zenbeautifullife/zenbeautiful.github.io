@@ -1,0 +1,315 @@
+/*
+* Backgrounds
+*/
+.post-corporate.post-corporate-img-bg .brand .brand-logo-dark, .section-main-bunner .brand .brand-logo-dark, .context-dark .brand .brand-logo-dark, .bg-gray-600 .brand .brand-logo-dark, .bg-gray-700 .brand .brand-logo-dark, .bg-gray-800 .brand .brand-logo-dark, .bg-primary .brand .brand-logo-dark, .bg-pink .brand .brand-logo-dark, .bg-secondary .brand .brand-logo-dark, .bg-secondary-2 .brand .brand-logo-dark, .bg-green .brand .brand-logo-dark, .box-countdown-dark .brand .brand-logo-dark {
+    display: none;
+}
+
+.post-corporate.post-corporate-img-bg .brand .brand-logo-light, .section-main-bunner .brand .brand-logo-light, .context-dark .brand .brand-logo-light, .bg-gray-600 .brand .brand-logo-light, .bg-gray-700 .brand .brand-logo-light, .bg-gray-800 .brand .brand-logo-light, .bg-primary .brand .brand-logo-light, .bg-pink .brand .brand-logo-light, .bg-secondary .brand .brand-logo-light, .bg-secondary-2 .brand .brand-logo-light, .bg-green .brand .brand-logo-light, .box-countdown-dark .brand .brand-logo-light {
+    display: block;
+}
+
+.post-corporate.post-corporate-img-bg .box-icon-caption p, .section-main-bunner .box-icon-caption p, .context-dark .box-icon-caption p, .bg-gray-600 .box-icon-caption p, .bg-gray-700 .box-icon-caption p, .bg-gray-800 .box-icon-caption p, .bg-primary .box-icon-caption p, .bg-pink .box-icon-caption p, .bg-secondary .box-icon-caption p, .bg-secondary-2 .box-icon-caption p, .bg-green .box-icon-caption p, .box-countdown-dark .box-icon-caption p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.post-corporate.post-corporate-img-bg .decorate-triangle:before, .section-main-bunner .decorate-triangle:before, .context-dark .decorate-triangle:before, .bg-gray-600 .decorate-triangle:before, .bg-gray-700 .decorate-triangle:before, .bg-gray-800 .decorate-triangle:before, .bg-primary .decorate-triangle:before, .bg-pink .decorate-triangle:before, .bg-secondary .decorate-triangle:before, .bg-secondary-2 .decorate-triangle:before, .bg-green .decorate-triangle:before, .box-countdown-dark .decorate-triangle:before {
+    border-color: transparent transparent rgba(255, 255, 255, 0.08) transparent;
+}
+
+.post-corporate.post-corporate-img-bg .decorate-circle:before, .section-main-bunner .decorate-circle:before, .context-dark .decorate-circle:before, .bg-gray-600 .decorate-circle:before, .bg-gray-700 .decorate-circle:before, .bg-gray-800 .decorate-circle:before, .bg-primary .decorate-circle:before, .bg-pink .decorate-circle:before, .bg-secondary .decorate-circle:before, .bg-secondary-2 .decorate-circle:before, .bg-green .decorate-circle:before, .box-countdown-dark .decorate-circle:before, .post-corporate.post-corporate-img-bg .decorate-rectangle:before, .section-main-bunner .decorate-rectangle:before, .context-dark .decorate-rectangle:before, .bg-gray-600 .decorate-rectangle:before, .bg-gray-700 .decorate-rectangle:before, .bg-gray-800 .decorate-rectangle:before, .bg-primary .decorate-rectangle:before, .bg-pink .decorate-rectangle:before, .bg-secondary .decorate-rectangle:before, .bg-secondary-2 .decorate-rectangle:before, .bg-green .decorate-rectangle:before, .box-countdown-dark .decorate-rectangle:before {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.post-corporate.post-corporate-img-bg .team-classic-caption p, .section-main-bunner .team-classic-caption p, .context-dark .team-classic-caption p, .bg-gray-600 .team-classic-caption p, .bg-gray-700 .team-classic-caption p, .bg-gray-800 .team-classic-caption p, .bg-primary .team-classic-caption p, .bg-pink .team-classic-caption p, .bg-secondary .team-classic-caption p, .bg-secondary-2 .team-classic-caption p, .bg-green .team-classic-caption p, .box-countdown-dark .team-classic-caption p, .post-corporate.post-corporate-img-bg .team-modern-caption p, .section-main-bunner .team-modern-caption p, .context-dark .team-modern-caption p, .bg-gray-600 .team-modern-caption p, .bg-gray-700 .team-modern-caption p, .bg-gray-800 .team-modern-caption p, .bg-primary .team-modern-caption p, .bg-pink .team-modern-caption p, .bg-secondary .team-modern-caption p, .bg-secondary-2 .team-modern-caption p, .bg-green .team-modern-caption p, .box-countdown-dark .team-modern-caption p {
+    color: rgba(21, 21, 21, 0.8);
+}
+
+.post-corporate.post-corporate-img-bg .team-classic-caption h4 a, .section-main-bunner .team-classic-caption h4 a, .context-dark .team-classic-caption h4 a, .bg-gray-600 .team-classic-caption h4 a, .bg-gray-700 .team-classic-caption h4 a, .bg-gray-800 .team-classic-caption h4 a, .bg-primary .team-classic-caption h4 a, .bg-pink .team-classic-caption h4 a, .bg-secondary .team-classic-caption h4 a, .bg-secondary-2 .team-classic-caption h4 a, .bg-green .team-classic-caption h4 a, .box-countdown-dark .team-classic-caption h4 a, .post-corporate.post-corporate-img-bg .team-modern-caption h4 a, .section-main-bunner .team-modern-caption h4 a, .context-dark .team-modern-caption h4 a, .bg-gray-600 .team-modern-caption h4 a, .bg-gray-700 .team-modern-caption h4 a, .bg-gray-800 .team-modern-caption h4 a, .bg-primary .team-modern-caption h4 a, .bg-pink .team-modern-caption h4 a, .bg-secondary .team-modern-caption h4 a, .bg-secondary-2 .team-modern-caption h4 a, .bg-green .team-modern-caption h4 a, .box-countdown-dark .team-modern-caption h4 a {
+    color: #151515;
+}
+
+.post-corporate.post-corporate-img-bg .team-classic-caption h4 a:hover, .section-main-bunner .team-classic-caption h4 a:hover, .context-dark .team-classic-caption h4 a:hover, .bg-gray-600 .team-classic-caption h4 a:hover, .bg-gray-700 .team-classic-caption h4 a:hover, .bg-gray-800 .team-classic-caption h4 a:hover, .bg-primary .team-classic-caption h4 a:hover, .bg-pink .team-classic-caption h4 a:hover, .bg-secondary .team-classic-caption h4 a:hover, .bg-secondary-2 .team-classic-caption h4 a:hover, .bg-green .team-classic-caption h4 a:hover, .box-countdown-dark .team-classic-caption h4 a:hover, .post-corporate.post-corporate-img-bg .team-modern-caption h4 a:hover, .section-main-bunner .team-modern-caption h4 a:hover, .context-dark .team-modern-caption h4 a:hover, .bg-gray-600 .team-modern-caption h4 a:hover, .bg-gray-700 .team-modern-caption h4 a:hover, .bg-gray-800 .team-modern-caption h4 a:hover, .bg-primary .team-modern-caption h4 a:hover, .bg-pink .team-modern-caption h4 a:hover, .bg-secondary .team-modern-caption h4 a:hover, .bg-secondary-2 .team-modern-caption h4 a:hover, .bg-green .team-modern-caption h4 a:hover, .box-countdown-dark .team-modern-caption h4 a:hover {
+    color: #87aeb4;
+}
+
+.post-corporate.post-corporate-img-bg .countdown-gradient .countdown-period, .section-main-bunner .countdown-gradient .countdown-period, .context-dark .countdown-gradient .countdown-period, .bg-gray-600 .countdown-gradient .countdown-period, .bg-gray-700 .countdown-gradient .countdown-period, .bg-gray-800 .countdown-gradient .countdown-period, .bg-primary .countdown-gradient .countdown-period, .bg-pink .countdown-gradient .countdown-period, .bg-secondary .countdown-gradient .countdown-period, .bg-secondary-2 .countdown-gradient .countdown-period, .bg-green .countdown-gradient .countdown-period, .box-countdown-dark .countdown-gradient .countdown-period {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.post-corporate.post-corporate-img-bg .countdown .countdown-section + .countdown-section::before, .section-main-bunner .countdown .countdown-section + .countdown-section::before, .context-dark .countdown .countdown-section + .countdown-section::before, .bg-gray-600 .countdown .countdown-section + .countdown-section::before, .bg-gray-700 .countdown .countdown-section + .countdown-section::before, .bg-gray-800 .countdown .countdown-section + .countdown-section::before, .bg-primary .countdown .countdown-section + .countdown-section::before, .bg-pink .countdown .countdown-section + .countdown-section::before, .bg-secondary .countdown .countdown-section + .countdown-section::before, .bg-secondary-2 .countdown .countdown-section + .countdown-section::before, .bg-green .countdown .countdown-section + .countdown-section::before, .box-countdown-dark .countdown .countdown-section + .countdown-section::before, .post-corporate.post-corporate-img-bg .countdown .countdown-section + .countdown-section::after, .section-main-bunner .countdown .countdown-section + .countdown-section::after, .context-dark .countdown .countdown-section + .countdown-section::after, .bg-gray-600 .countdown .countdown-section + .countdown-section::after, .bg-gray-700 .countdown .countdown-section + .countdown-section::after, .bg-gray-800 .countdown .countdown-section + .countdown-section::after, .bg-primary .countdown .countdown-section + .countdown-section::after, .bg-pink .countdown .countdown-section + .countdown-section::after, .bg-secondary .countdown .countdown-section + .countdown-section::after, .bg-secondary-2 .countdown .countdown-section + .countdown-section::after, .bg-green .countdown .countdown-section + .countdown-section::after, .box-countdown-dark .countdown .countdown-section + .countdown-section::after {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.post-corporate.post-corporate-img-bg .box-pricing-modern, .section-main-bunner .box-pricing-modern, .context-dark .box-pricing-modern, .bg-gray-600 .box-pricing-modern, .bg-gray-700 .box-pricing-modern, .bg-gray-800 .box-pricing-modern, .bg-primary .box-pricing-modern, .bg-pink .box-pricing-modern, .bg-secondary .box-pricing-modern, .bg-secondary-2 .box-pricing-modern, .bg-green .box-pricing-modern, .box-countdown-dark .box-pricing-modern {
+    color: #151515;
+}
+
+.post-corporate.post-corporate-img-bg .box-pricing-modern .pricing-modern-title, .section-main-bunner .box-pricing-modern .pricing-modern-title, .context-dark .box-pricing-modern .pricing-modern-title, .bg-gray-600 .box-pricing-modern .pricing-modern-title, .bg-gray-700 .box-pricing-modern .pricing-modern-title, .bg-gray-800 .box-pricing-modern .pricing-modern-title, .bg-primary .box-pricing-modern .pricing-modern-title, .bg-pink .box-pricing-modern .pricing-modern-title, .bg-secondary .box-pricing-modern .pricing-modern-title, .bg-secondary-2 .box-pricing-modern .pricing-modern-title, .bg-green .box-pricing-modern .pricing-modern-title, .box-countdown-dark .box-pricing-modern .pricing-modern-title {
+    color: #151515;
+}
+
+.post-corporate.post-corporate-img-bg .text-secondary, .section-main-bunner .text-secondary, .context-dark .text-secondary, .bg-gray-600 .text-secondary, .bg-gray-700 .text-secondary, .bg-gray-800 .text-secondary, .bg-primary .text-secondary, .bg-pink .text-secondary, .bg-secondary .text-secondary, .bg-secondary-2 .text-secondary, .bg-green .text-secondary, .box-countdown-dark .text-secondary {
+    color: #FFD541;
+}
+
+.post-corporate.post-corporate-img-bg .google-map, .section-main-bunner .google-map, .context-dark .google-map, .bg-gray-600 .google-map, .bg-gray-700 .google-map, .bg-gray-800 .google-map, .bg-primary .google-map, .bg-pink .google-map, .bg-secondary .google-map, .bg-secondary-2 .google-map, .bg-green .google-map, .box-countdown-dark .google-map {
+    color: #151515;
+}
+
+/*
+* Light Backgrounds
+*/
+/*.bg-default {*/
+/*    background-color: #ffffff;*/
+/*}*/
+
+.bg-default:not([style*="background-"]) + .bg-default:not([style*="background-"]) {
+    padding-top: 0;
+}
+
+.bg-gray-100 {
+    background-color: #edeff4;
+}
+
+.bg-gray-100:not([style*="background-"]) + .bg-gray-100:not([style*="background-"]) {
+    padding-top: 0;
+}
+
+.bg-gray-300 {
+    background-color: #E7E7E7;
+}
+
+.bg-gray-300:not([style*="background-"]) + .bg-gray-300:not([style*="background-"]) {
+    padding-top: 0;
+}
+
+.bg-gray-400 {
+    background-color: #C4C4C4;
+}
+
+.bg-gray-400:not([style*="background-"]) + .bg-gray-400:not([style*="background-"]) {
+    padding-top: 0;
+}
+
+.bg-gray-1 {
+    background-color: #f5f5f5;
+}
+
+.bg-gray-1:not([style*="background-"]) + .bg-gray-1:not([style*="background-"]) {
+    padding-top: 0;
+}
+
+/*
+* Dark Backgrounds
+*/
+.bg-gray-600 {
+    background-color: #323232;
+}
+
+.bg-gray-600:not([style*="background-"]) + .bg-gray-600:not([style*="background-"]) {
+    padding-top: 0;
+}
+
+.bg-gray-700 {
+    background-color: #444141;
+}
+
+.bg-gray-700:not([style*="background-"]) + .bg-gray-700:not([style*="background-"]) {
+    padding-top: 0;
+}
+
+.bg-gray-800 {
+    background-color: #151515;
+}
+
+.bg-gray-800:not([style*="background-"]) + .bg-gray-800:not([style*="background-"]) {
+    padding-top: 0;
+}
+
+.bg-dark-filter {
+    position: relative;
+}
+
+.bg-dark-filter > * {
+    position: relative;
+    z-index: 1;
+}
+
+.bg-dark-filter:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.01) 0%, rgba(11, 11, 11, 0.36) 51.93%, rgba(21, 21, 21, 0.34) 100%);
+}
+
+.bg-dark-filter-1::before {
+    background: linear-gradient(180deg, rgba(21, 21, 21, 0.15) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.bg-dark-filter-2::before {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0.63) 100%);
+}
+
+.bg-accent-filter {
+    position: relative;
+}
+
+.bg-accent-filter > * {
+    position: relative;
+    z-index: 1;
+}
+
+.bg-accent-filter:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(359.73deg, #3A092F 0.9%, rgba(60, 55, 79, 0.45) 107.43%);
+}
+
+/*
+* Accent Backgrounds
+*/
+.bg-primary {
+    background: #87aeb4;
+}
+
+.bg-primary + .bg-primary {
+    padding-top: 0;
+}
+
+.bg-pink {
+    background: #F73CA1;
+}
+
+.bg-pink + .bg-pink {
+    padding-top: 0;
+}
+
+.bg-secondary {
+    background: #FFD541;
+}
+
+.bg-secondary + .bg-secondary {
+    padding-top: 0;
+}
+
+.bg-secondary-2 {
+    background: #5656DF;
+}
+
+.bg-secondary-2 + .bg-secondary-2 {
+    padding-top: 0;
+}
+
+.bg-green {
+    background: #00E175;
+}
+
+.bg-green + .bg-green {
+    padding-top: 0;
+}
+
+/*
+* Background Image
+*/
+[class*='bg-'] {
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (min-width: 992px) {
+    html:not(.tablet):not(.mobile) .bg-fixed {
+        background-attachment: fixed;
+    }
+}
+
+.bg-dot {
+    position: relative;
+}
+
+.bg-dot > * {
+    position: relative;
+    z-index: 1;
+}
+
+.bg-dot:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../images/bg-dot.png");
+    opacity: .2;
+    z-index: 0;
+}
+
+.bg-dots-light {
+    position: relative;
+}
+
+.bg-dots-light > * {
+    position: relative;
+    z-index: 1;
+}
+
+.bg-dots-light:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../images/bg-dot-light.png");
+    opacity: .04;
+    z-index: 0;
+}
+
+.bg-decorate {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-decorate > * {
+    position: relative;
+    z-index: 2;
+}
+
+.bg-decorate:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../images/bg-dot-light.png");
+    opacity: .04;
+    z-index: 0;
+}
+
+.bg-decorate:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    background: #323232;
+    transform: skewY(13deg);
+    z-index: 0;
+}
+
+.bg-decorate.bg-decorate-reverse:after {
+    transform: skewY(-13deg);
+}
+
+.page {
+    /*background: #cac4b8;*/
+}

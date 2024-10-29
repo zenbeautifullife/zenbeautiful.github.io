@@ -1,0 +1,181 @@
+/*
+* Images
+*/
+img {
+    display: inline-block;
+    max-width: 100%;
+     height: auto;
+}
+.vlog-list img {
+
+     height: 208px;
+}
+
+.img-responsive {
+    width: 100%;
+}
+
+.box-image {
+    display: inline-block;
+    position: relative;
+}
+
+.box-image-position {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-56%);
+}
+
+.main-bunner-img {
+    background-size: cover;
+}
+
+
+@media (max-width: 575.98px) {
+    .box-image-position {
+        width: 70.6%;
+    }
+
+    .main-bunner-img {
+        background-size: 100%;
+        background-repeat-y: no-repeat;
+    }
+
+    /*.section-main-bunner .main-bunner-inner {*/
+    /*    margin-top: 0px;*/
+    /*}*/
+}
+
+.box-image-static {
+    border-radius: 7px;
+}
+
+/*
+* Icons
+*/
+.icon {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.icon::before {
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    font-style: normal;
+    speak: none;
+    text-transform: none;
+}
+
+.contactlinks .icon::before {
+    font-size: 24px;
+}
+
+.icon-secondary {
+    color: #FFD541;
+}
+
+.icon-bg-white {
+    background: #ffffff;
+    color: #87aeb4;
+}
+
+.icon-bg-black {
+    background: #ffffff;
+    color: black;
+}
+
+.icon-blue {
+    color: #135DEC;
+}
+
+.icon-pink {
+    color: #FF3951;
+}
+
+.icon-violet {
+    color: #2C3AB6;
+}
+
+.icon-blue-light {
+    color: #35B7E0;
+}
+
+.icon-circle {
+    border-radius: 50%;
+    text-align: center;
+}
+
+.icon-circle-md {
+    padding: 10px;
+    width: 48px;
+    height: 48px;
+}
+
+.icon-sm {
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.icon-md {
+    font-size: 27px;
+}
+
+.icon-lg {
+    font-size: 36px;
+}
+
+.icon-xl {
+    font-size: 90px;
+    line-height: 1;
+}
+
+.icon-gradient-1 {
+    color: #5656DF;
+}
+
+.icon-gradient-2 {
+    color: #F73CA1;
+}
+
+.icon-gradient-3 {
+    color: #FFD541;
+}
+
+.icon-gradient-4 {
+    color: #00E175;
+}
+
+@supports (-webkit-background-clip: text) {
+    .icon-gradient-1 {
+        background: linear-gradient(228.54deg, #87aeb4 30.16%, #5656DF 89.45%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .icon-gradient-2 {
+        background: linear-gradient(228.54deg, #FFD541 36.26%, #F73CA1 96.73%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .icon-gradient-3 {
+        background: linear-gradient(228.54deg, #5656DF 0%, #FFD541 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .icon-gradient-4 {
+        background: linear-gradient(228.54deg, #00E175 0%, #5656DF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.top-banner-bg {
+    position: absolute;
+    bottom: -88px;
+    left: 0;
+}

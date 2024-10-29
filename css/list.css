@@ -1,0 +1,282 @@
+/*
+* Lists
+*/
+/*
+* Vertical list
+*/
+.list > li + li {
+    margin-top: 10px;
+}
+
+.list-xs > li + li {
+    margin-top: 5px;
+}
+
+.list-sm > li + li {
+    margin-top: 10px;
+}
+
+.list-md > li + li {
+    margin-top: 18px;
+}
+
+.list-lg > li + li {
+    margin-top: 25px;
+}
+
+.list-xl > li + li {
+    margin-top: 30px;
+}
+
+.list-xxl > li + li {
+    margin-top: 30px;
+}
+
+@media (min-width: 992px) {
+    .list-xxl > li + li {
+        margin-top: 55px;
+    }
+}
+
+.heading-list h1, .heading-list h2, .heading-list h3, .heading-list h4, .heading-list h5, .heading-list h6, .heading-list [class^='heading-'] {
+    font-weight: 700;
+}
+
+.heading-list li * + p {
+    margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+    .list-xl > li + li {
+        margin-top: 60px;
+    }
+}
+
+/*
+* List inline
+*/
+.list-inline > li {
+    display: inline-block;
+}
+
+html .list-inline-md {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+html .list-inline-md > * {
+    margin-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media (min-width: 992px) {
+    html .list-inline-md {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    html .list-inline-md > * {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/*
+* List terms
+*/
+.list-terms dt + dd {
+    margin-top: 5px;
+}
+
+.list-terms dd + dt {
+    margin-top: 25px;
+}
+
+* + .list-terms {
+    margin-top: 25px;
+}
+
+/*
+* Index list
+*/
+.index-list {
+    counter-reset: li;
+}
+
+.index-list > li .list-index-counter:before {
+    content: counter(li, decimal-leading-zero);
+    counter-increment: li;
+}
+
+/*
+* Marked list
+*/
+.list-marked {
+    text-align: left;
+}
+
+.list-marked > li {
+    position: relative;
+    padding-left: 25px;
+}
+
+.list-marked > li::before {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: -1px;
+    min-width: 25px;
+    content: '\f222';
+    font-family: 'Material Design Icons';
+    line-height: 23px;
+    font-size: 15px;
+    letter-spacing: -0.03em;
+    color: #151515;
+}
+
+.list-marked > li + li {
+    margin-top: 4px;
+}
+
+* + .list-marked {
+    margin-top: 15px;
+}
+
+p + .list-marked {
+    margin-top: 10px;
+}
+
+/*
+* Ordered List
+*/
+.list-ordered {
+    counter-reset: li;
+    text-align: left;
+}
+
+.list-ordered > li {
+    position: relative;
+    padding-left: 25px;
+}
+
+.list-ordered > li:before {
+    content: counter(li, decimal) ".";
+    counter-increment: li;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 15px;
+    color: #151515;
+}
+
+.list-ordered > li + li {
+    margin-top: 4px;
+}
+
+* + .list-ordered {
+    margin-top: 15px;
+}
+
+ul.list-color {
+    max-width: 248px;
+    margin-left: -4px;
+    margin-right: -4px;
+    text-align: center;
+    font-size: 0;
+}
+
+ul.list-color li {
+    display: inline-block;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-bottom: 8px;
+}
+
+ul.list-contact-info li + li {
+    margin-top: 24px;
+}
+
+ul.list-contact-info li {
+    position: relative;
+    padding-left: 40px;
+    font-size: 18px;
+}
+
+ul.list-contact-info li > * {
+    display: inline-block;
+}
+
+ul.list-contact-info li .icon {
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+ul.social-list {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+ul.social-list > li {
+    display: inline-block;
+}
+
+ul.social-list > * {
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+ul.social-list a:hover {
+    color: #ffffff;
+    background: #AF9666;
+}
+
+@media (min-width: 768px) {
+    ul.social-list {
+        margin-left: -18px;
+        margin-right: -18px;
+    }
+    ul.social-list > * {
+        margin-top: 36px;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+
+.category-list > li + li {
+    margin-top: 8px;
+}
+
+.category-list li {
+    position: relative;
+    padding-left: 30px;
+}
+
+.category-list li:before {
+    position: absolute;
+    left: 0;
+    color: #87aeb4;
+    content: '\f14f';
+    font-family: 'Material Design Icons';
+    line-height: 27px;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    transition: all .3s;
+    opacity: 0;
+}
+
+.category-list li a {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(21, 21, 21, 0.5);
+}
+
+.category-list li.active a, .category-list li:hover a {
+    color: #151515;
+}
+
+.category-list li.active:before, .category-list li:hover:before {
+    opacity: 1;
+}

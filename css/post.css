@@ -1,0 +1,467 @@
+/*
+* Posts
+*/
+.badge {
+    padding: 4px 10px;
+    border-radius: 3px;
+    background: #323232;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: .05em;
+}
+
+.badge:hover {
+    color: #ffffff;
+    background: #87aeb4;
+}
+
+.badge:focus, .badge:active {
+    color: #ffffff;
+}
+
+.badge.badge-primary {
+    background: #87aeb4;
+}
+
+.badge.badge-primary:hover {
+    color: #ffffff;
+    background: #151515;
+}
+
+.badge.badge-secondary {
+    background: #FFD541;
+}
+
+.badge.badge-secondary:hover {
+    color: #ffffff;
+    background: #151515;
+}
+
+@media (min-width: 992px) {
+    .badge {
+        font-size: 15px;
+    }
+}
+
+ul.blog-post-meta {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+ul.blog-post-meta > li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+ul.blog-post-meta li + li {
+    margin-left: 15px;
+}
+
+ul.blog-post-meta li {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+ul.blog-post-meta li .icon {
+    font-size: 18px;
+    margin-right: 5px;
+    color: #000000;
+}
+
+* + .blog-post-title {
+    margin-top: 30px;
+}
+
+.blog-post-title {
+    font-weight: 500;
+}
+
+* + .blog-post-content {
+    margin-top: 35px;
+}
+
+.blog-post-content > * + * {
+    margin-top: 35px;
+}
+
+.blog-post-content * + .list-marked {
+    margin-top: 35px;
+}
+
+.blog-post-content .list-marked li + li {
+    margin-top: 20px;
+}
+
+.blog-post-share {
+    position: relative;
+}
+
+@media (min-width: 992px) {
+    .blog-post-share {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .blog-post-share:before {
+        position: relative;
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        max-width: 60%;
+        border-top: 1px solid #C4C4C4;
+    }
+}
+
+@media (min-width: 1200px) {
+    .blog-post-share:before {
+        max-width: 70%;
+    }
+}
+
+.blog-post-share .thin-title + * {
+    margin-top: 0;
+}
+
+.blog-post-share li + li {
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+.blog-post-share .icon {
+    color: #151515;
+}
+
+.blog-post-share .icon:hover {
+    color: #87aeb4;
+}
+
+.post-classic {
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-classic:hover .post-classic-figure img {
+    opacity: .8;
+    transform: scale(1.04);
+}
+
+.post-classic-figure {
+    background: #151515;
+    overflow: hidden;
+}
+
+.post-classic-figure img {
+    max-width: inherit;
+    transition: all .3s;
+    will-change: transform;
+}
+
+.post-classic-caption {
+    position: relative;
+    padding-top: 30px;
+}
+
+.post-classic-caption > * {
+    position: relative;
+    z-index: 1;
+}
+
+.post-classic-caption:before {
+    position: absolute;
+    content: '';
+    top: 10px;
+    right: 0;
+    left: 55%;
+    bottom: 0;
+    background: url("../images/bg-dot.png") center;
+    opacity: .2;
+    z-index: 0;
+}
+
+.post-classic-meta {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.post-classic-meta > li {
+    display: inline-block;
+}
+
+.post-classic-meta li + li {
+    margin-left: 30px;
+}
+
+* + .post-classic-meta {
+    margin-top: 20px;
+}
+
+.post-classic-tag {
+    color: #87aeb4;
+}
+
+.post-classic-tag:hover {
+    color: #151515;
+}
+
+.post-classic-tag.post-classic-tag-secondary {
+    color: #FFD541;
+}
+
+.post-classic-tag.post-classic-tag-secondary:hover {
+    color: #87aeb4;
+}
+
+.post-classic-tag.post-classic-tag-secondary-2 {
+    color: #5656DF;
+}
+
+.post-classic-tag.post-classic-tag-secondary-2:hover {
+    color: #FFD541;
+}
+
+.post-classic-title {
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: -.03em;
+}
+
+.block-aside {
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -60px;
+}
+
+.block-aside > * {
+    margin-bottom: 60px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .block-aside {
+        max-width: inherit;
+        columns: 2;
+        break-inside: avoid;
+        column-gap: 30px;
+    }
+    .block-aside .block-aside-item {
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+.block-aside-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+.block-aside-title + * {
+    margin-top: 30px;
+}
+
+.post-minimal + .post-minimal {
+    margin-top: 30px;
+}
+
+.post-minimal-title {
+    font-weight: 300;
+    line-height: 34px;
+    letter-spacing: -.03em;
+}
+
+.post-minimal-date {
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.post-modern {
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-modern.post-modern-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.post-modern:hover .post-modern-figure img {
+    transform: scale(1.04);
+    opacity: .8;
+}
+
+.post-modern-figure {
+    position: relative;
+    background: #151515;
+    overflow: hidden;
+}
+
+.post-modern-figure img {
+    max-width: inherit;
+    transition: all .3s;
+    will-change: transform;
+}
+
+.post-modern-figure .badge {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
+
+.post-modern-caption {
+    padding: 25px;
+    background: #ffffff;
+}
+
+.post-modern-date {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+}
+
+.post-modern-title {
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: -.03em;
+}
+
+* + .post-modern-title {
+    margin-top: 10px;
+}
+
+* + .post-modern-text {
+    margin-top: 25px;
+}
+
+.post-modern-text + * {
+    margin-top: 25px;
+}
+
+.post-modern-text {
+    color: rgba(21, 21, 21, 0.8);
+    line-height: 25px;
+}
+
+.post-corporate {
+    position: relative;
+    padding: 33px 0;
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.post-corporate.post-corporate-img-bg > * {
+    position: relative;
+    z-index: 1;
+}
+
+.post-corporate.post-corporate-img-bg .post-corporate-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.post-corporate.post-corporate-img-bg .post-corporate-bg:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(21, 21, 21, 0.32) 0%, rgba(0, 0, 0, 0.72) 100%);
+}
+
+.post-corporate.post-corporate-img-bg .post-corporate-title a:hover {
+    color: #FFD541;
+}
+
+.post-corporate.post-corporate-img-bg .post-corporate-link {
+    color: #ffffff;
+}
+
+.post-corporate.post-corporate-img-bg .post-corporate-link:hover {
+    color: #FFD541;
+}
+
+* + .post-corporate-title {
+    margin-top: 15px;
+}
+
+.post-corporate-badge {
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+}
+
+.post-corporate-badge:before, .post-corporate-badge:after {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    content: '';
+    z-index: -1;
+    transition: all .3s;
+}
+
+.post-corporate-badge:before {
+    background: linear-gradient(228.54deg, #00E175 0%, #5656DF 100%);
+}
+
+.post-corporate-badge:after {
+    opacity: 0;
+    background: linear-gradient(-228.54deg, #00E175 0%, #5656DF 100%);
+}
+
+.post-corporate-badge:hover {
+    color: #ffffff;
+    background: transparent;
+}
+
+.post-corporate-badge:hover:before {
+    opacity: 0;
+}
+
+.post-corporate-badge:hover:after {
+    opacity: 1;
+}
+
+.post-corporate-title {
+    font-weight: 400;
+}
+
+* + .post-corporate-text {
+    margin-top: 15px;
+}
+
+* + .post-corporate-link {
+    margin-top: 30px;
+}
+
+.post-corporate-link {
+    display: inline-block;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.post-corporate-link .icon {
+    margin-left: 12px;
+    font-size: 20px;
+    vertical-align: middle;
+}

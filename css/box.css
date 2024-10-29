@@ -1,0 +1,307 @@
+/*
+* Boxes
+*/
+.box-minimal {
+    text-align: center;
+}
+
+.box-minimal .box-minimal-icon {
+    font-size: 50px;
+    line-height: 50px;
+    color: #87aeb4;
+}
+
+.box-minimal-divider {
+    width: 36px;
+    height: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #87aeb4;
+}
+
+.box-minimal-text {
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+* + .box-minimal {
+    margin-top: 30px;
+}
+
+* + .box-minimal-title {
+    margin-top: 10px;
+}
+
+* + .box-minimal-divider {
+    margin-top: 20px;
+}
+
+* + .box-minimal-text {
+    margin-top: 15px;
+}
+
+.post-corporate.post-corporate-img-bg .box-minimal p, .section-main-bunner .box-minimal p, .context-dark .box-minimal p, .bg-gray-600 .box-minimal p, .bg-gray-700 .box-minimal p, .bg-gray-800 .box-minimal p, .bg-primary .box-minimal p, .bg-pink .box-minimal p, .bg-secondary .box-minimal p, .bg-secondary-2 .box-minimal p, .bg-green .box-minimal p, .box-countdown-dark .box-minimal p {
+    color: rgba(21, 21, 21, 0.8);
+}
+
+.box-counter {
+    position: relative;
+    text-align: center;
+    color: #444141;
+}
+
+.box-counter-title {
+    display: inline-block;
+    font-family: "PT Serif", "Times New Roman", Times, serif;
+    font-size: 16px;
+    line-height: 1.3;
+    letter-spacing: -.025em;
+}
+
+.box-counter-main {
+    font-family: "PT Serif", "Times New Roman", Times, serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.box-counter-main > * {
+    display: inline;
+    font: inherit;
+}
+
+.box-counter-main .small {
+    font-size: 28px;
+}
+
+.box-counter-main .small_top {
+    position: relative;
+    top: .2em;
+    vertical-align: top;
+}
+
+.box-counter-divider {
+    font-size: 0;
+    line-height: 0;
+}
+
+.box-counter-divider::after {
+    content: '';
+    display: inline-block;
+    width: 80px;
+    height: 2px;
+    background: #87aeb4;
+}
+
+* + .box-counter-title {
+    margin-top: 10px;
+}
+
+* + .box-counter-main {
+    margin-top: 20px;
+}
+
+* + .box-counter-divider {
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .box-counter-title {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .box-counter-main {
+        font-size: 60px;
+    }
+    .box-counter-main .small {
+        font-size: 36px;
+    }
+    * + .box-counter-main {
+        margin-top: 30px;
+    }
+    * + .box-counter-divider {
+        margin-top: 15px;
+    }
+    * + .box-counter-title {
+        margin-top: 18px;
+    }
+}
+
+.bg-primary .box-counter {
+    color: #ffffff;
+}
+
+.bg-primary .box-counter-divider::after {
+    background: #ffffff;
+}
+
+.box-color {
+    width: 54px;
+    height: 54px;
+}
+
+.box-icon-inner {
+    position: relative;
+}
+
+.box-icon-inner > * {
+    position: relative;
+    z-index: 1;
+}
+
+.box-icon-inner:before {
+    position: absolute;
+    top: 33%;
+    left: 56%;
+    content: '';
+    z-index: 0;
+}
+
+.box-icon-inner.decorate-triangle:before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 18px 10px;
+    border-color: transparent transparent #D0EFD5 transparent;
+    transform: rotate(137.76deg) translate(0, 0);
+    will-change: transform;
+    transition: all .6s;
+}
+
+.box-icon-inner.decorate-triangle.decorate-color-secondary:before {
+    border-color: transparent transparent #FFD541 transparent;
+}
+
+.box-icon-inner.decorate-triangle.decorate-color-primary:before {
+    border-color: transparent transparent #87aeb4 transparent;
+}
+
+.box-icon-inner.decorate-circle:before {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #D0EFD5;
+    transform: translate(0, 0);
+    will-change: transform;
+    transition: all .6s;
+}
+
+.box-icon-inner.decorate-circle.decorate-color-secondary-2:before {
+    background: #5656DF;
+}
+
+.box-icon-inner.decorate-circle.decorate-color-primary:before {
+    background: #87aeb4;
+}
+
+.box-icon-inner.decorate-rectangle:before {
+    width: 16px;
+    height: 16px;
+    transform: translateY(0) rotate(45deg);
+    background: #D0EFD5;
+    will-change: transform;
+    transition: all .6s;
+}
+
+.box-icon-inner.decorate-rectangle.decorate-color-primary:before {
+    background: #87aeb4;
+}
+.box-icon-inner a{
+    color:#000;
+}
+
+.box-icon-inner a:focus, .box-icon-inner a:active, .box-icon-inner a:hover{
+    color:#87aeb4;
+}
+.box-icon-caption h4 {
+    font-weight: 500;
+}
+
+.box-icon-caption * + p {
+    margin-top: 20px;
+}
+
+.box-icon-classic {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.box-icon-classic > * + * {
+    margin-top: 18px;
+}
+
+.box-icon-classic .box-icon-caption p {
+    color: rgba(21, 21, 21, 0.6);
+}
+
+.box-icon-classic:hover .decorate-triangle:before {
+    transform: rotate(175deg) translate(15px, 15px);
+}
+
+.box-icon-classic:hover .decorate-circle:before {
+    transform: translate(-45px, 2px);
+}
+
+.box-icon-classic:hover .decorate-rectangle:before {
+    transform: rotate(-90deg) translateY(-40px);
+}
+
+.box-icon-modern {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.box-icon-modern > * + * {
+    margin-top: 25px;
+}
+
+@media (min-width: 576px) {
+    .box-icon-modern {
+        flex-direction: row;
+        text-align: left;
+    }
+    .box-icon-modern > * + * {
+        margin-top: 0;
+        margin-left: 30px;
+    }
+    .box-icon-modern .box-icon-inner:before {
+        left: 85%;
+    }
+}
+
+.box-icon-modern .box-icon-caption * + p {
+    margin-top: 5px;
+}
+
+.box-icon-modern .decorate-triangle:before {
+    border-width: 0 12px 22px 12px;
+}
+
+.box-icon-modern .decorate-circle:before {
+    width: 24px;
+    height: 24px;
+}
+
+.box-icon-modern .decorate-rectangle:before {
+    width: 20px;
+    height: 20px;
+}
+
+.box-icon-modern:hover .decorate-triangle:before {
+    transform: rotate(175deg) translate(15px, 15px);
+}
+
+.box-icon-modern:hover .decorate-circle:before {
+    transform: translate(-45px, 2px);
+}
+
+.box-icon-modern:hover .decorate-rectangle:before {
+    transform: rotate(-90deg) translateY(-40px);
+}

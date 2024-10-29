@@ -1,0 +1,115 @@
+/*
+* Contexts
+*/
+.post-corporate.post-corporate-img-bg, .section-main-bunner, .context-dark, .bg-gray-600, .bg-gray-700, .bg-gray-800, .bg-primary, .bg-pink, .bg-secondary, .bg-secondary-2, .bg-green, .box-countdown-dark,
+.post-corporate.post-corporate-img-bg h1,
+.section-main-bunner h1,
+.context-dark h1,
+.bg-gray-600 h1,
+.bg-gray-700 h1,
+.bg-gray-800 h1,
+.bg-primary h1,
+.bg-pink h1,
+.bg-secondary h1,
+.bg-secondary-2 h1,
+.bg-green h1,
+.box-countdown-dark h1, .post-corporate.post-corporate-img-bg h2, .section-main-bunner h2, .context-dark h2, .bg-gray-600 h2, .bg-gray-700 h2, .bg-gray-800 h2, .bg-primary h2, .bg-pink h2, .bg-secondary h2, .bg-secondary-2 h2, .bg-green h2, .box-countdown-dark h2, .post-corporate.post-corporate-img-bg h3, .section-main-bunner h3, .context-dark h3, .bg-gray-600 h3, .bg-gray-700 h3, .bg-gray-800 h3, .bg-primary h3, .bg-pink h3, .bg-secondary h3, .bg-secondary-2 h3, .bg-green h3, .box-countdown-dark h3, .post-corporate.post-corporate-img-bg h4, .section-main-bunner h4, .context-dark h4, .bg-gray-600 h4, .bg-gray-700 h4, .bg-gray-800 h4, .bg-primary h4, .bg-pink h4, .bg-secondary h4, .bg-secondary-2 h4, .bg-green h4, .box-countdown-dark h4, .post-corporate.post-corporate-img-bg h5, .section-main-bunner h5, .context-dark h5, .bg-gray-600 h5, .bg-gray-700 h5, .bg-gray-800 h5, .bg-primary h5, .bg-pink h5, .bg-secondary h5, .bg-secondary-2 h5, .bg-green h5, .box-countdown-dark h5, .post-corporate.post-corporate-img-bg h6, .section-main-bunner h6, .context-dark h6, .bg-gray-600 h6, .bg-gray-700 h6, .bg-gray-800 h6, .bg-primary h6, .bg-pink h6, .bg-secondary h6, .bg-secondary-2 h6, .bg-green h6, .box-countdown-dark h6, .post-corporate.post-corporate-img-bg [class^='heading-'], .section-main-bunner [class^='heading-'], .context-dark [class^='heading-'], .bg-gray-600 [class^='heading-'], .bg-gray-700 [class^='heading-'], .bg-gray-800 [class^='heading-'], .bg-primary [class^='heading-'], .bg-pink [class^='heading-'], .bg-secondary [class^='heading-'], .bg-secondary-2 [class^='heading-'], .bg-green [class^='heading-'], .box-countdown-dark [class^='heading-'] {
+    color: #ffffff;
+}
+
+.post-corporate.post-corporate-img-bg .title-style-1, .section-main-bunner .title-style-1, .context-dark .title-style-1, .bg-gray-600 .title-style-1, .bg-gray-700 .title-style-1, .bg-gray-800 .title-style-1, .bg-primary .title-style-1, .bg-pink .title-style-1, .bg-secondary .title-style-1, .bg-secondary-2 .title-style-1, .bg-green .title-style-1, .box-countdown-dark .title-style-1 {
+    color: #87aeb4;
+}
+
+.post-corporate.post-corporate-img-bg .button-primary:hover, .section-main-bunner .button-primary:hover, .context-dark .button-primary:hover, .bg-gray-600 .button-primary:hover, .bg-gray-700 .button-primary:hover, .bg-gray-800 .button-primary:hover, .bg-primary .button-primary:hover, .bg-pink .button-primary:hover, .bg-secondary .button-primary:hover, .bg-secondary-2 .button-primary:hover, .bg-green .button-primary:hover, .box-countdown-dark .button-primary:hover, .post-corporate.post-corporate-img-bg .button-primary:active, .section-main-bunner .button-primary:active, .context-dark .button-primary:active, .bg-gray-600 .button-primary:active, .bg-gray-700 .button-primary:active, .bg-gray-800 .button-primary:active, .bg-primary .button-primary:active, .bg-pink .button-primary:active, .bg-secondary .button-primary:active, .bg-secondary-2 .button-primary:active, .bg-green .button-primary:active, .box-countdown-dark .button-primary:active {
+    background: #151515;
+    border-color: #151515;
+}
+
+a:focus,
+button:focus {
+    outline: none !important;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+blockquote {
+    padding: 0;
+    margin: 0;
+}
+
+input,
+button,
+select,
+textarea {
+    outline: none;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+p {
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li,
+ol li {
+    display: block;
+}
+
+dl {
+    margin: 0;
+}
+
+dt,
+dd {
+    line-height: inherit;
+}
+
+dt {
+    font-weight: inherit;
+}
+
+dd {
+    margin-bottom: 0;
+}
+
+cite {
+    font-style: normal;
+}
+
+form {
+    margin-bottom: 0;
+}
+
+blockquote {
+    padding-left: 0;
+    border-left: 0;
+}
+
+address {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+figure {
+    margin-bottom: 0;
+}
+
+html p a:hover {
+    text-decoration: none;
+}

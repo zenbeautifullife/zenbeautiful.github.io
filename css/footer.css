@@ -1,0 +1,251 @@
+/*
+* Footers
+*/
+.footer-classic {
+    padding: 90px 0;
+    font-weight: 400;
+    background: #323232;
+}
+
+@media (min-width: 1200px) {
+    .footer-classic {
+        padding: 125px 0;
+    }
+}
+
+.footer-classic .footer-title {
+    color: #ffffff;
+}
+
+.footer-classic p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-classic p.big {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic p.rights {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-classic p.rights a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-classic .form-input {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic .form-label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic .list-contact-info a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic .list-contact-info a:hover {
+    color: #87aeb4;
+}
+
+.footer-classic .icon-bg-white {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+.footer-classic .icon-bg-black {
+    background: rgba(255, 255, 255, 0.05);
+    color: black;
+}
+
+
+.footer-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+}
+
+.footer-title + * {
+    margin-top: 30px;
+}
+
+.footer-divider {
+    width: 70px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-classic .footer-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-modern .form-validation, .footer-classic .form-validation {
+    color: #ffffff;
+}
+
+.footer-modern {
+    position: relative;
+    background: #323232;
+}
+
+.footer-modern > .container {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-modern p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-modern p.big {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-modern p.big a {
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+.footer-modern p.big a:hover {
+    color: #87aeb4;
+}
+
+.footer-modern p.rights {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-modern p.rights a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-modern * + .rights {
+    margin-top: 25px;
+}
+
+.footer-modern * + .rd-mailform {
+    margin-top: 30px;
+}
+
+.footer-modern .form-input {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-modern .form-label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (min-width: 992px) {
+    .footer-modern .google-map-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: calc(100vw - 60%);
+        z-index: 3;
+    }
+    .footer-modern .google-map-container .google-map {
+        height: 100%;
+    }
+}
+
+.footer-modern .icon-bg-white {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+.footer-modern .social-list > li {
+    margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    .footer-modern .social-list > li {
+        display: block;
+        margin-bottom: 15px;
+    }
+}
+
+.footer-minimal {
+    padding: 60px 0;
+    text-align: center;
+    /*background: #323232;*/
+    background: #695245;
+            /*background#e0dfdb;*/
+}
+
+.footer-minimal .icon-bg-white {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+.footer-minimal * + .rights {
+    margin-top: 45px;
+}
+
+@media (min-width: 992px) {
+    .footer-minimal {
+        padding: 90px 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer-minimal {
+        padding: 120px 0 110px;
+    }
+    .footer-minimal * + .rights {
+        margin-top: 100px;
+    }
+}
+
+.footer-minimal .rights {
+    color: white;
+}
+
+.footer-minimal .rights a {
+    color: white;
+}
+
+.footer-minimal .social-list li {
+    margin-top: 0;
+}
+
+.footer-minimal-nav {
+    display: inline-block;
+}
+
+.footer-minimal-nav li {
+    padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+    .footer-minimal-nav li {
+        display: inline-block;
+    }
+}
+
+.footer-minimal-nav li + li {
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    .footer-minimal-nav li + li {
+        margin-top: 0;
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+    }
+}
+
+.footer-minimal-nav a {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    text-align: center;
+    color: white
+}
+
+.footer-minimal-nav a:hover {
+    color: #AF9666;
+}
