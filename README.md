@@ -1,2 +1,2 @@
-# beautifulartjourney.github.io
+# zenbeautiful.github.io
 website
