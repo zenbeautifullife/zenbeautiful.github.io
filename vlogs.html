@@ -34,7 +34,7 @@
     </style>
 </head>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", async function () {
         const itemsPerPage = 6;
         const vlogContainer = document.getElementById("vlog-container");
         const prevBtn = document.getElementById("prevBtn");
@@ -42,8 +42,7 @@
         const pageIndicator = document.getElementById("pageIndicator");
 
         let currentPage = 1;
-        let allVlogs = Array.from(vlogContainer.children);
-        let fetched = false;
+        let allVlogs = [];
 
         function updatePagination() {
             const totalPages = Math.ceil(allVlogs.length / itemsPerPage);
@@ -57,67 +56,62 @@
 
             pageIndicator.textContent = `Page ${currentPage} of ${totalPages}`;
             prevBtn.disabled = currentPage === 1;
-            nextBtn.disabled = currentPage >= totalPages && fetched;
+            nextBtn.disabled = currentPage === totalPages;
         }
 
         function createVlogElement(data) {
             const col = document.createElement("div");
             col.className = "col-md-6 col-lg-4 wow-outer";
             col.innerHTML = `
-            <div class="wow fadeInUp">
-                <div class="product-featured">
-                    <div class="product-featured-figure vlog-list">
-                        <a href="${data.url}" target="_blank">
-                            <img src="${data.img}" alt="" width="570" height="320" />
-                        </a>
-                    </div>
-                    <div class="post-info">
-                        <div class="entry-date">
-                            ${data.date.split('.').map((val, i) =>
-                                `<span class="${['day','month','year'][i]}">${val}</span>`
-                            ).join('.')}
+                <div class="wow fadeInUp">
+                    <div class="product-featured">
+                        <div class="product-featured-figure vlog-list">
+                            <a href="${data.url}" target="_blank">
+                                <img src="${data.img}" alt="" width="570" height="320" />
+                            </a>
                         </div>
-                        <header class="entry-header">
-                            <h3 class="entry-title">
-                                <a href="${data.url}" target="_blank" rel="bookmark">${data.title}</a>
-                            </h3>
-                        </header>
-                        <div class="entry-meta-small">
-                            <a href="${data.detail}" target="_blank"><i class="icon-bubble icons"></i>View more →</a>
+                        <div class="post-info">
+                            <div class="entry-date">
+                                ${data.date.split('.').map((val, i) =>
+                                    `<span class="${['day','month','year'][i]}">${val}</span>`
+                                ).join('.')}
+                            </div>
+                            <header class="entry-header">
+                                <h3 class="entry-title">
+                                    <a href="${data.url}" target="_blank" rel="bookmark">${data.title}</a>
+                                </h3>
+                            </header>
+                            <div class="entry-meta-small">
+                                <a href="${data.detail}" target="_blank"><i class="icon-bubble icons"></i>View more →</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             `;
             return col;
         }
 
-        async function fetchMoreVlogs() {
-            if (fetched) return;
+        async function loadInitialVlogs() {
             try {
                 const response = await fetch("vlogs.json");
-                const newVlogs = await response.json();
+                const vlogDataArray = await response.json();
 
-                newVlogs.forEach(vlogData => {
-                    const vlogEl = createVlogElement(vlogData);
-                    vlogContainer.appendChild(vlogEl);
-                    allVlogs.push(vlogEl);
+                vlogDataArray.forEach(data => {
+                    const vlogElement = createVlogElement(data);
+                    vlogElement.style.display = "none"; // default hidden, shown by pagination
+                    vlogContainer.appendChild(vlogElement);
+                    allVlogs.push(vlogElement);
                 });
 
-                fetched = true;
                 updatePagination();
             } catch (error) {
-                console.error("Failed to fetch more vlogs:", error);
+                console.error("Error loading initial vlogs:", error);
             }
         }
 
-        nextBtn.addEventListener("click", async () => {
+        nextBtn.addEventListener("click", () => {
             const totalPages = Math.ceil(allVlogs.length / itemsPerPage);
             if (currentPage < totalPages) {
-                currentPage++;
-                updatePagination();
-            } else if (!fetched) {
-                await fetchMoreVlogs();
                 currentPage++;
                 updatePagination();
             }
@@ -130,8 +124,11 @@
             }
         });
 
+        // Load vlogs.json when page loads
+        await loadInitialVlogs();
     });
 </script>
+
 
 
 
@@ -207,180 +204,7 @@
                 </div>
             </div>
             <div class="row row-20 row-lg-30" id="vlog-container">
-                <div class="col-md-6 col-lg-4 wow-outer">
-                    <div class="wow fadeInUp">
-                        <div class="product-featured">
-                            <div class="product-featured-figure vlog-list">
-                                <a href="https://youtu.be/c5ec62k0IEY" target="_blank">
-                                    <img src="images/vlog/62-cherry-blossom.jpg" alt="" width="570" height="320" />
-                                </a>
 
-                            </div>
-                            <div class="post-info">
-                                <div class="entry-date">
-                                    <span class="day">27</span>.<span class="month">Sep</span>.<span
-                                        class="year">2024</span>
-                                </div>
-                                <header class="entry-header">
-                                    <h3 class="entry-title">
-                                        <a href="https://youtu.be/c5ec62k0IEY" target="_blank"
-                                           rel="bookmark">#62 Step-by-Step Cherry Blossom Watercolor Tutorial</a>
-                                    </h3>
-                                </header>
-                                <div class="entry-meta-small">
-
-                                    <a href="pages/vlogs/62/vlog62.html" target="_blank"><i
-                                            class="icon-bubble icons"></i>View more →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow-outer">
-                    <div class="wow fadeInUp">
-                        <div class="product-featured">
-                            <div class="product-featured-figure vlog-list">
-                                <a href="https://youtu.be/XxzlCt-KnZY" target="_blank">
-                                    <img src="images/vlog/61-watercolor-bird.jpg" alt="" width="570" height="320" />
-                                </a>
-
-                            </div>
-                            <div class="post-info">
-                                <div class="entry-date">
-                                    <span class="day">20</span>.<span class="month">Sep</span>.<span
-                                        class="year">2024</span>
-                                </div>
-                                <header class="entry-header">
-                                    <h3 class="entry-title">
-                                        <a href="https://youtu.be/XxzlCt-KnZY" target="_blank"
-                                           rel="bookmark">#61 How to Paint a Crimson Finch in Watercolor: Easy Bird Painting Guide</a>
-                                    </h3>
-                                </header>
-                                <div class="entry-meta-small">
-
-                                    <a href="pages/vlogs/61/vlog61.html" target="_blank"><i
-                                            class="icon-bubble icons"></i>View more →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow-outer">
-                    <div class="wow fadeInUp">
-                        <div class="product-featured">
-                            <div class="product-featured-figure vlog-list">
-                                <a href="https://youtu.be/DADOElkHLdM" target="_blank">
-                                    <img src="images/vlog/60-watercolor-lotus.jpg" alt="" width="570" height="320" />
-                                </a>
-
-                            </div>
-                            <div class="post-info">
-                                <div class="entry-date">
-                                    <span class="day">13</span>.<span class="month">Sep</span>.<span
-                                        class="year">2024</span>
-                                </div>
-                                <header class="entry-header">
-                                    <h3 class="entry-title">
-                                        <a href="https://youtu.be/DADOElkHLdM" target="_blank"
-                                           rel="bookmark">#60 Relax and Paint: Step-by-Step Watercolor Lotus Tutorial with Stunning Techniques</a>
-                                    </h3>
-                                </header>
-                                <div class="entry-meta-small">
-
-                                    <a href="pages/vlogs/60/vlog60.html" target="_blank"><i
-                                            class="icon-bubble icons"></i>View more →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow-outer">
-                    <div class="wow fadeInUp">
-                        <div class="product-featured">
-                            <div class="product-featured-figure vlog-list">
-                                <a href="https://youtu.be/OdtknuNRadc" target="_blank">
-                                    <img src="images/vlog/59-watercolor-white-magnolia.jpg" alt="" width="570" height="320" />
-                                </a>
-
-                            </div>
-                            <div class="post-info">
-                                <div class="entry-date">
-                                    <span class="day">6</span>.<span class="month">Sep</span>.<span
-                                        class="year">2024</span>
-                                </div>
-                                <header class="entry-header">
-                                    <h3 class="entry-title">
-                                        <a href="https://youtu.be/OdtknuNRadc" target="_blank"
-                                           rel="bookmark">#59 How to Paint a Stunning White Magnolia in Watercolor: Step-by-Step Guide</a>
-                                    </h3>
-                                </header>
-                                <div class="entry-meta-small">
-
-                                    <a href="pages/vlogs/59/vlog59.html" target="_blank"><i
-                                            class="icon-bubble icons"></i>View more →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow-outer">
-                    <div class="wow fadeInUp">
-                        <div class="product-featured">
-                            <div class="product-featured-figure vlog-list">
-                                <a href="https://youtu.be/5laHNv_QImE" target="_blank">
-                                    <img src="images/vlog/58-watercolor-pink-magnolia.jpg" alt="" width="570" height="320" />
-                                </a>
-
-                            </div>
-                            <div class="post-info">
-                                <div class="entry-date">
-                                    <span class="day">30</span>.<span class="month">Aug</span>.<span
-                                        class="year">2024</span>
-                                </div>
-                                <header class="entry-header">
-                                    <h3 class="entry-title">
-                                        <a href="https://youtu.be/5laHNv_QImE" target="_blank"
-                                           rel="bookmark">#58 WATERCOLOR PINK MAGNOLIA | Step-by-Step Demo</a>
-                                    </h3>
-                                </header>
-                                <div class="entry-meta-small">
-
-                                    <a href="pages/vlogs/58/vlog58.html" target="_blank"><i
-                                            class="icon-bubble icons"></i>View more →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow-outer">
-                    <div class="wow fadeInUp">
-                        <div class="product-featured">
-                            <div class="product-featured-figure vlog-list">
-                                <a href="https://youtu.be/5laHNv_QImE" target="_blank">
-                                    <img src="images/vlog/57-watercolor-sea-turtle.jpg" alt="" width="570" height="320" />
-                                </a>
-
-                            </div>
-                            <div class="post-info">
-                                <div class="entry-date">
-                                    <span class="day">24</span>.<span class="month">Aug</span>.<span
-                                        class="year">2024</span>
-                                </div>
-                                <header class="entry-header">
-                                    <h3 class="entry-title">
-                                        <a href="https://youtu.be/5laHNv_QImE" target="_blank"
-                                           rel="bookmark">#57 A Beginner’s Guide: The Three Must-Know Watercolor Techniques Explained</a>
-                                    </h3>
-                                </header>
-                                <div class="entry-meta-small">
-
-                                    <a href="pages/vlogs/57/vlog57.html" target="_blank"><i
-                                            class="icon-bubble icons"></i>View more →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
             <div class="pagination text-center mt-4">

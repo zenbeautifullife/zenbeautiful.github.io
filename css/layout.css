@@ -26,6 +26,13 @@ article,aside,figcaption,figure,footer,header,hgroup,main,nav,section {
     display: block
 }
 
+.text-center figcaption {
+    margin: 15px 0 20px;
+    text-align: left;
+    font-family:"PT Serif";
+    font-size:18px;
+}
+
 body {
     margin: 0;
     font-family: poppins,sans-serif;
