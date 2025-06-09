@@ -33,6 +33,17 @@ article,aside,figcaption,figure,footer,header,hgroup,main,nav,section {
     font-size:18px;
 }
 
+.section .content {
+    margin: 80px 20px 20px
+}
+
+.description p {
+    margin:40px 0px 40px 0px;
+    font-size: 18px;
+    line-height:30px;
+    font-family:"Roboto"
+}
+
 body {
     margin: 0;
     font-family: poppins,sans-serif;
