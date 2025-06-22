@@ -2,7 +2,7 @@
 <html class="wide wow-animation" lang="en">
 
 <head>
-    <title>Vlogs-Zen Beautiful Art</title>
+    <title>Podcast-Zen Beautiful Art</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,12 +42,12 @@
         const pageIndicator = document.getElementById("pageIndicator");
 
         let currentPage = 1;
-        let allVlogs = [];
+        let allEpisodes = [];
 
         function updatePagination() {
-            const totalPages = Math.ceil(allVlogs.length / itemsPerPage);
+            const totalPages = Math.ceil(allEpisodes.length / itemsPerPage);
 
-            allVlogs.forEach((vlog, index) => {
+            allEpisodes.forEach((vlog, index) => {
                 vlog.style.display =
                     index >= (currentPage - 1) * itemsPerPage && index < currentPage * itemsPerPage
                         ? "block"
@@ -82,7 +82,7 @@
                                 </h3>
                             </header>
                             <div class="entry-meta-small">
-                                <a href="${data.detail}" target="_blank"><i class="icon-bubble icons"></i>View more →</a>
+                                <a href="${data.detail}" target="_blank"><i class="icon-bubble icons"></i>Listen now →</a>
                             </div>
                         </div>
                     </div>
@@ -91,26 +91,26 @@
             return col;
         }
 
-        async function loadInitialVlogs() {
+        async function loadInitialEpisodes() {
             try {
-                const response = await fetch("vlogs.json");
+                const response = await fetch("episodes.json");
                 const vlogDataArray = await response.json();
 
                 vlogDataArray.forEach(data => {
                     const vlogElement = createVlogElement(data);
                     vlogElement.style.display = "none"; // default hidden, shown by pagination
                     vlogContainer.appendChild(vlogElement);
-                    allVlogs.push(vlogElement);
+                    allEpisodes.push(vlogElement);
                 });
 
                 updatePagination();
             } catch (error) {
-                console.error("Error loading initial vlogs:", error);
+                console.error("Error loading initial episodes:", error);
             }
         }
 
         nextBtn.addEventListener("click", () => {
-            const totalPages = Math.ceil(allVlogs.length / itemsPerPage);
+            const totalPages = Math.ceil(allEpisodes.length / itemsPerPage);
             if (currentPage < totalPages) {
                 currentPage++;
                 updatePagination();
@@ -124,8 +124,8 @@
             }
         });
 
-        // Load vlogs.json when page loads
-        await loadInitialVlogs();
+        // Load episodes.json when page loads
+        await loadInitialEpisodes();
     });
 </script>
 
@@ -166,9 +166,9 @@
                             <div class="block-right">
                                 <ul class="list-inline nav-list">
                                     <li class="list-inline-item"><a href="index.html">Home</a></li>
-                                    <li class="list-inline-item active"><a href="vlogs.html">Vlogs</a></li>
-                                    <li class="list-inline-item"><a href="podcast.html">Podcast</a></li>
-                                    <li class="list-inline-item"><a href="gallery.html">Gallery</a></li>
+                                    <li class="list-inline-item"><a href="vlogs.html">Vlogs</a></li>
+                                    <li class="list-inline-item active"><a href="podcast.html">Podcast</a></li>
+                                    <li class="list-inline-item "><a href="gallery.html">Gallery</a></li>
                                     <li class="list-inline-item"><a href="contact.html">Contact</a></li>
                                     <li class="list-inline-item"><a href="about.html">About</a></li>
                                 </ul>
@@ -193,14 +193,14 @@
         </div>
     </header>
 
-    <!-- 4. Latest video-->
+    <!-- 4. Latest episode -->
     <section class="section section-lg bg-default" style="margin-top:80px">
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-md-9 col-lg-7 wow-outer">
                     <div class="wow slideInDown">
                         <h2>Latest Updates</h2>
-                        <h3 style="text-align: center" class="heading-title">New Tutorials</h3>
+                        <h3 style="text-align: center" class="heading-title">New Episode</h3>
                     </div>
                 </div>
             </div>
