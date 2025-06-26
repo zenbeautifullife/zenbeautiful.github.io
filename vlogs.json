@@ -1,12 +1,18 @@
 [
   {
+    "title": "#96 Find Your Inner Artist | Loose Watercolor Flower + Pen Line Art",
+    "url": "https://youtu.be/bHAqlfNUwlI",
+    "img": "images/vlog/96-loose-watercolor-rose.jpeg",
+    "date": "17.Aug.2024",
+    "detail": "pages/vlogs/96/vlog96.html"
+  },
+  {
     "title": "#95|15-Minute Watercolor Flowers",
     "url": "https://youtu.be/FsGVtG3ErCc",
     "img": "images/vlog/95-15-minute-watercolor.jpeg",
     "date": "20.June.2025",
     "detail": "pages/vlogs/95/vlog95.html"
   },
-
   {
     "title": "#94 Feeling overwhelmed or stuck?",
     "url": "https://youtu.be/HG_eo36fblI",
@@ -154,5 +160,4 @@
     "date": "9.Aug.2024",
     "detail": "https://youtu.be/3RfgOvlEG9o"
   }
-
 ]
