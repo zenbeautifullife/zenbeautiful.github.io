@@ -36,7 +36,12 @@ article,aside,figcaption,figure,footer,header,hgroup,main,nav,section {
 .section .content {
     margin: 80px 20px 20px
 }
-
+.content-description {
+    margin:40px 0px 40px 0px;
+    line-height:36px;
+    font-family:"PT Serif";
+    font-size:18px
+}
 .description p {
     margin:40px 0px 40px 0px;
     font-size: 18px;
