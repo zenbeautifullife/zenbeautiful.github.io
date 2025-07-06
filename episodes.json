@@ -1,37 +1,72 @@
 [
   {
-    "title": "episode1 The Day I Forgot to Breathe – and Picked Up a Brush",
-    "url": "https://youtu.be/WBsSR5qqnXM",
-    "img": "images/episodes/1.jpg",
-    "date": "22.June.2025",
-    "detail": "https://youtu.be/WBsSR5qqnXM"
+    "title": "Episode 10:  Watching the Watercolor Bloom",
+    "url": "https://youtu.be/lxTVdGZ87PM",
+    "img": "images/episodes/10.jpg",
+    "date": "6.July.2025",
+    "detail": "https://youtu.be/lxTVdGZ87PM"
   },
   {
-    "title": "episode2 Small Sketches Big Shifts The Power of Just 15 Minutes",
-    "url": "https://youtu.be/xEm7LsxR86Y",
-    "img": "images/episodes/2.jpg",
-    "date": "22.June.2025",
-    "detail": "https://youtu.be/xEm7LsxR86Y"
+    "title": "Episode 9:  I Didn’t Like What I Made — and That’s OK",
+    "url": "https://youtu.be/OVnNAMTnJ40",
+    "img": "images/episodes/9.jpg",
+    "date": "6.July.2025",
+    "detail": "https://youtu.be/OVnNAMTnJ40"
   },
   {
-    "title": "episode3 The Fear of the Blank Page and How to Begin Anyway",
-    "url": "https://youtu.be/P0XBWQjJlT4",
-    "img": "images/episodes/3.jpg",
-    "date": "22.June.2025",
-    "detail": "https://youtu.be/P0XBWQjJlT4"
+    "title": "Episode 8: Who Am I When I’m Creating?",
+    "url": "https://youtu.be/PKYALhBV84o",
+    "img": "images/episodes/8.jpg",
+    "date": "6.July.2025",
+    "detail": "https://youtu.be/PKYALhBV84o"
   },
   {
-    "title": "episode4 Creating Calm Through Color How Watercolor Became My Daily Meditation",
+    "title": "Episode 7: Am I Allowed to Do This for Me?",
+    "url": "https://youtu.be/3oUFTqT-4GQ",
+    "img": "images/episodes/7.jpg",
+    "date": "6.July.2025",
+    "detail": "https://youtu.be/3oUFTqT-4GQ"
+  },
+  {
+    "title": "Episode 6: How I Carved Out Time for Art in a Busy Week",
+    "url": "https://youtu.be/5xD1-gbB_-g",
+    "img": "images/episodes/6.jpg",
+    "date": "6.July.2025",
+    "detail": "https://youtu.be/5xD1-gbB_-g"
+  },
+  {
+    "title": "episode 5 Why We Stop Creating And How to Find Our Way Back",
+    "url": "https://youtu.be/kAa_hF1XOAI",
+    "img": "images/episodes/5.jpg",
+    "date": "22.June.2025",
+    "detail": "https://youtu.be/kAa_hF1XOAI"
+  },
+  {
+    "title": "episode 4 Creating Calm Through Color How Watercolor Became My Daily Meditation",
     "url": "https://youtu.be/aQOhNqp9iYA",
     "img": "images/episodes/4.jpg",
     "date": "22.June.2025",
     "detail": "https://youtu.be/aQOhNqp9iYA"
   },
   {
-    "title": "episode5 Why We Stop Creating And How to Find Our Way Back",
-    "url": "https://youtu.be/kAa_hF1XOAI",
-    "img": "images/episodes/5.jpg",
+    "title": "episode 3 The Fear of the Blank Page and How to Begin Anyway",
+    "url": "https://youtu.be/P0XBWQjJlT4",
+    "img": "images/episodes/3.jpg",
     "date": "22.June.2025",
-    "detail": "https://youtu.be/kAa_hF1XOAI"
+    "detail": "https://youtu.be/P0XBWQjJlT4"
+  },
+  {
+    "title": "episode 2 Small Sketches Big Shifts The Power of Just 15 Minutes",
+    "url": "https://youtu.be/xEm7LsxR86Y",
+    "img": "images/episodes/2.jpg",
+    "date": "22.June.2025",
+    "detail": "https://youtu.be/xEm7LsxR86Y"
+  },
+  {
+    "title": "episode 1 The Day I Forgot to Breathe – and Picked Up a Brush",
+    "url": "https://youtu.be/WBsSR5qqnXM",
+    "img": "images/episodes/1.jpg",
+    "date": "22.June.2025",
+    "detail": "https://youtu.be/WBsSR5qqnXM"
   }
 ]
