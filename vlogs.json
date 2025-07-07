@@ -1,9 +1,23 @@
-[
+[{
+  "title": "#98 Paint a Watercolor Iris in 15 Minutes",
+  "url": "https://youtu.be/AmK6rzPZXQ0",
+  "img": "images/vlog/98-watercolor-iris.jpeg",
+  "date": "11.July.2025",
+  "detail": "pages/vlogs/98/vlog98.html"
+},
+
   {
-    "title": "#96 Find Your Inner Artist | Loose Watercolor Flower + Pen Line Art",
+    "title": "#97 Find Your Inner Artist | Loose Watercolor Flower + Pen Line Art",
+    "url": "https://youtu.be/R8TKJ3FZWBs",
+    "img": "images/vlog/97-loose-watercolor-flower.jpeg",
+    "date": "7.July.2025",
+    "detail": "pages/vlogs/97/vlog97.html"
+  },
+  {
+    "title": "#96 Feeling Stressed? Paint These Loose Watercolor Roses with Me",
     "url": "https://youtu.be/bHAqlfNUwlI",
     "img": "images/vlog/96-loose-watercolor-rose.jpeg",
-    "date": "17.Aug.2024",
+    "date": "27.June.2025",
     "detail": "pages/vlogs/96/vlog96.html"
   },
   {
