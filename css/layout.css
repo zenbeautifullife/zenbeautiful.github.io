@@ -39,8 +39,9 @@ article,aside,figcaption,figure,footer,header,hgroup,main,nav,section {
 .content-description {
     margin:40px 0px 40px 0px;
     line-height:36px;
-    font-family:"PT Serif";
-    font-size:18px
+    font-family:Open Sans;
+    font-size: 22px;
+    -webkit-font-smoothing: antialiased;
 }
 .description p {
     margin:40px 0px 40px 0px;
