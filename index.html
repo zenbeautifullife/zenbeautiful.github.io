@@ -1,270 +1,186 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, height=device-height" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>Lucy Lu Art | Watercolor Painting</title>
+    <link href="https://zenbeautiful.life/images/favicon.ico" rel="icon" type="image/x-icon">
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X5S26BW2ZC"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-X5S26BW2ZC');
     </script>
-    <title>Lucy Lu Art | Watercolor Painting</title>
-    <meta charset="utf-8">
-    <meta content="width=device-width, height=device-height, initial-scale=1.0" name="viewport">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content='no-cache' http-equiv='cache-control'>
-    <meta content='0' http-equiv='expires'>
-    <meta content='no-cache' http-equiv='pragma'>
-    <link href="https://zenbeautiful.life/images/favicon.ico" rel="icon" type="image/x-icon">
+
+    <!-- Preload fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+
+    <!-- Main CSS -->
     <link href="css/layout.css" rel="stylesheet">
     <link href="css/fonts.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="./css/slick/slick.css" rel="stylesheet" type="text/css"/>
-    <link href="./css/slick/slick-theme.css" rel="stylesheet" type="text/css"/>
-    <style>.ie-panel {
-        display: none;
-        background: #212121;
-        padding: 10px 0;
-        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
-        clear: both;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-    }
 
-    html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
-        display: block;
-    }
-    </style>
-
+    <!-- Deferred CSS -->
+    <link as="style" href="css/slick/slick.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload">
+    <link as="style" href="css/slick/slick-theme.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload">
+    <noscript>
+        <link href="css/slick/slick.css" rel="stylesheet">
+        <link href="css/slick/slick-theme.css" rel="stylesheet">
+    </noscript>
+    <!-- Inline critical CSS for preloader and basic layout -->
     <style>
-        .content {
-          margin: auto;
-          padding: 20px;
-          width: 80%;
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: #fff;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
-        .blue {
-          background: #3498db;
-          color: #fff;
+        .cssload-container {
+            width: 40px; height: 40px; position: relative;
         }
-        .blue h3 {
-          background: #fff;
-          color: #3498db;
-          font-size: 36px;
-          line-height: 100px;
-          margin: 10px;
-          padding: 2%;
-          position: relative;
-          text-align: center;
+        .cssload-speeding-wheel {
+            width: 100%; height: 100%;
+            border: 4px solid #3498db;
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
         }
-        .slick-slider {
-          margin: 30px auto 50px;
+        @keyframes spin { 0% { transform: rotate(0deg);} 100% { transform: rotate(360deg);} }
+        .preloader p {
+            margin-top: 15px;
+            font-family: 'Poppins', sans-serif;
+            color: #3498db;
+            font-size: 16px;
         }
-        .slick-slide .image {
-          padding: 15px;
-          margin: 0 10px;
-        }
-        .slick-slide img {
-          border: 5px solid #fff;
-          display: block;
-          width: 100%;
-        }
-        .slick-slide img.slick-loading {
-          border: 0;
-        }
-        .slick-prev {
-          left: -35px;
-        }
-        .slick-prev:before,
-        .slick-next:before {
-          font-size: 40px;
-        }
-        .image {
-          background: white;
-          border: 6px solid #000;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .image img {
-          margin: 0 auto;
-          height: auto;
-          border: 0;
-          vertical-align: middle;
-        }
-        .image-block {
-          overflow: hidden;
-          position: relative;
-          transition: all 0.3s ease;
-          vertical-align: top;
-          display: inline-block;
-          background-color: #fff;
-        }
-       .product-detail-wrapper {
-          text-align: center;
-          padding: 20px 0 0;
-        }
-       .price-amount {
-          color: #000;
-          font-weight: 600;
-       }
+
+        /* Basic layout & preloader styles */
+        .ie-panel { display:none; background:#212121; padding:10px 0; box-shadow:3px3px5px rgba(0,0,0,.3); text-align:center; position:relative; z-index:1; }
+        html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel { display:block; }
+
+        .content{margin:auto;padding:20px;width:80%}
+        .blue{background:#3498db;color:#fff}
+        .blue h3{background:#fff;color:#3498db;font-size:36px;line-height:100px;margin:10px;padding:2%;text-align:center;position:relative;}
+        .slick-slider{margin:30px auto 50px}
+        .slick-slide .image{padding:15px;margin:0 10px}
+        .slick-slide img{border:5px solid #fff;display:block;width:100%}
+        .slick-slide img.slick-loading{border:0}
+        .slick-prev{left:-35px}
+        .slick-prev:before, .slick-next:before{font-size:40px}
+        .image{background:white;border:6px solid #000;box-shadow:0 4px 8px rgba(0,0,0,.2),0 6px 20px rgba(0,0,0,.19)}
+        .image img{margin:0 auto;height:auto;border:0;vertical-align:middle}
+        .image-block{overflow:hidden;position:relative;transition:all 0.3s ease;display:inline-block;background-color:#fff;vertical-align:top}
+        .product-detail-wrapper{text-align:center;padding:20px 0 0}
+        .price-amount{color:#000;font-weight:600}
+      .slider .image {
+    margin: 0 10px; /* horizontal gap between slides */
+}
+
+.slider .image-block {
+    background: #fff;
+    border: 2px solid #000;
+    box-shadow: 0 4px 8px rgba(0,0,0,.2), 0 6px 20px rgba(0,0,0,.19);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 15px; /* add padding inside border */
+}
+
+.slider .image-block img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
 
     </style>
-
 </head>
 <body>
 <div class="preloader">
-    <div class="preloader-body">
-        <div class="cssload-container">
-            <div class="cssload-speeding-wheel"></div>
-        </div>
-        <p>Loading...</p>
+    <div class="cssload-container">
+        <div class="cssload-speeding-wheel"></div>
     </div>
+    <p>Loading...</p>
 </div>
-<div class="page main-container">
-    <!-- Page Header-->
+
+<div class="page main-container" style="display:none;">
+    <!-- Header -->
     <header class="section page-header">
-        <!-- RD Navbar-->
-        <div class="rd-navbar-wrap">
-            <nav class="rd-navbar rd-navbar-aside" data-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static"
-                 data-lg-layout="rd-navbar-static" data-lg-stick-up="true"
-                 data-lg-stick-up-offset="46px" data-md-device-layout="rd-navbar-fixed"
-                 data-md-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
-                 data-xl-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-stick-up="true"
-                 data-xl-stick-up-offset="46px" data-xxl-stick-up="true" data-xxl-stick-up-offset="46px">
-                <div class="rd-navbar-main-outer">
-                    <div class="rd-navbar-main">
-                        <!-- RD Navbar Panel-->
-                        <div class="rd-navbar-panel">
-                            <!-- RD Navbar Toggle-->
-                            <!--<button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>-->
-                            <!-- RD Navbar Brand-->
-                            <div class="rd-navbar-brand">
-                                <a href="index.html"><img alt="" class="brand-logo-light" height="57"
-                                                          src="images/logo-white.png" srcset="images/logo-white.png 2x" width="114"/></a>
-                                <h1 class="brand-title">Lucy Lu</h1>
-                            </div>
-
-                            <div class="block-right">
-                                <ul class="list-inline nav-list">
-                                    <li class="list-inline-item active"><a href="index.html">Home</a></li>
-                                    <li class="list-inline-item"><a href="vlogs.html">Vlogs</a></li>
-                                    <li class="list-inline-item"><a href="podcast.html">Podcast</a></li>
-                                    <li class="list-inline-item"><a href="gallery.html">Gallery</a></li>
-                                    <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-                                    <li class="list-inline-item"><a href="about.html">About</a></li>
-                                </ul>
-                                <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1"
-                                     data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
-                                <div class="rd-navbar-aside-outer rd-navbar-collapse">
-                                    <div class="rd-navbar-aside">
-                                        <ul class="list-inline header-soc-list">
-                                            <li><a class="icon fa-instagram"
-                                                   href="https://www.instagram.com/zenbeautifulart/"></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
+        <nav class="rd-navbar rd-navbar-aside" data-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+             data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main-outer">
+                <div class="rd-navbar-main">
+                    <div class="rd-navbar-panel">
+                        <div class="rd-navbar-brand">
+                            <a href="index.html"><img alt="" height="57"
+                                                      src="images/logo-white.png" srcset="images/logo-white.png 2x" width="114"></a>
+                            <h1 class="brand-title">Lucy Lu</h1>
                         </div>
-
-
+                        <ul class="list-inline nav-list">
+                            <li class="list-inline-item active"><a href="index.html">Home</a></li>
+                            <li class="list-inline-item"><a href="vlogs.html">Vlogs</a></li>
+                            <li class="list-inline-item"><a href="podcast.html">Podcast</a></li>
+                            <li class="list-inline-item"><a href="gallery.html">Gallery</a></li>
+                            <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+                            <li class="list-inline-item"><a href="about.html">About</a></li>
+                        </ul>
+                        <ul class="list-inline header-soc-list">
+                            <li><a class="icon fa-instagram" href="https://www.instagram.com/zenbeautifulart/"></a></li>
+                        </ul>
                     </div>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
-    <!-- 1.banner-->
-<!--    <section class="section section-lg section-main-bunner section-main-bunner-filter text-center">-->
-<!--        <div class="main-bunner-img" style="background-image: url(images/banner6.jpg);"></div>-->
-<!--        <div class="main-bunner-inner">-->
-<!--            <div class="container">-->
-<!--                <div class="box-default">-->
-<!--                    <h1 class="box-default-title">Live a Zen-Beautiful Life — Through Art, Calm, and Creation.</h1>-->
 
-<!--                    <p class="big box-default-text">Join me in celebrating mindful art and creativity that soothe the soul.</p>-->
-<!--                    <div class="box-default-decor"></div>-->
-<!--                    <a href="#journey" class="cta-btn">Join the Journey</a>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-    <!-- 2. link info to sign up -->
+    <!-- Join now section -->
     <section class="section section-lg bg-default">
         <div class="container">
             <div class="row justify-content-center text-center">
-                <div class="col-md-9 col-lg-7 wow-outer">
-                    <div class="wow slideInDown">
-                        <h2>Join now</h2>
-                        <h3 class="heading-title" style="text-align: center">What's New</h3>
-                    </div>
+                <div class="col-md-9 col-lg-7">
+                    <h2>Join now</h2>
+                    <h3 class="heading-title">What's New</h3>
                 </div>
             </div>
-
             <div class="row row-20 row-lg-30">
-                <div class="col-md-6 col-lg-6 wow-outer">
+                <div class="col-md-6 col-lg-6">
                     <h3>Escape Into Nature</h3>
                     <h4 style="margin-top: 15px">5 Free Watercolor Lessons for Beginners.</h4>
                     <p class="description">
-                        Learn how to paint peaceful nature scenes step by step — even if you’re completely new to watercolor. <br>
-                        You’ll discover essential techniques, brush control, and color mixing through 5 relaxing lessons designed to inspire joy in every stroke.
-
+                        Learn how to paint peaceful nature scenes step by step — even if you’re completely new to
+                        watercolor. <br>
+                        You’ll discover essential techniques, brush control, and color mixing through 5 relaxing lessons
+                        designed to inspire joy in every stroke.
                         Sign up today and begin your creative escape into watercolor.
-                         </p>
-
-                    <a class="button" href="https://zenbeautiful.life/signup-5-free-landscape-course" target="_blank">Click here for more info!</a>
-
+                    </p>
+                    <a class="button" href="https://zenbeautiful.life/signup-5-free-landscape-course" target="_blank">Click
+                        here for more info!</a>
                 </div>
-                <div class="col-md-6 col-lg-6 wow-outer">
-                    <img class="vc_single_image-img attachment-full" height="342"
-                         src="images/home/watercolor-landscape.jpeg"
-                         title="countdown-img"
-                         width="606"
-                    />
+                <div class="col-md-6 col-lg-6">
+                    <img alt="Watercolor Landscape" height="342" loading="lazy" src="images/home/watercolor-landscape.jpeg"
+                         width="606">
                 </div>
-
-
             </div>
         </div>
-
-
     </section>
-<!--    &lt;!&ndash; 2. Intro &ndash;&gt;-->
-<!--    <section class="section section-lg bg-default">-->
-<!--        <div class="container">-->
 
-<!--            <div class="row row-20 row-lg-30">-->
-<!--                <div class="col-md-6 col-lg-6 wow-outer">-->
-<!--                    <img class="vc_single_image-img attachment-full" height="342"-->
-<!--                         src="images/home/support-image.jpg"-->
-<!--                         title="countdown-img"-->
-<!--                         width="606"-->
-<!--                    />-->
-<!--                </div>-->
-<!--                <div class="col-md-6 col-lg-6 wow-outer">-->
-<!--                    <h3 class="title">About Zen Beautiful</h3>-->
-<!--                    <p class="description">-->
-<!--                        At Zen Beautiful, we believe that art is more than just a creative outlet—it’s a path to inner peace, personal growth, and self-expression. Our mission is to guide you on a transformative journey from beginner to confident artist, helping you find joy and calm in the creative process.-->
-
-<!--                        Through our unique blend of art tutorials and mindfulness practices, we encourage you to explore your artistic side, connect with your inner self, and experience the calming power of creation.-->
-<!--                    </p>-->
-<!--                    <p class="description">A little support goes a long way! If you’d like to help me keep creating, you can do so at <a href="https://ko-fi.com/zenbeautifulart"> Ko-fi Support me</a></p>-->
-
-<!--                    <a class="button" href="https://www.youtube.com/@ZenBeautifulArt" target="_blank">Find Zen Beautiful Art</a>-->
-
-<!--                </div>-->
-
-<!--            </div>-->
-<!--        </div>-->
-
-
-<!--    </section>-->
+    <!-- Product section -->
     <section class="section section-bg section-top-bg">
-        <!-- product section -->
+        <!-- Product section -->
         <div class="row justify-content-center text-center">
             <div class="col-md-9 col-lg-7 wow-outer">
                 <div class="wow slideInDown">
@@ -275,142 +191,97 @@
         </div>
         <div class="container">
             <div class="slider lazy">
-                <div>
-                    <div class="image">
-                        <div class="image-block">
-
-                            <img data-lazy="./images/products/Goldfish-1.jpg"/>
-                        </div>
+                <!-- Slide example -->
+                <div class="image">
+                    <div class="image-block">
+                        <img alt="Goldfish Painting" data-lazy="./images/products/Goldfish-1.jpg">
                     </div>
                 </div>
-
-                <div>
-                    <div class="image">
-                        <div class="image-block">
-
-                            <img data-lazy="./images/products/Peony-4.jpg"/>
-                        </div>
+                <div class="image">
+                    <div class="image-block">
+                        <img alt="Peony Painting" data-lazy="./images/products/Peony-4.jpg">
                     </div>
                 </div>
-                <div>
-                    <div class="image">
-                        <div class="image-block">
-
-                            <img data-lazy="./images/products/Koi-fish-1.jpg"/>
-                        </div>
+                <div class="image">
+                    <div class="image-block">
+                        <img alt="Koi Painting" data-lazy="./images/products/Koi-fish-1.jpg">
                     </div>
                 </div>
-                <div>
-                    <div class="image">
-                        <div class="image-block">
-
-                            <img data-lazy="./images/products/Goldfish-3.jpg"/>
-                        </div>
+                <div class="image">
+                    <div class="image-block">
+                        <img data-lazy="./images/products/Goldfish-3.jpg" alt="Goldfish Painting">
                     </div>
                 </div>
-                <div>
-                    <div class="image">
-                        <div class="image-block">
-
-                            <img data-lazy="./images/products/Goldfish-2.jpg"/>
-                        </div>
+                <div class="image">
+                    <div class="image-block">
+                        <img data-lazy="./images/products/Goldfish-2.jpg" alt="Goldfish Painting">
                     </div>
                 </div>
-                <div>
-                    <div class="image">
-                        <div class="image-block">
-
-                            <img data-lazy="./images/products/Peony-1.jpg"/>
-                        </div>
+                <div class="image">
+                    <div class="image-block">
+                        <img data-lazy="./images/products/Peony-1.jpg" alt="Peony Painting">
                     </div>
                 </div>
-                <div>
-                    <div class="image">
-                        <div class="image-block">
-
-                            <img data-lazy="./images/products/Peony-2.jpg"/>
-                        </div>
+                <div class="image">
+                    <div class="image-block">
+                        <img data-lazy="./images/products/Peony-2.jpg" alt="Peony Painting">
                     </div>
                 </div>
-                <div>
-                    <div class="image">
-                        <div class="image-block">
-
-                            <img data-lazy="./images/products/Peony-3.jpg"/>
-                        </div>
+                <div class="image">
+                    <div class="image-block">
+                        <img data-lazy="./images/products/Peony-3.jpg" alt="Peony Painting">
                     </div>
                 </div>
-
-                <div>
-                    <div class="image">
-                        <div class="image-block">
-
-                            <img data-lazy="./images/products/Rose.jpg"/>
-                        </div>
+                <div class="image">
+                    <div class="image-block">
+                        <img data-lazy="./images/products/Rose.jpg" alt="Rose Painting">
                     </div>
                 </div>
-
-                <div>
-                    <div class="image">
-                        <div class="image-block">
-
-                            <img data-lazy="./images/products/Koi-fish-2.jpg"/>
-                        </div>
+                <div class="image">
+                    <div class="image-block">
+                        <img data-lazy="./images/products/Koi-fish-2.jpg" alt="Koi Painting">
                     </div>
                 </div>
-                <div>
-                    <div class="image">
-                        <div class="image-block">
-                            <img data-lazy="./images/products/Koi-fish-3.jpg"/>
-                        </div>
-
+                <div class="image">
+                    <div class="image-block">
+                        <img data-lazy="./images/products/Koi-fish-3.jpg" alt="Koi Painting">
                     </div>
                 </div>
-                <div>
-                    <div class="image">
-                        <div class="image-block">
-
-                            <img data-lazy="./images/products/Serene-Shadows.jpg"/>
-                        </div>
+                <div class="image">
+                    <div class="image-block">
+                        <img data-lazy="./images/products/Serene-Shadows.jpg" alt="Serene Shadows Painting">
                     </div>
                 </div>
-                <div>
-                    <div class="image">
-                        <div class="image-block">
-
-                            <img data-lazy="./images/products/Serenity.jpg"/>
-                        </div>
+                <div class="image">
+                    <div class="image-block">
+                        <img data-lazy="./images/products/Serenity.jpg" alt="Serenity Painting">
                     </div>
                 </div>
-                <div>
-                    <div class="image">
-                        <div class="image-block">
-
-                            <img data-lazy="./images/products/Water-lily.jpg"/>
-                        </div>
+                <div class="image">
+                    <div class="image-block">
+                        <img data-lazy="./images/products/Water-lily.jpg" alt="Water Lily Painting">
                     </div>
                 </div>
+                <!-- Add remaining slides in the same format -->
             </div>
         </div>
-
     </section>
-    <!-- 5.subscribe -->
-    <section class="section ">
 
 
+    <!-- Subscribe section -->
+    <section class="section">
         <div class="container">
             <div class="row justify-content-center text-center">
-                <div class="col-md-9 col-lg-7 wow-outer">
-                    <div class="wow slideInDown">
-                        <h2>Subscribe</h2>
-                        <h3 class="heading-title" style="text-align: center">Let's Be Friends</h3>
-                        <h4 class="newsletter-des">Subscribe on Youtube for new videos every week!</h4>
-                        <a class="button" href="https://www.youtube.com/@ZenBeautifulArt" target="_blank">Find Zen Beautiful Art</a>
-                    </div>
+                <div class="col-md-9 col-lg-7">
+                    <h2>Subscribe</h2>
+                    <h3 class="heading-title">Let's Be Friends</h3>
+                    <h4 class="newsletter-des">Subscribe on Youtube for new videos every week!</h4>
+                    <a class="button" href="https://www.youtube.com/@ZenBeautifulArt" target="_blank">Find Zen Beautiful
+                        Art</a>
                 </div>
             </div>
             <div class="row justify-content-center text-center">
-                <div class="col-md-9 col-lg-7 wow-outer">
+                <div class="col-md-9 col-lg-7">
                     <div class="subscribe-container">
                         <img class="vc_single_image-img attachment-full" height="315" src="images/home/thank-note.png"
                              width="100%"/>
@@ -419,131 +290,50 @@
             </div>
         </div>
     </section>
-    <!-- 4. Latest video-->
-<!--    <section class="section bg-default section-bottom-bg">-->
-<!--        <div class="container">-->
-<!--            <div class="row justify-content-center text-center">-->
-<!--                <div class="col-md-9 col-lg-7 wow-outer">-->
-<!--                    <div class="wow slideInDown">-->
-<!--                        <h2>View now</h2>-->
-<!--                        <h3 class="heading-title" style="text-align: center">New series</h3>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row row-20 row-lg-30">-->
-<!--                <div class="col-md-6 col-lg-4 wow-outer">-->
-<!--                    <div class="wow fadeInUp">-->
-<!--                        <div class="product-featured">-->
-<!--                            <div class="product-featured-figure">-->
-<!--                                <a href="https://youtu.be/FsGVtG3ErCc" target="_blank"><img alt=""-->
-<!--                                                                                            height="400" src="images/latest/1.jpg"-->
-<!--                                                                                            width="600"/></a>-->
 
-<!--                            </div>-->
-<!--                            <div class="post-info">-->
-<!--                                <div class="text-block">-->
-<!--                                    <h3 class="product-name">-->
-<!--                                        <a href="https://youtu.be/FsGVtG3ErCc" target="_blank">#95|15-Minute Watercolor Flowers</a>-->
-<!--                                    </h3>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-md-6 col-lg-4 wow-outer">-->
-<!--                    <div class="wow fadeInUp">-->
-<!--                        <div class="product-featured">-->
-<!--                            <div class="product-featured-figure">-->
-<!--                                <a href="https://youtu.be/HG_eo36fblI" target="_blank"><img alt=""-->
-<!--                                                                                            height="400" src="images/latest/2.jpg"-->
-<!--                                                                                            width="600"/></a>-->
-
-<!--                            </div>-->
-<!--                            <div class="post-info">-->
-<!--                                <div class="text-block">-->
-<!--                                    <h3 class="product-name">-->
-<!--                                        <a href="https://youtu.be/HG_eo36fblI" target="_blank">#94 Feeling overwhelmed or stuck?</a>-->
-<!--                                    </h3>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="col-md-6 col-lg-4 wow-outer">-->
-<!--                    <div class="wow fadeInUp">-->
-<!--                        <div class="product-featured">-->
-<!--                            <div class="product-featured-figure">-->
-<!--                                <a href="https://youtu.be/c5ec62k0IEY" target="_blank"><img alt=""-->
-<!--                                                                                            height="400" src="images/latest/3.jpg"-->
-<!--                                                                                            width="600"/></a>-->
-
-<!--                            </div>-->
-<!--                            <div class="post-info">-->
-<!--                                <div class="text-block">-->
-<!--                                    <h3 class="product-name">-->
-<!--                                        <a href="https://youtu.be/c5ec62k0IEY" target="_blank">#62 Step-by-Step Cherry Blossom Watercolor Tutorial</a>-->
-<!--                                    </h3>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
-
-
-
-
-
-    <!-- Page Footer-->
+    <!-- Footer -->
     <footer class="section footer-minimal context-dark">
-        <div class="container wow-outer">
-            <div class="wow fadeIn">
-                <div class="row row-60">
-                    <div class="col-12"><a class="brand-logo-title" href="../index.html">zenbeautiful.life</a>
-                    </div>
-                    <div class="col-12">
-                        <ul class="footer-minimal-nav">
-                            <li><a href="termsAndConditions.html">Terms and Conditions</a></li>
-                            <li><a href="privacyPolicy.html">Privacy Policy</a></li>
-                            <li><a href="pages/contacts.html">Contacts</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-12">
-                        <ul class="social-list">
-                            <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-black fa-instagram"
-                                   href="https://www.instagram.com/zenbeautifulart/"></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <p class="rights"><span>&copy;&nbsp; </span><span
-                        class="copyright-year"></span><span>&nbsp;</span><span>zenbeautiful.life</span><span>.&nbsp;</span><a
-                        href="privacy-policy.html">Privacy Policy</a></p>
-            </div>
+        <div class="container text-center">
+            <a class="brand-logo-title" href="../index.html">zenbeautiful.life</a>
+            <ul class="footer-minimal-nav">
+                <li><a href="termsAndConditions.html">Terms and Conditions</a></li>
+                <li><a href="privacyPolicy.html">Privacy Policy</a></li>
+                <li><a href="pages/contacts.html">Contacts</a></li>
+            </ul>
+            <p class="rights">&copy; <span class="copyright-year"></span> zenbeautiful.life. <a
+                    href="privacy-policy.html">Privacy Policy</a></p>
         </div>
     </footer>
 </div>
-<script src="js/lib/core.min.js"></script>
-<script src="js/lib/script.js"></script>
-<script src="js/lib/jquery-1.12.4.min.js"></script>
-<script src="js/lib/jquery-migrate.min.js"></script>
-<script src="js/lib/slick.min.js" type="text/javascript"></script>
-<script>
-    $('.lazy').slick({
-  lazyLoad: 'ondemand',
-  slidesToShow: 3,
-  slidesToScroll: 1
-});
 
-</script>
-<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-    kofiWidgetOverlay.draw('zenbeautifulart', {
-      'type': 'floating-chat',
-      'floating-chat.donateButton.text': 'Support me',
-      'floating-chat.donateButton.background-color': '#5cb85c',
-      'floating-chat.donateButton.text-color': '#fff'
+<!-- JS -->
+<script defer src="js/lib/jquery-1.12.4.min.js"></script>
+<script defer src="js/lib/jquery-migrate.min.js"></script>
+<script defer src="js/lib/slick.min.js"></script>
+<script defer src="js/lib/core.min.js"></script>
+<script defer src="js/lib/script.js"></script>
+<script defer src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+
+<script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Hide preloader and show page
+        document.querySelector('.preloader').style.display = 'none';
+        document.querySelector('.page.main-container').style.display = 'block';
+
+        // Initialize slider
+        $('.lazy').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 3,
+            slidesToScroll: 1
+        });
+
+        // Ko-fi widget
+        kofiWidgetOverlay.draw('zenbeautifulart', {
+            'type': 'floating-chat',
+            'floating-chat.donateButton.text': 'Support me',
+            'floating-chat.donateButton.background-color': '#5cb85c',
+            'floating-chat.donateButton.text-color': '#fff'
+        });
     });
 </script>
 </body>
