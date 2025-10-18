@@ -613,6 +613,10 @@
     content: "\f05e";
 }
 
+.fa-magnifying-glass:before {
+  content: "\f002";
+}
+
 .fa-arrow-left:before {
     content: "\f060";
 }
