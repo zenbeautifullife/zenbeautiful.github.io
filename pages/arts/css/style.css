@@ -11934,7 +11934,7 @@ html[data-x-mode]:not(.lt-ie10) .not-animated {
 
 .isotope-filters {
 	position: relative;
-	display: inline-block;
+	/*display: inline-block; */
 }
 
 .isotope-filters-list {
@@ -12003,7 +12003,6 @@ html[data-x-mode]:not(.lt-ie10) .not-animated {
 		border-radius: 0;
 		box-shadow: none;
 		margin-bottom: 0;
-		border-bottom: 1px solid #d9d9d9;
 	}
 	.isotope-filters-horizontal .isotope-filters-list > li,
 	.isotope-filters-vertical .isotope-filters-list > li {
