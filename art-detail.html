@@ -20,9 +20,8 @@
 
     <style>
         body {
-          background-color: #fff;
+<!--          background-color: #fff;-->
           font-family: 'Lato', sans-serif;
-          padding: 40px;
         }
 
         .art-detail-container {
@@ -32,6 +31,7 @@
           gap: 40px;
           max-width: 1200px;
           margin: 0 auto;
+          padding: 60px 0;
         }
 
 
@@ -39,8 +39,8 @@
           position: relative;
           overflow: hidden;
           flex: 1 1 45%;
-          max-width: 600px;
-          height: 500px; /* Adjust height as needed */
+          max-width: 500px;
+          height: 600px; /* Adjust height as needed */
           cursor: zoom-in; /* This changes cursor to a magnifying glass */
         }
 
@@ -89,8 +89,15 @@
     </style>
 </head>
 <body>
-
-<div class="art-detail-container">
+<div class="preloader">
+    <div class="preloader-body">
+        <div class="cssload-container">
+            <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Loading...</p>
+    </div>
+</div>
+<div class="page">
     <!-- Page Header-->
     <header class="section page-header">
         <!-- RD Navbar-->
@@ -141,55 +148,62 @@
             </nav>
         </div>
     </header>
-    <div class="art-image">
-        <img id="artImage" src="pages/arts/gallery/fish/Dance-of-Two-Goldfish.jpg" alt="Artwork">
-    </div>
+    <section class="section section-xl bg-default">
+        <div class="art-detail-container">
 
-    <div class="art-info">
-        <h2 id="artTitle">Artwork Title</h2>
-        <p id="artDescription">Artwork description will appear here.</p>
-        <a href="gallery.html" class="back-link">&larr; Back to Gallery</a>
-    </div>
-    <!-- Page Footer-->
-    <footer class="section footer-minimal context-dark">
-        <div class="container wow-outer">
-            <div class="wow fadeIn">
-                <div class="row row-60">
-                    <div class="col-12"><a class="brand-logo-title" href="../../index.html">zenbeautiful.life</a></div>
-                    <div class="col-12">
-                        <ul class="footer-minimal-nav">
-                            <li><a href="pages/termsAndConditions.html">Terms and Conditions</a></li>
-                            <li><a href="pages/privacyPolicy.html">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-12">
-                        <ul class="social-list">
-                            <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-black fa-instagram"
-                                   href="https://www.instagram.com/zenbeautifulart/"></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>zenbeautiful.life</span></p>
+            <div class="art-image">
+                <img alt="Artwork" id="artImage" src="pages/arts/gallery/fish/Dance-of-Two-Goldfish.jpg">
             </div>
-        </div>
-    </footer>
-</div>
 
+            <div class="art-info">
+                <h2 id="artTitle">Artwork Title</h2>
+                <p id="artDescription">Artwork description will appear here.</p>
+                <a class="back-link" href="gallery.html">&larr; Back to Gallery</a>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+<!-- Page Footer-->
+<footer class="section footer-minimal context-dark">
+    <div class="container wow-outer">
+        <div class="wow fadeIn">
+            <div class="row row-60">
+                <div class="col-12"><a class="brand-logo-title" href="../../index.html">zenbeautiful.life</a></div>
+                <div class="col-12">
+                    <ul class="footer-minimal-nav">
+                        <li><a href="pages/termsAndConditions.html">Terms and Conditions</a></li>
+                        <li><a href="pages/privacyPolicy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <ul class="social-list">
+                        <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-black fa-instagram"
+                               href="https://www.instagram.com/zenbeautifulart/"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>zenbeautiful.life</span>
+            </p>
+        </div>
+    </div>
+</footer>
 <script>
     // Extract query parameters from URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const title = decodeURIComponent(urlParams.get('title') || 'Artwork');
-    const img = decodeURIComponent(urlParams.get('img') || '');
-    const desc = decodeURIComponent(urlParams.get('desc') || '');
+<!--    const urlParams = new URLSearchParams(window.location.search);-->
+<!--    const title = decodeURIComponent(urlParams.get('title') || 'Artwork');-->
+<!--    const img = decodeURIComponent(urlParams.get('img') || '');-->
+<!--    const desc = decodeURIComponent(urlParams.get('desc') || '');-->
 
-    // Populate the content
-    const artTitle = document.getElementById('artTitle');
-    const artImage = document.getElementById('artImage');
-    const artDescription = document.getElementById('artDescription');
+<!--    // Populate the content-->
+<!--    const artTitle = document.getElementById('artTitle');-->
+<!--    const artImage = document.getElementById('artImage');-->
+<!--    const artDescription = document.getElementById('artDescription');-->
 
-    artTitle.textContent = title;
-    artImage.src = img;
-    artDescription.textContent = desc;
+<!--    artTitle.textContent = title;-->
+<!--    artImage.src = img;-->
+<!--    artDescription.textContent = desc;-->
 
     // Zoom effect on mouse move
     const container = document.querySelector('.art-image');
@@ -210,6 +224,7 @@
       artImage.style.transformOrigin = 'center center';
     });
 </script>
-
+<script src="js/lib/core.min.js"></script>
+<script src="js/lib/script.js"></script>
 </body>
 </html>
