@@ -124,67 +124,15 @@
         </div>
     </header>
 
-    <section class="section section-xl bg-default">
-        <!-- Portfolio-->
-        <section class="section-85">
-            <div class="row justify-content-center text-center">
-                <div class="col-md-9 col-lg-7 wow-outer">
-                    <div class="wow slideInDown">
-                        <h3 class="heading-title" style="text-align: center">Portfolio of Works</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid">
-                <h1 class="fw-bold">Originals</h1>
+    <div class="art-image">
+        <img id="artImage" src="" alt="Artwork">
+    </div>
 
-                <div class="offset-top-30">
-                    <div class="isotope-wrap">
-
-                        <!-- ===== Categories moved to top ===== -->
-                        <div class="isotope-filters isotope-filters-horizontal">
-                            <h4 class="text-uppercase fw-bold isotope-filters-title">Categories</h4>
-                            <ul class="list-inline list-inline-sm isotope-filters-list" id="isotope-53">
-                                <li class="list-inline-item"><a class="fw-bold active" data-isotope-filter="*" href="#">All originals</a></li>
-                                <li class="list-inline-item"><a class="fw-bold" data-isotope-filter="Fish" href="#">Fish</a></li>
-                                <li class="list-inline-item"><a class="fw-bold" data-isotope-filter="Bird" href="#">Bird</a></li>
-                                <li class="list-inline-item"><a class="fw-bold" data-isotope-filter="Flower" href="#">Flower</a></li>
-                                <li class="list-inline-item"><a class="fw-bold" data-isotope-filter="Landscape" href="#">Landscape</a></li>
-                                <li class="list-inline-item"><a class="fw-bold" data-isotope-filter="Others" href="#">Others</a></li>
-                            </ul>
-                        </div>
-                        <!-- =============================== -->
-
-                        <!-- Isotope Content -->
-                        <!-- Isotope Content -->
-                        <div class="isotope" data-isotope-layout="masonry">
-                            <div class="row" data-lightgallery="group">
-                                <div class="col-12 col-md-6 col-xl-4 isotope-item" data-filter="Fish">
-                                    <div class="thumbnail-apollo">
-                                        <a href="art-detail.html?title=Dance%20of%20Two%20Goldfish&img=pages/arts/gallery/fish/Dance-of-Two-Goldfish.jpg&desc=Watercolor%20on%20Paper%20(23cm%20x%2030.5cm)">
-                                            <img
-                                                    alt="Dance of Two Goldfish"
-                                                    class="example-image"
-                                                    src="pages/arts/gallery/fish/Dance-of-Two-Goldfish-s.jpg"/>
-                                            <figcaption>
-                                                <div>
-                                                    <h4 class="thumbnail-apollo-title">Dance of Two Goldfish</h4>
-                                                </div>
-                                                <p class="small">Watercolor on Paper</p>
-                                                <p class="small">23cm x 30.5cm</p>
-                                                <span class="novi-icon icon icon-xxs d-none d-md-inline-block fa-solid fa-magnifying-glass"></span>
-                                            </figcaption>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
+    <div class="art-info">
+        <h2 id="artTitle">Artwork Title</h2>
+        <p id="artDescription">Artwork description will appear here.</p>
+        <a href="gallery.html" class="back-link">&larr; Back to Gallery</a>
+    </div>
 </div>
 
 <!-- Page Footer-->
@@ -213,6 +161,40 @@
 
 <script src="js/lib/core.min.js"></script>
 <script src="js/lib/script.js"></script>
+<script>
+    // Extract query parameters from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const title = decodeURIComponent(urlParams.get('title') || 'Artwork');
+    const img = decodeURIComponent(urlParams.get('img') || '');
+    const desc = decodeURIComponent(urlParams.get('desc') || '');
 
+    // Populate the content
+    const artTitle = document.getElementById('artTitle');
+    const artImage = document.getElementById('artImage');
+    const artDescription = document.getElementById('artDescription');
+
+    artTitle.textContent = title;
+    artImage.src = img;
+    artDescription.textContent = desc;
+
+    // Zoom effect on mouse move
+    const container = document.querySelector('.art-image');
+
+    container.addEventListener('mousemove', (e) => {
+      const { offsetX, offsetY } = e;
+      const { clientWidth, clientHeight } = container;
+
+      const xPercent = (offsetX / clientWidth) * 100;
+      const yPercent = (offsetY / clientHeight) * 100;
+
+      artImage.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+      artImage.style.transform = 'scale(1.5)';
+    });
+
+    container.addEventListener('mouseleave', () => {
+      artImage.style.transform = 'scale(1)';
+      artImage.style.transformOrigin = 'center center';
+    });
+</script>
 </body>
 </html>
