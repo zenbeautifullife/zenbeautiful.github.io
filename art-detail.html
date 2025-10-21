@@ -12,67 +12,85 @@
     <link href="pages/arts/js/lightbox2/lightbox.css" rel="stylesheet"/>
     <link href="//fonts.googleapis.com/css?family=Questrial%7CPlayfair+Display:400,700%7CLato:400,300" rel="stylesheet"
           type="text/css">
-    <link href="pages/arts/css/bootstrap.css" rel="stylesheet">
-    <link href="pages/arts/css/fonts.css" rel="stylesheet">
+
     <link href="pages/arts/css/style.css" rel="stylesheet">
+    <link href="pages/arts/css/bootstrap.css" rel="stylesheet">
+    <link href="pages/arts/css/style.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Questrial%7CPlayfair+Display:400,700%7CLato:400,300" rel="stylesheet">
+
     <style>
-        .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;}
-        html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
-
-        /* === NEW ADDED STYLES FOR TOP FILTERS === */
-        .isotope-filters-horizontal {
-            position: sticky;
-            top: 80px; /* adjust depending on your header height */
-            z-index: 10;
-            padding: 15px 0;
-            text-align: center;
+        body {
+          background-color: #fff;
+          font-family: 'Lato', sans-serif;
+          padding: 40px;
         }
 
-        .isotope-filters-horizontal h4 {
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            font-weight: 700;
+        .art-detail-container {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: flex-start;
+          gap: 40px;
+          max-width: 1200px;
+          margin: 0 auto;
         }
 
-        .isotope-filters-horizontal .list-inline-item {
-            margin: 5px 10px;
+
+        .art-image {
+          position: relative;
+          overflow: hidden;
+          flex: 1 1 45%;
+          max-width: 600px;
+          height: 500px; /* Adjust height as needed */
+          cursor: zoom-in; /* This changes cursor to a magnifying glass */
         }
 
-        .isotope-filters-horizontal .list-inline-item a {
-            text-transform: uppercase;
-            color: #333;
-            padding: 6px 14px;
-            border: 1px solid transparent;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            font-weight: 600;
+        .art-image img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.5s ease; /* Smooth transition for both hover and leave */
         }
 
-        .isotope-filters-horizontal .list-inline-item a:hover,
-        .isotope-filters-horizontal .list-inline-item a.active {
-            color: #000;
+        /* Art info */
+        .art-info {
+          flex: 1 1 45%;
         }
 
-        /* To ensure isotope items have space after sticky filters */
-        .isotope-wrap {
-            margin-top: 40px;
+        .art-info h2 {
+          font-family: 'Playfair Display', serif;
+          font-size: 2rem;
+          margin-bottom: 20px;
+        }
+
+        .art-info p {
+          font-size: 1.1rem;
+          line-height: 1.6;
+          color: #444;
+        }
+
+        .back-link {
+          display: inline-block;
+          margin-top: 30px;
+          padding: 10px 18px;
+          border: 1px solid #333;
+          border-radius: 25px;
+          text-decoration: none;
+          color: #333;
+          transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+          background-color: #333;
+          color: #fff;
         }
     </style>
-
-    <script src="pages/arts/js/lightbox2/lightbox-plus-jquery.js"></script>
-    <script src="pages/arts/js/lightbox2/lightbox.js"></script>
 </head>
 <body>
-<div class="preloader">
-    <div class="preloader-body">
-        <div class="cssload-container">
-            <div class="cssload-speeding-wheel"></div>
-        </div>
-        <p>Loading...</p>
-    </div>
-</div>
-<div class="page">
+
+<div class="art-detail-container">
     <!-- Page Header-->
     <header class="section page-header">
         <!-- RD Navbar-->
@@ -123,9 +141,8 @@
             </nav>
         </div>
     </header>
-
     <div class="art-image">
-        <img id="artImage" src="" alt="Artwork">
+        <img id="artImage" src="pages/arts/gallery/fish/Dance-of-Two-Goldfish.jpg" alt="Artwork">
     </div>
 
     <div class="art-info">
@@ -133,34 +150,31 @@
         <p id="artDescription">Artwork description will appear here.</p>
         <a href="gallery.html" class="back-link">&larr; Back to Gallery</a>
     </div>
+    <!-- Page Footer-->
+    <footer class="section footer-minimal context-dark">
+        <div class="container wow-outer">
+            <div class="wow fadeIn">
+                <div class="row row-60">
+                    <div class="col-12"><a class="brand-logo-title" href="../../index.html">zenbeautiful.life</a></div>
+                    <div class="col-12">
+                        <ul class="footer-minimal-nav">
+                            <li><a href="pages/termsAndConditions.html">Terms and Conditions</a></li>
+                            <li><a href="pages/privacyPolicy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <ul class="social-list">
+                            <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-black fa-instagram"
+                                   href="https://www.instagram.com/zenbeautifulart/"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>zenbeautiful.life</span></p>
+            </div>
+        </div>
+    </footer>
 </div>
 
-<!-- Page Footer-->
-<footer class="section footer-minimal context-dark">
-    <div class="container wow-outer">
-        <div class="wow fadeIn">
-            <div class="row row-60">
-                <div class="col-12"><a class="brand-logo-title" href="../../index.html">zenbeautiful.life</a></div>
-                <div class="col-12">
-                    <ul class="footer-minimal-nav">
-                        <li><a href="pages/termsAndConditions.html">Terms and Conditions</a></li>
-                        <li><a href="pages/privacyPolicy.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-12">
-                    <ul class="social-list">
-                        <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-black fa-instagram"
-                               href="https://www.instagram.com/zenbeautifulart/"></a></li>
-                    </ul>
-                </div>
-            </div>
-            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>zenbeautiful.life</span></p>
-        </div>
-    </div>
-</footer>
-
-<script src="js/lib/core.min.js"></script>
-<script src="js/lib/script.js"></script>
 <script>
     // Extract query parameters from URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -196,5 +210,6 @@
       artImage.style.transformOrigin = 'center center';
     });
 </script>
+
 </body>
 </html>
