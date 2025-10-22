@@ -21,8 +21,6 @@
     <style>
         body {
           font-family: 'Lato', sans-serif;
-
-<!--          color: #333;-->
         }
 
         .art-detail-container {
@@ -52,6 +50,7 @@
           top: 0; left: 0;
           width: 100%;
           height: 100%;
+          overflow: hidden;
         }
 
         .slide img {
@@ -59,12 +58,13 @@
           height: 100%;
           object-fit: cover;
           transition: transform 0.5s ease;
+          transform-origin: center center;
           cursor: zoom-in;
         }
 
-        /* Zoom on hover */
-        .slide img:hover {
-          transform: scale(1.2);
+        /* Zoom effect */
+        .slide img.zoomed {
+          transform: scale(2);
         }
 
         /* Navigation buttons */
@@ -82,6 +82,7 @@
           background-color: rgba(255,255,255,0.7);
           user-select: none;
           transition: background-color 0.3s;
+          z-index: 2;
         }
 
         .prev:hover, .next:hover {
@@ -98,6 +99,9 @@
           position: absolute;
           bottom: 15px;
           width: 100%;
+          .active, .dot:hover {
+          background-color: #333;
+        }
         }
 
         .dot {
@@ -111,9 +115,7 @@
           transition: background-color 0.3s;
         }
 
-        .active, .dot:hover {
-          background-color: #333;
-        }
+
 
         /* Art Info */
         .art-info {
@@ -224,22 +226,21 @@
 
     <section class="section section-xl bg-default">
         <div class="art-detail-container">
-
             <!-- Slideshow -->
             <div class="slideshow-container">
                 <div class="slide">
-                    <img alt="Artwork 1" src="pages/arts/gallery/fish/Dance-of-Two-Goldfish.jpg">
+                    <img src="pages/arts/gallery/fish/Dance-of-Two-Goldfish.jpg" alt="Artwork 1">
                 </div>
                 <div class="slide">
-                    <img alt="Artwork 2" src="pages/arts/gallery/fish/Dance-of-Two-Goldfish-mockup.jpg">
+                    <img src="pages/arts/gallery/fish/Dance-of-Two-Goldfish-mockup.jpg" alt="Artwork 2">
                 </div>
+
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
                 <div class="dots">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
             </div>
 
@@ -254,7 +255,6 @@
                 </p>
                 <a class="back-link" href="gallery.html">&larr; Back to Gallery</a>
             </div>
-
         </div>
     </section>
 
@@ -289,20 +289,38 @@
     function currentSlide(n) { showSlides(slideIndex = n); }
 
     function showSlides(n) {
-      let i;
       const slides = document.getElementsByClassName("slide");
       const dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
+      if (n > slides.length) slideIndex = 1;
+      if (n < 1) slideIndex = slides.length;
+      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+      for (let i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
     }
+
+    // Zoom follow-cursor behavior for all slide images
+    const slides = document.querySelectorAll('.slide img');
+
+    slides.forEach(img => {
+      const container = img.parentElement;
+
+      container.addEventListener('mousemove', e => {
+        const rect = container.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        img.style.transformOrigin = `${x}% ${y}%`;
+      });
+
+      container.addEventListener('mouseenter', () => {
+        img.classList.add('zoomed');
+      });
+
+      container.addEventListener('mouseleave', () => {
+        img.classList.remove('zoomed');
+        img.style.transformOrigin = 'center center';
+      });
+    });
 </script>
 
 <script src="js/lib/core.min.js"></script>
