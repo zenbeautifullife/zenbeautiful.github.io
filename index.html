@@ -20,22 +20,13 @@
     <!-- Preload fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
 
     <!-- Main CSS -->
     <link href="css/layout.css" rel="stylesheet">
     <link href="css/fonts.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Deferred CSS -->
-    <link as="style" href="css/slick/slick.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload">
-    <link as="style" href="css/slick/slick-theme.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload">
-    <noscript>
-        <link href="css/slick/slick.css" rel="stylesheet">
-        <link href="css/slick/slick-theme.css" rel="stylesheet">
-    </noscript>
     <!-- Inline critical CSS for preloader and basic layout -->
     <style>
         /* Preloader */
@@ -69,44 +60,179 @@
         }
 
         /* Basic layout & preloader styles */
-        .ie-panel { display:none; background:#212121; padding:10px 0; box-shadow:3px3px5px rgba(0,0,0,.3); text-align:center; position:relative; z-index:1; }
+        .ie-panel { display:none; background:#212121; padding:10px 0; box-shadow:3px 3px 5px rgba(0,0,0,.3); text-align:center; position:relative; z-index:1; }
         html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel { display:block; }
 
-        .content{margin:auto;padding:20px;width:80%}
-        .blue{background:#3498db;color:#fff}
-        .blue h3{background:#fff;color:#3498db;font-size:36px;line-height:100px;margin:10px;padding:2%;text-align:center;position:relative;}
-        .slick-slider{margin:30px auto 50px}
-        .slick-slide .image{padding:15px;margin:0 10px}
-        .slick-slide img{border:5px solid #fff;display:block;width:100%}
-        .slick-slide img.slick-loading{border:0}
-        .slick-prev{left:-35px}
-        .slick-prev:before, .slick-next:before{font-size:40px}
-        .image{background:white;border:6px solid #000;box-shadow:0 4px 8px rgba(0,0,0,.2),0 6px 20px rgba(0,0,0,.19)}
-        .image img{margin:0 auto;height:auto;border:0;vertical-align:middle}
-        .image-block{overflow:hidden;position:relative;transition:all 0.3s ease;display:inline-block;background-color:#fff;vertical-align:top}
-        .product-detail-wrapper{text-align:center;padding:20px 0 0}
-        .price-amount{color:#000;font-weight:600}
-      .slider .image {
-    margin: 0 10px; /* horizontal gap between slides */
-}
-
-.slider .image-block {
-    background: #fff;
-    border: 2px solid #000;
-    box-shadow: 0 4px 8px rgba(0,0,0,.2), 0 6px 20px rgba(0,0,0,.19);
-    overflow: hidden;
-    transition: all 0.3s ease;
-    padding: 15px; /* add padding inside border */
-}
-
-.slider .image-block img {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
-
-
+        .main-container { padding-top: 48px; }
+        .announcement-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1100;
+            background: linear-gradient(90deg, #264c44 0%, #5d7b68 100%);
+            color: #fff;
+            text-align: center;
+            padding: 12px 18px;
+            font-size: 15px;
+            line-height: 1.4;
+            font-family: 'Poppins', sans-serif;
+        }
+        .announcement-bar a {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+        .reset-landing {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #f6f6ef 0%, #fbfaf4 100%);
+        }
+        .landing-section {
+            padding: 36px 0;
+        }
+        .section-first {
+            margin-top: 120px;
+        }
+        .hero-title {
+            font-size: 46px;
+            line-height: 1.15;
+            color: #213b35;
+            margin-bottom: 18px;
+        }
+        .hero-subtitle {
+            font-size: 20px;
+            color: #445f58;
+            margin-bottom: 22px;
+        }
+        .hero-image {
+            border-radius: 18px;
+            box-shadow: 0 18px 40px rgba(33, 59, 53, .18);
+            width: 100%;
+            height: auto;
+        }
+        .course-bullets {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px;
+        }
+        .course-bullets li {
+            margin-bottom: 10px;
+            color: #2d4f47;
+            font-size: 17px;
+        }
+        .course-btn {
+            display: inline-block;
+            background: #2f6d5a;
+            color: #fff;
+            border: 2px solid #2f6d5a;
+            padding: 14px 26px;
+            border-radius: 999px;
+            font-weight: 600;
+            transition: all .2s ease;
+        }
+        .course-btn:hover {
+            background: transparent;
+            color: #2f6d5a;
+            text-decoration: none;
+        }
+        .micro-copy {
+            margin-top: 12px;
+            color: #5f675f;
+            font-size: 14px;
+        }
+        .soft-panel {
+            background: #fff;
+            border-radius: 18px;
+            padding: 36px;
+            border: 1px solid #e6e6dc;
+            box-shadow: 0 14px 30px rgba(50, 63, 54, .08);
+        }
+        .section-title {
+            color: #1f3f38;
+            margin-bottom: 18px;
+            font-size: 34px;
+        }
+        .section-text {
+            color: #435950;
+            font-size: 17px;
+            line-height: 1.75;
+        }
+        .paint-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 24px;
+        }
+        .paint-card {
+            background: #fff;
+            border: 1px solid #e7e4d8;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 10px 24px rgba(34, 44, 41, .08);
+        }
+        .paint-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .paint-card .caption {
+            padding: 14px;
+            color: #324d46;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .check-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .check-list li {
+            margin: 0 0 12px;
+            color: #324d46;
+            font-size: 17px;
+        }
+        .pricing-box {
+            text-align: center;
+            background: #eaf2ed;
+            border: 1px solid #d0dfd5;
+            border-radius: 22px;
+            padding: 42px 24px;
+        }
+        .price {
+            font-size: 44px;
+            color: #1f3f38;
+            margin: 12px 0;
+            font-weight: 600;
+        }
+        .divider-line {
+            border-top: 1px solid #dfe5dd;
+            margin: 24px 0;
+        }
+        .blog-promo {
+            background: #fff;
+            border: 1px dashed #9db4aa;
+            border-radius: 16px;
+            padding: 28px;
+            margin-top: 18px;
+        }
+        @media (max-width: 1199px) {
+            .paint-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        }
+        @media (max-width: 991px) {
+            .hero-title { font-size: 38px; }
+            .landing-section { padding: 58px 0; }
+            .paint-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 767px) {
+            .main-container { padding-top: 58px; }
+            .announcement-bar { font-size: 13px; padding: 10px 14px; }
+            .hero-title { font-size: 31px; }
+            .hero-subtitle { font-size: 17px; }
+            .paint-grid { grid-template-columns: 1fr; }
+            .soft-panel { padding: 24px; }
+            .section-title { font-size: 28px; }
+            .price { font-size: 38px; }
+        }
     </style>
 </head>
 <body>
@@ -115,6 +241,10 @@
         <div class="cssload-speeding-wheel"></div>
     </div>
     <p>Loading...</p>
+</div>
+
+<div class="announcement-bar">
+    New! Paint Away the Overwhelm - A 5-Day Watercolor Reset (Only $5) -> <a href="https://ko-fi.com/s/75b7f4b634" rel="noopener noreferrer" target="_blank">Join Here</a>
 </div>
 
 <div class="page main-container" style="display:none;">
@@ -147,161 +277,157 @@
         </nav>
     </header>
 
-    <!-- Join now section -->
-    <section class="section section-lg bg-default">
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-md-9 col-lg-7">
-                    <h2>Join now</h2>
-                    <h3 class="heading-title">What's New</h3>
+    <main class="reset-landing">
+        <section class="landing-section section-first">
+            <div class="container">
+                <div class="row align-items-center row-40">
+                    <div class="col-md-12 col-lg-6">
+                        <h1 class="hero-title">Paint Away the Overwhelm<br>A Gentle 5-Day Watercolor Reset</h1>
+                        <p class="hero-subtitle">
+                            Slow down, breathe, and reconnect with your creativity through five calming watercolor paintings.
+                        </p>
+                        <ul class="course-bullets">
+                            <li>Perfect for beginners</li>
+                            <li>Simple step-by-step painting videos</li>
+                            <li>Paint anytime at your own pace</li>
+                        </ul>
+                        <a class="course-btn" href="https://ko-fi.com/s/75b7f4b634" rel="noopener noreferrer" target="_blank">Join the 5-Day Reset - Only $5</a>
+                        <p class="micro-copy">Less than the cost of a cup of coffee.</p>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <img alt="Paint Away the Overwhelm watercolor preview" class="hero-image" src="images/home/5days/5day-course-post.png">
+                    </div>
                 </div>
             </div>
-            <div class="row row-20 row-lg-30">
-                <div class="col-md-6 col-lg-6">
-                    <h3>Escape Into Nature</h3>
-                    <h4 style="margin-top: 15px">5 Free Watercolor Lessons for Beginners.</h4>
-                    <p class="description">
-                        Learn how to paint peaceful nature scenes step by step — even if you’re completely new to
-                        watercolor. <br>
-                        You’ll discover essential techniques, brush control, and color mixing through 5 relaxing lessons
-                        designed to inspire joy in every stroke.
-                        Sign up today and begin your creative escape into watercolor.
+        </section>
+
+        <section class="landing-section">
+            <div class="container">
+                <div class="soft-panel">
+                    <h2 class="section-title">Feeling overwhelmed lately?</h2>
+                    <p class="section-text">
+                        When life feels busy or heavy, creativity often gets pushed aside.<br>
+                        But painting does not have to be complicated.<br><br>
+                        Sometimes all you need is a quiet moment, a brush in water, and permission to begin again.<br><br>
+                        That is why I created this gentle 5-day watercolor reset.
                     </p>
-                    <a class="button" href="https://zenbeautiful.life/signup-5-free-landscape-course" target="_blank">Click
-                        here for more info!</a>
-                </div>
-                <div class="col-md-6 col-lg-6">
-                    <img alt="Watercolor Landscape" height="342" loading="lazy" src="images/home/watercolor-landscape.jpeg"
-                         width="606">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Product section -->
-    <section class="section section-bg section-top-bg">
-        <!-- Product section -->
-        <div class="row justify-content-center text-center">
-            <div class="col-md-9 col-lg-7 wow-outer">
-                <div class="wow slideInDown">
-                    <h2>Enjoy</h2>
-                    <h3 class="heading-title" style="text-align: center">My Painting</h3>
+        <section class="landing-section">
+            <div class="container">
+                <h2 class="section-title text-center">What You'll Paint in the 5-Day Reset</h2>
+                <div class="paint-grid">
+                    <article class="paint-card">
+                        <img alt="Day 1 One-Color Calm" src="images/home/5days/Day1–One-Color-Calm.jpg">
+                        <div class="caption"><strong>Day 1 - One-Color Calm</strong><br>Slow, calming brush strokes.</div>
+                    </article>
+                    <article class="paint-card">
+                        <img alt="Day 2 Two-Color Ocean" src="images/home/5days/Day2–Two-Color-Ocean.jpg">
+                        <div class="caption"><strong>Day 2 - Two-Color Ocean</strong><br>Simple layers for movement and flow.</div>
+                    </article>
+                    <article class="paint-card">
+                        <img alt="Day 3 Soft Cloudy Sky" src="images/home/5days/Day3–Cloudy-Sky.jpg">
+                        <div class="caption"><strong>Day 3 - Soft Cloudy Sky</strong><br>Relaxing wet-on-wet blending.</div>
+                    </article>
+                    <article class="paint-card">
+                        <img alt="Day 4 Loose Eucalyptus" src="images/home/5days/Day4–Loose-Eucalyptus.jpg">
+                        <div class="caption"><strong>Day 4 - Loose Eucalyptus</strong><br>Loose leaves with soft color.</div>
+                    </article>
+                    <article class="paint-card">
+                        <img alt="Day 5 Emotional Flower" src="images/home/5days/Day5–Emotional-Flower.jpg">
+                        <div class="caption"><strong>Day 5 - Emotional Flower</strong><br>Expressive painting to close your reset.</div>
+                    </article>
+                    </div>
+                <div class="text-center" style="margin-top: 26px;">
+                    <a class="course-btn" href="https://ko-fi.com/s/75b7f4b634" rel="noopener noreferrer" target="_blank">Start the 5-Day Reset</a>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="slider lazy">
-                <!-- Slide example -->
-                <div class="image">
-                    <div class="image-block">
-                        <img alt="Goldfish Painting" data-lazy="./images/products/Goldfish-1.jpg">
-                    </div>
-                </div>
-                <div class="image">
-                    <div class="image-block">
-                        <img alt="Peony Painting" data-lazy="./images/products/Peony-4.jpg">
-                    </div>
-                </div>
-                <div class="image">
-                    <div class="image-block">
-                        <img alt="Koi Painting" data-lazy="./images/products/Koi-fish-1.jpg">
-                    </div>
-                </div>
-                <div class="image">
-                    <div class="image-block">
-                        <img data-lazy="./images/products/Goldfish-3.jpg" alt="Goldfish Painting">
-                    </div>
-                </div>
-                <div class="image">
-                    <div class="image-block">
-                        <img data-lazy="./images/products/Goldfish-2.jpg" alt="Goldfish Painting">
-                    </div>
-                </div>
-                <div class="image">
-                    <div class="image-block">
-                        <img data-lazy="./images/products/Peony-1.jpg" alt="Peony Painting">
-                    </div>
-                </div>
-                <div class="image">
-                    <div class="image-block">
-                        <img data-lazy="./images/products/Peony-2.jpg" alt="Peony Painting">
-                    </div>
-                </div>
-                <div class="image">
-                    <div class="image-block">
-                        <img data-lazy="./images/products/Peony-3.jpg" alt="Peony Painting">
-                    </div>
-                </div>
-                <div class="image">
-                    <div class="image-block">
-                        <img data-lazy="./images/products/Rose.jpg" alt="Rose Painting">
-                    </div>
-                </div>
-                <div class="image">
-                    <div class="image-block">
-                        <img data-lazy="./images/products/Koi-fish-2.jpg" alt="Koi Painting">
-                    </div>
-                </div>
-                <div class="image">
-                    <div class="image-block">
-                        <img data-lazy="./images/products/Koi-fish-3.jpg" alt="Koi Painting">
-                    </div>
-                </div>
-                <div class="image">
-                    <div class="image-block">
-                        <img data-lazy="./images/products/Serene-Shadows.jpg" alt="Serene Shadows Painting">
-                    </div>
-                </div>
-                <div class="image">
-                    <div class="image-block">
-                        <img data-lazy="./images/products/Serenity.jpg" alt="Serenity Painting">
-                    </div>
-                </div>
-                <div class="image">
-                    <div class="image-block">
-                        <img data-lazy="./images/products/Water-lily.jpg" alt="Water Lily Painting">
-                    </div>
-                </div>
-                <!-- Add remaining slides in the same format -->
-            </div>
-        </div>
-    </section>
+        </section>
 
-
-    <!-- Subscribe section -->
-    <section class="section">
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-md-9 col-lg-7">
-                    <h2>Subscribe</h2>
-                    <h3 class="heading-title">Let's Be Friends</h3>
-                    <h4 class="newsletter-des">Subscribe on Youtube for new videos every week!</h4>
-                    <a class="button" href="https://www.youtube.com/@ZenBeautifulArt" target="_blank">Find Zen Beautiful
-                        Art</a>
-                </div>
-            </div>
-            <div class="row justify-content-center text-center">
-                <div class="col-md-9 col-lg-7">
-                    <div class="subscribe-container">
-                        <img class="vc_single_image-img attachment-full" height="315" src="images/home/thank-note.png"
-                             width="100%"/>
+        <section class="landing-section">
+            <div class="container">
+                <div class="row row-40">
+                    <div class="col-md-12 col-lg-6">
+                        <h2 class="section-title">This is not a traditional art course</h2>
+                        <p class="section-text">
+                            Instead of focusing on perfection, this series focuses on slowing down, enjoying the process,
+                            and letting watercolor flow naturally.
+                        </p>
+                        <p class="section-text">No complicated techniques. No pressure. Just gentle painting moments.</p>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <h2 class="section-title">This reset is perfect for you if:</h2>
+                        <ul class="check-list">
+                            <li>- You feel overwhelmed and need a creative pause</li>
+                            <li>- You want to paint but do not know where to start</li>
+                            <li>- You love calm watercolor videos</li>
+                            <li>- You want simple, relaxing art time</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="landing-section">
+            <div class="container">
+                <div class="soft-panel">
+                    <div class="row row-40">
+                        <div class="col-md-12 col-lg-6">
+                            <h2 class="section-title">Inside the 5-Day Reset</h2>
+                            <ul class="check-list">
+                                <li>- 5 guided watercolor video lessons</li>
+                                <li>- Watch anytime at your own pace</li>
+                                <li>- Beginner-friendly paintings</li>
+                                <li>- A calm creative reset</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-12 col-lg-6">
+                            <h2 class="section-title" style="font-size: 29px;">Hi, I'm Lucy Lu</h2>
+                            <p class="section-text">
+                                Watercolor has always been a quiet space for me — a place where I can slow down, breathe, and let go of the noise of everyday life.<br>
+
+                                I love creating simple paintings that feel calm, gentle, and expressive. Not perfect, just honest moments on paper.<br>
+
+                                Through this 5-day series, I hope to share that feeling with you<br>
+
+                                a small pause in your day where you can slow down and rediscover the joy of painting.<br>
+
+                                You don’t need perfect skills.<br>
+                                Just a little curiosity… and a brush.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="landing-section" id="join-reset">
+            <div class="container">
+                <div class="pricing-box">
+                    <h2 class="section-title" style="margin-bottom: 4px;">Join the 5-Day Watercolor Reset</h2>
+                    <p class="section-text">A gentle invitation to create one peaceful painting each day.</p>
+                    <p class="price">$5</p>
+                    <p class="section-text">All 5 lessons | Lifetime access | Paint anytime</p>
+                    <a class="course-btn" href="https://ko-fi.com/s/75b7f4b634" rel="noopener noreferrer" target="_blank">Start My Watercolor Reset</a>
+                    <p class="micro-copy">Less than the cost of a cup of coffee.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="section footer-minimal context-dark">
         <div class="container text-center">
-            <a class="brand-logo-title" href="../index.html">zenbeautiful.life</a>
+            <a class="brand-logo-title" href="https://zenbeautiful.life/">zenbeautiful.life</a>
             <ul class="footer-minimal-nav">
-                <li><a href="termsAndConditions.html">Terms and Conditions</a></li>
-                <li><a href="privacyPolicy.html">Privacy Policy</a></li>
-                <li><a href="pages/contacts.html">Contacts</a></li>
+                <li><a href="https://zenbeautiful.life/termsAndConditions.html">Terms and Conditions</a></li>
+                <li><a href="https://zenbeautiful.life/privacyPolicy.html">Privacy Policy</a></li>
+                <li><a href="https://zenbeautiful.life/contact.html">Contacts</a></li>
             </ul>
             <p class="rights">&copy; <span class="copyright-year"></span> zenbeautiful.life. <a
-                    href="privacy-policy.html">Privacy Policy</a></p>
+                    href="https://zenbeautiful.life/privacyPolicy.html">Privacy Policy</a></p>
         </div>
     </footer>
 </div>
@@ -309,31 +435,14 @@
 <!-- JS -->
 <script defer src="js/lib/jquery-1.12.4.min.js"></script>
 <script defer src="js/lib/jquery-migrate.min.js"></script>
-<script defer src="js/lib/slick.min.js"></script>
 <script defer src="js/lib/core.min.js"></script>
 <script defer src="js/lib/script.js"></script>
-<script defer src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
 
 <script defer>
     document.addEventListener("DOMContentLoaded", function() {
         // Hide preloader and show page
         document.querySelector('.preloader').style.display = 'none';
         document.querySelector('.page.main-container').style.display = 'block';
-
-        // Initialize slider
-        $('.lazy').slick({
-            lazyLoad: 'ondemand',
-            slidesToShow: 3,
-            slidesToScroll: 1
-        });
-
-        // Ko-fi widget
-        kofiWidgetOverlay.draw('zenbeautifulart', {
-            'type': 'floating-chat',
-            'floating-chat.donateButton.text': 'Support me',
-            'floating-chat.donateButton.background-color': '#5cb85c',
-            'floating-chat.donateButton.text-color': '#fff'
-        });
     });
 </script>
 </body>
