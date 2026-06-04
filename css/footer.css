@@ -189,6 +189,7 @@
 @media (min-width: 992px) {
     .footer-minimal {
         padding: 90px 0;
+        margin-top: 45px;
     }
 }
 
