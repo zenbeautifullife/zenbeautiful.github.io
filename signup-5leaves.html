@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint 5 Beautiful Leaves in 5 Days</title>
+    <style>
+        :root {
+          --ink: #23302b;
+          --muted: #5c6c62;
+          --paper: #fffaf1;
+          --soft-paper: #f7efe2;
+          --leaf: #426d4a;
+          --leaf-dark: #254b36;
+          --mint: #dcebd8;
+          --rose: #e9c8b7;
+          --gold: #e6b85d;
+          --sky: #cadfe1;
+          --line: rgba(35, 48, 43, 0.16);
+          --shadow: 0 22px 70px rgba(58, 72, 58, 0.16);
+          font-family: Georgia, "Times New Roman", serif;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        body {
+          margin: 0;
+          color: var(--ink);
+          background:
+            radial-gradient(circle at 15% 10%, rgba(233, 200, 183, 0.32), transparent 28rem),
+            radial-gradient(circle at 85% 12%, rgba(202, 223, 225, 0.48), transparent 26rem),
+            linear-gradient(180deg, #fffdf7 0%, var(--paper) 42%, #f4eadb 100%);
+          font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          line-height: 1.6;
+        }
+
+        body::before {
+          content: "";
+          position: fixed;
+          inset: 0;
+          pointer-events: none;
+          opacity: 0.36;
+          background-image:
+            linear-gradient(rgba(35, 48, 43, 0.035) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(35, 48, 43, 0.025) 1px, transparent 1px);
+          background-size: 42px 42px;
+          mask-image: linear-gradient(to bottom, #000, transparent 76%);
+        }
+
+        .page {
+          overflow: hidden;
+        }
+
+        .shell {
+          width: min(1120px, calc(100% - 36px));
+          margin: 0 auto;
+        }
+
+        .hero {
+          min-height: 94vh;
+          display: grid;
+          grid-template-columns: minmax(0, 1.02fr) minmax(330px, 0.78fr);
+          align-items: center;
+          gap: 56px;
+          padding: 48px 0 68px;
+        }
+
+        .kicker {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 18px;
+          color: var(--leaf-dark);
+          font-size: 0.78rem;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        }
+
+        .kicker::before {
+          content: "";
+          width: 32px;
+          height: 1px;
+          background: var(--gold);
+        }
+
+        h1,
+        h2,
+        h3 {
+          margin: 0;
+          font-family: Georgia, "Times New Roman", serif;
+          line-height: 1.04;
+          letter-spacing: 0;
+        }
+
+        h1 {
+          max-width: 780px;
+          font-size: clamp(3rem, 8vw, 6.9rem);
+          font-weight: 500;
+        }
+
+        h2 {
+          font-size: clamp(2.1rem, 4vw, 4rem);
+          font-weight: 500;
+        }
+
+        h3 {
+          font-size: 1.35rem;
+          font-weight: 600;
+        }
+
+        p {
+          margin: 0;
+          color: var(--muted);
+        }
+
+        .hero-copy {
+          position: relative;
+          z-index: 2;
+        }
+
+        .subhead {
+          max-width: 650px;
+          margin-top: 24px;
+          color: #47584f;
+          font-size: clamp(1.15rem, 2vw, 1.42rem);
+          line-height: 1.55;
+        }
+
+        .calm-line {
+          display: grid;
+          gap: 10px;
+          max-width: 570px;
+          margin-top: 28px;
+          font-size: 1.02rem;
+        }
+
+        .hero-actions {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 18px;
+          margin-top: 34px;
+        }
+
+        .button {
+          appearance: none;
+          border: 0;
+          border-radius: 999px;
+          background: var(--leaf-dark);
+          color: #fffdf7;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 54px;
+          padding: 0 28px;
+          font-size: 1rem;
+          font-weight: 800;
+          text-decoration: none;
+          box-shadow: 0 14px 32px rgba(37, 75, 54, 0.24);
+          transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+        }
+
+        .button:hover {
+          background: #1e3f2e;
+          box-shadow: 0 18px 40px rgba(37, 75, 54, 0.28);
+          transform: translateY(-2px);
+        }
+
+        .trust-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          color: var(--leaf-dark);
+          font-size: 0.86rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+        }
+
+        .trust-row span {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+        }
+
+        .trust-row span::before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: var(--gold);
+        }
+
+        .art-panel {
+          position: relative;
+          min-height: 620px;
+        }
+
+        .botanical-sheet {
+          position: absolute;
+          inset: 28px 0 0;
+          border: 1px solid rgba(66, 109, 74, 0.2);
+          border-radius: 8px;
+          background:
+            linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(255, 250, 241, 0.9)),
+            repeating-linear-gradient(0deg, transparent 0 31px, rgba(35, 48, 43, 0.05) 32px);
+          box-shadow: var(--shadow);
+          overflow: hidden;
+        }
+
+        .botanical-sheet::before {
+          content: "";
+          position: absolute;
+          inset: 18px;
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          border-radius: 6px;
+        }
+
+        .paint-wash {
+          position: absolute;
+          inset: auto 7% 7% 7%;
+          height: 130px;
+          border-radius: 46% 54% 55% 45% / 42% 42% 58% 58%;
+          background:
+            radial-gradient(circle at 26% 48%, rgba(230, 184, 93, 0.42), transparent 35%),
+            radial-gradient(circle at 68% 38%, rgba(66, 109, 74, 0.42), transparent 34%),
+            rgba(202, 223, 225, 0.45);
+          filter: blur(0.2px);
+        }
+
+        .leaf-svg {
+          position: absolute;
+          inset: 48px 8% auto;
+          width: 84%;
+          height: auto;
+          filter: drop-shadow(0 20px 24px rgba(37, 75, 54, 0.14));
+        }
+
+        .note {
+          position: absolute;
+          right: -12px;
+          bottom: 96px;
+          width: min(260px, 62%);
+          padding: 18px 18px 20px;
+          border: 1px solid rgba(37, 75, 54, 0.12);
+          border-radius: 8px;
+          background: rgba(255, 253, 247, 0.9);
+          box-shadow: 0 16px 42px rgba(58, 72, 58, 0.14);
+          backdrop-filter: blur(12px);
+        }
+
+        .note strong {
+          display: block;
+          color: var(--leaf-dark);
+          font-family: Georgia, "Times New Roman", serif;
+          font-size: 1.3rem;
+          font-weight: 600;
+          line-height: 1.15;
+        }
+
+        .note span {
+          display: block;
+          margin-top: 8px;
+          color: var(--muted);
+          font-size: 0.94rem;
+        }
+
+        section {
+          padding: 82px 0;
+        }
+
+        .intro {
+          border-block: 1px solid rgba(35, 48, 43, 0.1);
+          background: rgba(255, 253, 247, 0.62);
+        }
+
+        .intro-grid {
+          display: grid;
+          grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+          gap: 54px;
+          align-items: start;
+        }
+
+        .eyebrow {
+          margin-bottom: 14px;
+          color: var(--leaf-dark);
+          font-size: 0.8rem;
+          font-weight: 850;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        }
+
+        .body-large {
+          color: #4c5e53;
+          font-size: clamp(1.1rem, 2vw, 1.35rem);
+          line-height: 1.7;
+        }
+
+        .soft-copy {
+          display: grid;
+          gap: 18px;
+        }
+
+        .days {
+          background: linear-gradient(180deg, rgba(220, 235, 216, 0.34), rgba(255, 250, 241, 0));
+        }
+
+        .section-top {
+          display: flex;
+          align-items: end;
+          justify-content: space-between;
+          gap: 28px;
+          margin-bottom: 34px;
+        }
+
+        .section-top p {
+          max-width: 460px;
+          font-size: 1.08rem;
+        }
+
+        .day-grid {
+          display: grid;
+          grid-template-columns: repeat(5, minmax(160px, 1fr));
+          gap: 14px;
+        }
+
+        .day-card {
+          position: relative;
+          min-height: 290px;
+          padding: 18px;
+          border: 1px solid rgba(35, 48, 43, 0.12);
+          border-radius: 8px;
+          background: rgba(255, 253, 247, 0.84);
+          box-shadow: 0 12px 34px rgba(58, 72, 58, 0.08);
+          overflow: hidden;
+        }
+
+        .day-card::after {
+          content: "";
+          position: absolute;
+          left: 18px;
+          right: 18px;
+          bottom: 18px;
+          height: 102px;
+          border-radius: 44% 56% 52% 48% / 50% 46% 54% 50%;
+          background: var(--leaf-color);
+          opacity: 0.28;
+          transform: rotate(var(--tilt));
+          transform-origin: center;
+        }
+
+        .day-number {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 42px;
+          height: 42px;
+          margin-bottom: 18px;
+          border-radius: 50%;
+          background: var(--mint);
+          color: var(--leaf-dark);
+          font-weight: 900;
+        }
+
+        .day-card p {
+          position: relative;
+          z-index: 1;
+          margin-top: 12px;
+          font-size: 0.96rem;
+        }
+
+        .day-card h3 {
+          position: relative;
+          z-index: 1;
+        }
+
+        .perfect {
+          background: var(--leaf-dark);
+          color: #fffdf7;
+        }
+
+        .perfect p,
+        .perfect .eyebrow {
+          color: rgba(255, 253, 247, 0.78);
+        }
+
+        .perfect h2 {
+          color: #fffdf7;
+        }
+
+        .check-grid,
+        .receive-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 14px;
+          margin-top: 34px;
+        }
+
+        .check-item,
+        .receive-item {
+          min-height: 112px;
+          padding: 19px;
+          border: 1px solid rgba(255, 253, 247, 0.16);
+          border-radius: 8px;
+          background: rgba(255, 253, 247, 0.08);
+          color: rgba(255, 253, 247, 0.9);
+          font-weight: 650;
+        }
+
+        .check-item::before,
+        .receive-item::before {
+          content: "✓";
+          display: block;
+          margin-bottom: 10px;
+          color: var(--gold);
+          font-weight: 900;
+        }
+
+        .receive {
+          background: #fffdf7;
+        }
+
+        .receive-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .receive-item {
+          border-color: rgba(35, 48, 43, 0.12);
+          background:
+            linear-gradient(135deg, rgba(220, 235, 216, 0.44), rgba(255, 253, 247, 0.96)),
+            #fffdf7;
+          color: var(--ink);
+          box-shadow: 0 12px 30px rgba(58, 72, 58, 0.06);
+        }
+
+        .permission {
+          padding: 96px 0;
+        }
+
+        .quote-layout {
+          display: grid;
+          grid-template-columns: minmax(0, 0.76fr) minmax(0, 1fr);
+          gap: 58px;
+          align-items: center;
+        }
+
+        .round-art {
+          aspect-ratio: 1;
+          border-radius: 50%;
+          background:
+            radial-gradient(circle at 48% 52%, rgba(255, 253, 247, 0.88), rgba(255, 253, 247, 0.45) 52%, transparent 53%),
+            conic-gradient(from 20deg, rgba(66, 109, 74, 0.44), rgba(230, 184, 93, 0.36), rgba(202, 223, 225, 0.52), rgba(233, 200, 183, 0.44), rgba(66, 109, 74, 0.44));
+          border: 1px solid rgba(35, 48, 43, 0.12);
+          position: relative;
+          box-shadow: var(--shadow);
+        }
+
+    <!--    .round-art::before,-->
+    <!--    .round-art::after {-->
+    <!--      content: "";-->
+    <!--      position: absolute;-->
+    <!--      width: 44%;-->
+    <!--      height: 70%;-->
+    <!--      left: 28%;-->
+    <!--      top: 15%;-->
+    <!--      border-radius: 50% 8% 50% 8%;-->
+    <!--      background: rgba(66, 109, 74, 0.54);-->
+    <!--      transform: rotate(-28deg);-->
+    <!--    }-->
+
+    <!--    .round-art::after {-->
+    <!--      width: 36%;-->
+    <!--      height: 56%;-->
+    <!--      left: 41%;-->
+    <!--      top: 22%;-->
+    <!--      background: rgba(230, 184, 93, 0.38);-->
+    <!--      transform: rotate(34deg);-->
+    <!--    }-->
+
+        .quote-layout .soft-copy {
+          max-width: 650px;
+        }
+
+        .final-signup {
+          padding: 92px 0 104px;
+          background:
+            linear-gradient(rgba(255, 253, 247, 0.8), rgba(255, 253, 247, 0.8)),
+            linear-gradient(135deg, var(--mint), var(--rose));
+        }
+
+        .signup-box {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+          gap: 42px;
+          align-items: center;
+          padding: clamp(28px, 5vw, 54px);
+          border: 1px solid rgba(35, 48, 43, 0.13);
+          border-radius: 8px;
+          background: rgba(255, 253, 247, 0.88);
+          box-shadow: var(--shadow);
+        }
+
+        .signup-box h2 {
+          max-width: 720px;
+        }
+
+        .signup-box p {
+          max-width: 620px;
+          margin-top: 18px;
+          font-size: 1.12rem;
+        }
+
+        form {
+          display: grid;
+          gap: 12px;
+        }
+
+        label {
+          color: var(--leaf-dark);
+          font-size: 0.84rem;
+          font-weight: 850;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+
+        input {
+          width: 100%;
+          min-height: 56px;
+          padding: 0 17px;
+          border: 1px solid rgba(35, 48, 43, 0.2);
+          border-radius: 8px;
+          background: #fff;
+          color: var(--ink);
+          font: inherit;
+          outline: none;
+          transition: border 160ms ease, box-shadow 160ms ease;
+        }
+
+        input:focus {
+          border-color: var(--leaf);
+          box-shadow: 0 0 0 4px rgba(66, 109, 74, 0.16);
+        }
+
+        .form-note {
+          color: var(--muted);
+          font-size: 0.9rem;
+        }
+
+        .form-success {
+          display: none;
+          margin-top: 4px;
+          color: var(--leaf-dark);
+          font-weight: 800;
+        }
+
+        .form-success.is-visible {
+          display: block;
+        }
+
+        footer {
+          padding: 28px 0;
+          background: #fffdf7;
+          color: var(--muted);
+          text-align: center;
+          font-size: 0.94rem;
+        }
+
+        @media (max-width: 980px) {
+          .hero,
+          .intro-grid,
+          .quote-layout,
+          .signup-box {
+            grid-template-columns: 1fr;
+          }
+
+          .hero {
+            min-height: auto;
+            padding-top: 34px;
+          }
+
+          .art-panel {
+            min-height: 560px;
+          }
+
+          .day-grid,
+          .check-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          .section-top {
+            align-items: start;
+            flex-direction: column;
+          }
+
+          .round-art {
+            width: min(440px, 100%);
+            margin: 0 auto;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .shell {
+            width: min(100% - 26px, 1120px);
+          }
+
+          h1 {
+            font-size: clamp(2.55rem, 15vw, 4.25rem);
+          }
+
+          section,
+          .permission {
+            padding: 62px 0;
+          }
+
+          .art-panel {
+            min-height: 470px;
+          }
+
+          .botanical-sheet {
+            inset-inline: 0;
+          }
+
+          .note {
+            right: 14px;
+            bottom: 54px;
+            width: min(250px, 76%);
+          }
+
+          .day-grid,
+          .check-grid,
+          .receive-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .day-card {
+            min-height: 230px;
+          }
+
+          .hero-actions {
+            align-items: stretch;
+            flex-direction: column;
+          }
+
+          .button {
+            width: 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+<main class="page">
+    <header class="hero shell">
+        <div class="hero-copy">
+            <div class="kicker">Free 5-day watercolor reset</div>
+            <h1>Paint 5 Beautiful Leaves in 5 Days</h1>
+            <p class="subhead">A beginner-friendly watercolor experience for busy adults who want to slow down, relax,
+                and reconnect with their creativity.</p>
+            <div class="calm-line">
+                <p>Life can feel nonstop. <br>Between work, family, responsibilities, and endless notifications, <br>it
+                    is easy to lose touch with the creative part of yourself.</p>
+                <p>Step away from the noise for a few minutes each day with a paintbrush.<br>A little water, and a
+                    simple leaf.</p>
+            </div>
+            <div class="hero-actions">
+                <a class="button" href="#signup">Join the Free Reset</a>
+                <div class="trust-row" aria-label="Program highlights">
+                    <span>Free to join</span>
+                    <span>Beginner friendly</span>
+                    <span>Self-paced</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="art-panel" aria-hidden="true">
+            <div class="botanical-sheet">
+                <img src="images/signup/5leaves/1.jpeg" height="100%" alt=""/>
+            </div>
+            <div class="note">
+                <strong>One leaf. One painting. One peaceful moment.</strong>
+                <span>Five simple lessons delivered gently to your inbox.</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="shell intro-grid">
+            <div>
+                <div class="eyebrow">Join the free reset</div>
+                <h2>Five calm days <br>Five beautiful botanical leaves.</h2>
+            </div>
+            <div class="soft-copy body-large">
+                <p>Over five days, you will paint five beautiful botanical leaves while enjoying a calming creative
+                    practice designed to help you slow down and be present.</p>
+                <p>No pressure. No perfection. Just a few peaceful minutes each day.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="days">
+        <div class="shell">
+            <div class="section-top">
+                <div>
+                    <div class="eyebrow">What you will paint</div>
+                    <h2>Your 5-day leaf journey</h2>
+                </div>
+                <p>Each project builds confidence with simple watercolor techniques, soft movement, and
+                    beginner-friendly botanical shapes.</p>
+            </div>
+            <div class="day-grid">
+                <article class="day-card" style="--leaf-color: #6e9a5f; --tilt: -14deg;">
+                    <div class="day-number">1</div>
+                    <h3>Swiss Cheese Plant</h3>
+                    <p>Learn simple watercolor techniques while painting this beautiful tropical leaf.</p>
+                </article>
+                <article class="day-card" style="--leaf-color: #7fa16d; --tilt: 12deg;">
+                    <div class="day-number">2</div>
+                    <h3>Snake Plant</h3>
+                    <p>Practice layering and soft color transitions with elegant leaf shapes.</p>
+                </article>
+                <article class="day-card" style="--leaf-color: #9bbd72; --tilt: -6deg;">
+                    <div class="day-number">3</div>
+                    <h3>Spider Plant</h3>
+                    <p>Discover how to paint flowing lines and natural movement.</p>
+                </article>
+                <article class="day-card" style="--leaf-color: #bc8aa3; --tilt: 15deg;">
+                    <div class="day-number">4</div>
+                    <h3>Tradescantia</h3>
+                    <p>Explore delicate details and beautiful watercolor textures.</p>
+                </article>
+                <article class="day-card" style="--leaf-color: #5a8f58; --tilt: -10deg;">
+                    <div class="day-number">5</div>
+                    <h3>Canna Lily</h3>
+                    <p>Bring everything together in a relaxing final project filled with vibrant greens.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="perfect">
+        <div class="shell">
+            <div class="section-top">
+                <div>
+                    <div class="eyebrow">This is perfect for you if</div>
+                    <h2>You need a creative break that feels gentle.</h2>
+                </div>
+                <p>This reset is made for busy adults who want a small, beautiful pause from screens, pressure, and the
+                    pace of everyday life.</p>
+            </div>
+            <div class="check-grid">
+                <div class="check-item">You feel overwhelmed and need a creative break.</div>
+                <div class="check-item">You spend most of your day in front of screens.</div>
+                <div class="check-item">You miss having time for yourself.</div>
+                <div class="check-item">You want to learn watercolor in a simple, stress-free way.</div>
+                <div class="check-item">You used to enjoy being creative and want to reconnect.</div>
+                <div class="check-item">You believe creativity should feel relaxing, not intimidating.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="receive">
+        <div class="shell intro-grid">
+            <div>
+                <div class="eyebrow">What you will receive</div>
+                <h2>Everything you need to begin with ease.</h2>
+                <div class="image" aria-hidden="true">
+                    <img src="images/signup/5leaves/3.jpeg" width="100%" alt=""/>
+                </div>
+            </div>
+            <div class="receive-grid">
+                <div class="receive-item">5 guided watercolor leaf lessons</div>
+                <div class="receive-item">Step-by-step video tutorials</div>
+                <div class="receive-item">Reference photos for each project</div>
+                <div class="receive-item">Simple techniques suitable for beginners</div>
+                <div class="receive-item">Lifetime access to the lessons</div>
+                <div class="receive-item">A gentle daily reminder to slow down and create</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="permission">
+        <div class="shell quote-layout">
+            <div class="image" aria-hidden="true">
+                <img src="images/signup/5leaves/2.jpeg" width="100%" alt=""/>
+            </div>
+            <div class="soft-copy body-large">
+                <div class="eyebrow">You do not need to be artistic</div>
+                <h2>This is not about painting perfect leaves.</h2>
+                <p>Many people think they are not creative enough. The truth is, this reset is about creating a small
+                    pocket of calm in your day.</p>
+                <p>It is about putting down your phone, picking up a brush, and giving yourself permission to enjoy the
+                    process.</p>
+                <p>One leaf. One painting. One peaceful moment at a time.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-signup" id="signup">
+        <div class="shell signup-box">
+            <div>
+                <div class="eyebrow">Ready to begin?</div>
+                <h2>Paint 5 beautiful watercolor leaves, one peaceful lesson at a time.</h2>
+                <p>Join the interest list and I will let you know as soon as the free 5-day watercolor leaf lessons are
+                    ready to begin.</p>
+                <div class="trust-row" style="margin-top: 24px;">
+                    <span>Free to join</span>
+                    <span>Beginner friendly</span>
+                    <span>Relaxing</span>
+                </div>
+            </div>
+            <form id="signup-form">
+                <iframe width="540" height="305"
+                        src="https://72f31874.sibforms.com/v2/serve/MUIFAG0mhdT80oXeaLbDf8oQYesyQB8oaO5C8tObj9w-YDFgOqONX8UynxaXiqShnZtQJS3kqlaag0w0xJVmVEpDVQUv4Eu49Pk45sa5rPZgVavVrlSxzvX91MQqLSe_NKQek8ISks9-LoTfbdMxHQsVXir7gbVQWbu2dOFXpoxdSJdNJC81ZTztGXj_0If6-hlD65GvN7aq8qIQ"
+                        frameborder="0" scrolling="auto" allowfullscreen
+                        style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+                <p class="form-note">No perfection required. Just 5 quiet inbox nudges to help you begin.</p>
+                <p class="form-success" id="form-success">Thank you. Your 5 leaf painting lessons are ready to
+                    begin.</p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    I can't wait to paint with you.
+</footer>
+
+<script>
+    const form = document.querySelector("#signup-form");
+    const success = document.querySelector("#form-success");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      success.classList.add("is-visible");
+      form.reset();
+    });
+</script>
+</body>
+</html>
