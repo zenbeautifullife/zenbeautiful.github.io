@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Day Watercolor Bloom</title>
+    <style>
+        :root {
+          --ink: #26302c;
+          --muted: #657169;
+          --paper: #fffaf4;
+          --soft-paper: #f8efe8;
+          --green: #476d5d;
+          --green-dark: #26483d;
+          --cta: #9c6418;
+          --cta-hover: #805113;
+          --rose: #d9828d;
+          --rose-soft: #f2d2cf;
+          --lavender: #b6a7ce;
+          --gold: #d8a44f;
+          --sky: #d7e5e2;
+          --line: rgba(38, 48, 44, 0.15);
+          --shadow: 0 22px 70px rgba(72, 61, 52, 0.15);
+          font-family: Georgia, "Times New Roman", serif;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        html {
+          scroll-behavior: smooth;
+        }
+
+        body {
+          margin: 0;
+          color: var(--ink);
+          background:
+            radial-gradient(circle at 12% 7%, rgba(242, 210, 207, 0.55), transparent 27rem),
+            radial-gradient(circle at 88% 9%, rgba(215, 229, 226, 0.7), transparent 26rem),
+            radial-gradient(circle at 48% 36%, rgba(216, 164, 79, 0.16), transparent 24rem),
+            linear-gradient(180deg, #fffdf8 0%, var(--paper) 45%, #f3e8de 100%);
+          font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          line-height: 1.6;
+        }
+
+        body::before {
+          content: "";
+          position: fixed;
+          inset: 0;
+          pointer-events: none;
+          opacity: 0.28;
+          background-image:
+            linear-gradient(rgba(38, 48, 44, 0.035) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(38, 48, 44, 0.025) 1px, transparent 1px);
+          background-size: 42px 42px;
+          mask-image: linear-gradient(to bottom, #000, transparent 76%);
+        }
+
+        .page {
+          overflow: hidden;
+        }
+
+        .shell {
+          width: min(1120px, calc(100% - 36px));
+          margin: 0 auto;
+        }
+
+        .site-header {
+          position: relative;
+          z-index: 5;
+          background: linear-gradient(90deg, #2a4b43 0%, #8b6d78 100%);
+          color: #fffdf8;
+        }
+
+        .site-nav {
+          min-height: 82px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 24px;
+          padding: 12px 0;
+        }
+
+        .site-brand {
+          display: inline-flex;
+          align-items: center;
+          gap: 12px;
+          color: #fffdf8;
+          text-decoration: none;
+        }
+
+        .site-brand img {
+          display: block;
+          width: 72px;
+          height: auto;
+        }
+
+        .brand-title {
+          color: #fffdf8;
+          font-family: Georgia, "Times New Roman", serif;
+          font-size: 1.45rem;
+          font-weight: 600;
+          letter-spacing: 0;
+        }
+
+        .site-links,
+        .site-social {
+          display: flex;
+          align-items: center;
+          gap: 18px;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+
+        .site-nav a {
+          color: rgba(255, 253, 248, 0.91);
+          font-size: 0.92rem;
+          font-weight: 800;
+          text-decoration: none;
+          transition: color 160ms ease;
+        }
+
+        .site-nav a:hover {
+          color: #fff;
+        }
+
+        .hero {
+          min-height: 94vh;
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) minmax(340px, 0.82fr);
+          align-items: center;
+          gap: 56px;
+          padding: 48px 0 68px;
+        }
+
+        .kicker {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 18px;
+          color: var(--green-dark);
+          font-size: 0.78rem;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        }
+
+        .kicker::before {
+          content: "";
+          width: 32px;
+          height: 1px;
+          background: var(--gold);
+        }
+
+        h1,
+        h2,
+        h3 {
+          margin: 0;
+          font-family: Georgia, "Times New Roman", serif;
+          line-height: 1.04;
+          letter-spacing: 0;
+        }
+
+        h1 {
+          max-width: 820px;
+          font-size: clamp(3.05rem, 7.5vw, 6.8rem);
+          font-weight: 500;
+        }
+
+        h2 {
+          font-size: clamp(2.1rem, 4vw, 4rem);
+          font-weight: 500;
+        }
+
+        h3 {
+          font-size: 1.32rem;
+          font-weight: 600;
+        }
+
+        p {
+          margin: 0;
+          color: var(--muted);
+        }
+
+        .hero-copy {
+          position: relative;
+          z-index: 2;
+        }
+
+        .subhead {
+          max-width: 690px;
+          margin-top: 24px;
+          color: #4f5e56;
+          font-size: clamp(1.14rem, 2vw, 1.42rem);
+          line-height: 1.55;
+        }
+
+        .calm-line {
+          display: grid;
+          gap: 10px;
+          max-width: 590px;
+          margin-top: 28px;
+          font-size: 1.02rem;
+        }
+
+        .hero-actions {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 18px;
+          margin-top: 34px;
+        }
+
+        .button {
+          appearance: none;
+          border: 0;
+          border-radius: 999px;
+          background: var(--cta);
+          color: #fffdf8;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 54px;
+          padding: 0 28px;
+          font-size: 1rem;
+          font-weight: 800;
+          text-decoration: none;
+          box-shadow: 0 14px 32px rgba(156, 100, 24, 0.24);
+          transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+        }
+
+        .button:hover {
+          background: var(--cta-hover);
+          box-shadow: 0 18px 40px rgba(156, 100, 24, 0.3);
+          transform: translateY(-2px);
+        }
+
+        .trust-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          color: var(--green-dark);
+          font-size: 0.86rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+        }
+
+        .trust-row span {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+        }
+
+        .trust-row span::before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: var(--gold);
+        }
+
+        .art-panel {
+          position: relative;
+          min-height: 650px;
+        }
+
+        .photo-stack {
+          position: absolute;
+          inset: 20px 0 0;
+        }
+
+        .hero-photo {
+          position: absolute;
+          border: 10px solid rgba(255, 253, 248, 0.88);
+          border-radius: 8px;
+          background: #fff;
+          box-shadow: var(--shadow);
+          overflow: hidden;
+        }
+
+        .hero-photo img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .hero-photo.main {
+          inset: 0 7% 108px 0;
+        }
+
+        .hero-photo.small {
+          right: 0;
+          bottom: 10px;
+          width: 48%;
+          height: 240px;
+          transform: rotate(3deg);
+        }
+
+        .note {
+          position: absolute;
+          left: -8px;
+          bottom: 70px;
+          width: min(280px, 65%);
+          padding: 18px 18px 20px;
+          border: 1px solid rgba(38, 72, 61, 0.12);
+          border-radius: 8px;
+          background: rgba(255, 253, 248, 0.91);
+          box-shadow: 0 16px 42px rgba(72, 61, 52, 0.14);
+          backdrop-filter: blur(12px);
+        }
+
+        .note strong {
+          display: block;
+          color: var(--green-dark);
+          font-family: Georgia, "Times New Roman", serif;
+          font-size: 1.3rem;
+          font-weight: 600;
+          line-height: 1.15;
+        }
+
+        .note span {
+          display: block;
+          margin-top: 8px;
+          color: var(--muted);
+          font-size: 0.94rem;
+        }
+
+        section {
+          padding: 82px 0;
+        }
+
+        .intro {
+          border-block: 1px solid rgba(38, 48, 44, 0.1);
+          background: rgba(255, 253, 248, 0.62);
+        }
+
+        .intro-grid {
+          display: grid;
+          grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+          gap: 54px;
+          align-items: start;
+        }
+
+        .eyebrow {
+          margin-bottom: 14px;
+          color: var(--green-dark);
+          font-size: 0.8rem;
+          font-weight: 850;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        }
+
+        .body-large {
+          color: #4f5e56;
+          font-size: clamp(1.1rem, 2vw, 1.35rem);
+          line-height: 1.7;
+        }
+
+        .soft-copy {
+          display: grid;
+          gap: 18px;
+        }
+
+        .days {
+          background: linear-gradient(180deg, rgba(242, 210, 207, 0.36), rgba(255, 250, 244, 0));
+        }
+
+        .section-top {
+          display: flex;
+          align-items: end;
+          justify-content: space-between;
+          gap: 28px;
+          margin-bottom: 34px;
+        }
+
+        .section-top p {
+          max-width: 470px;
+          font-size: 1.08rem;
+        }
+
+        .day-grid {
+          display: grid;
+          grid-template-columns: repeat(5, minmax(160px, 1fr));
+          gap: 14px;
+        }
+
+        .day-card {
+          position: relative;
+          min-height: 390px;
+          border: 1px solid rgba(38, 48, 44, 0.12);
+          border-radius: 8px;
+          background: rgba(255, 253, 248, 0.86);
+          box-shadow: 0 12px 34px rgba(72, 61, 52, 0.08);
+          overflow: hidden;
+        }
+
+        .day-slider {
+          position: relative;
+          height: 178px;
+          background: rgba(255, 253, 248, 0.72);
+          overflow: hidden;
+        }
+
+        .day-slides {
+          position: relative;
+          height: 100%;
+        }
+
+        .day-slides img {
+          position: absolute;
+          inset: 0;
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0;
+          transform: scale(1.03);
+          transition: opacity 900ms ease, transform 5200ms ease;
+        }
+
+        .day-slides img.is-active {
+          opacity: 1;
+          transform: scale(1);
+        }
+
+        .day-dots {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 11px;
+          display: flex;
+          justify-content: center;
+          gap: 7px;
+          z-index: 2;
+        }
+
+        .day-dot {
+          appearance: none;
+          width: 8px;
+          height: 8px;
+          padding: 0;
+          border: 1px solid rgba(255, 253, 248, 0.92);
+          border-radius: 50%;
+          background: rgba(255, 253, 248, 0.52);
+          cursor: pointer;
+          box-shadow: 0 1px 5px rgba(38, 48, 44, 0.18);
+        }
+
+        .day-dot.is-active {
+          background: #fffdf8;
+          transform: scale(1.18);
+        }
+
+        .day-content {
+          padding: 17px;
+        }
+
+        .day-number {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 42px;
+          height: 42px;
+          margin-bottom: 16px;
+          border-radius: 50%;
+          background: var(--day-color);
+          color: #fffdf8;
+          font-weight: 900;
+        }
+
+        .day-card p {
+          margin-top: 12px;
+          font-size: 0.95rem;
+        }
+
+        .perfect {
+          background: #dde9dd;
+          color: var(--ink);
+        }
+
+        .perfect p,
+        .perfect .eyebrow {
+          color: #4f5e56;
+        }
+
+        .perfect h2 {
+          color: var(--ink);
+        }
+
+        .check-grid,
+        .receive-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 14px;
+          margin-top: 34px;
+        }
+
+        .check-item,
+        .receive-item {
+          min-height: 112px;
+          padding: 19px;
+          border: 1px solid rgba(255, 253, 248, 0.16);
+          border-radius: 8px;
+          background: rgba(255, 253, 248, 0.08);
+          color: rgba(255, 253, 248, 0.9);
+          font-weight: 650;
+        }
+
+        .perfect .check-item {
+          border-color: rgba(38, 72, 61, 0.14);
+          background: rgba(255, 253, 248, 0.72);
+          color: var(--ink);
+          box-shadow: 0 12px 30px rgba(72, 61, 52, 0.06);
+        }
+
+        .check-item::before,
+        .receive-item::before {
+          content: "✓";
+          display: block;
+          margin-bottom: 10px;
+          color: var(--gold);
+          font-weight: 900;
+        }
+
+        .receive {
+          background: #fffdf8;
+        }
+
+        .image {
+          margin-top: 28px;
+          border: 10px solid rgba(255, 253, 248, 0.86);
+          border-radius: 8px;
+          box-shadow: var(--shadow);
+          overflow: hidden;
+        }
+
+        .image img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        .receive-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .receive-item {
+          border-color: rgba(38, 48, 44, 0.12);
+          background:
+            linear-gradient(135deg, rgba(215, 229, 226, 0.5), rgba(255, 253, 248, 0.96)),
+            #fffdf8;
+          color: var(--ink);
+          box-shadow: 0 12px 30px rgba(72, 61, 52, 0.06);
+        }
+
+        .permission {
+          padding: 96px 0;
+        }
+
+        .quote-layout {
+          display: grid;
+          grid-template-columns: minmax(0, 0.76fr) minmax(0, 1fr);
+          gap: 58px;
+          align-items: center;
+        }
+
+        .final-signup {
+          padding: 92px 0 104px;
+          background:
+            linear-gradient(rgba(255, 253, 248, 0.82), rgba(255, 253, 248, 0.82)),
+            linear-gradient(135deg, var(--sky), var(--rose-soft), rgba(182, 167, 206, 0.55));
+        }
+
+        .signup-box {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+          gap: 42px;
+          align-items: center;
+          padding: clamp(28px, 5vw, 54px);
+          border: 1px solid rgba(38, 48, 44, 0.13);
+          border-radius: 8px;
+          background: rgba(255, 253, 248, 0.9);
+          box-shadow: var(--shadow);
+        }
+
+        .signup-box h2 {
+          max-width: 720px;
+        }
+
+        .signup-box p {
+          max-width: 620px;
+          margin-top: 18px;
+          font-size: 1.12rem;
+        }
+
+        form {
+          display: grid;
+          gap: 12px;
+        }
+
+        iframe {
+          width: 100%;
+          max-width: 100%;
+          border: 0;
+        }
+
+        .form-note {
+          color: var(--muted);
+          font-size: 0.9rem;
+        }
+
+        .site-footer {
+          position: relative;
+          z-index: 2;
+          padding: 40px 0;
+          background: #26302c;
+          color: rgba(255, 253, 248, 0.76);
+          text-align: center;
+          font-size: 0.94rem;
+        }
+
+        .footer-brand {
+          display: inline-block;
+          color: #fffdf8;
+          font-family: Georgia, "Times New Roman", serif;
+          font-size: 1.35rem;
+          font-weight: 600;
+          text-decoration: none;
+        }
+
+        .footer-nav {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 14px 24px;
+          margin: 18px 0 12px;
+          padding: 0;
+          list-style: none;
+        }
+
+        .site-footer a {
+          color: #fffdf8;
+          text-decoration: none;
+        }
+
+        .site-footer a:hover {
+          text-decoration: underline;
+        }
+
+        .rights {
+          margin: 0;
+          color: rgba(255, 253, 248, 0.7);
+        }
+
+        @media (max-width: 980px) {
+          .site-nav {
+            align-items: flex-start;
+            flex-direction: column;
+          }
+
+          .site-links,
+          .site-social {
+            flex-wrap: wrap;
+          }
+
+          .hero,
+          .intro-grid,
+          .quote-layout,
+          .signup-box {
+            grid-template-columns: 1fr;
+          }
+
+          .hero {
+            min-height: auto;
+            padding-top: 34px;
+          }
+
+          .art-panel {
+            min-height: 590px;
+          }
+
+          .day-grid,
+          .check-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          .section-top {
+            align-items: start;
+            flex-direction: column;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .shell {
+            width: min(100% - 26px, 1120px);
+          }
+
+          .site-nav {
+            min-height: auto;
+            gap: 14px;
+          }
+
+          .site-links {
+            gap: 12px 16px;
+          }
+
+          h1 {
+            font-size: clamp(2.55rem, 15vw, 4.18rem);
+          }
+
+          section,
+          .permission {
+            padding: 62px 0;
+          }
+
+          .art-panel {
+            min-height: 500px;
+          }
+
+          .hero-photo.main {
+            inset: 0 0 126px 0;
+          }
+
+          .hero-photo.small {
+            width: 56%;
+            height: 190px;
+          }
+
+          .note {
+            left: 12px;
+            bottom: 44px;
+            width: min(260px, 78%);
+          }
+
+          .day-grid,
+          .check-grid,
+          .receive-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .day-card {
+            min-height: auto;
+          }
+
+          .day-slider {
+            height: 230px;
+          }
+
+          .hero-actions {
+            align-items: stretch;
+            flex-direction: column;
+          }
+
+          .button {
+            width: 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+<header class="site-header">
+    <nav class="site-nav shell" aria-label="Main navigation">
+        <a class="site-brand" href="index.html">
+            <img src="images/logo-white.png" alt="Lucy Lu">
+            <span class="brand-title">Lucy Lu</span>
+        </a>
+        <ul class="site-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="vlogs.html">Vlogs</a></li>
+            <li><a href="podcast.html">Podcast</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <ul class="site-social">
+            <li><a href="https://www.instagram.com/zenbeautifulart/" rel="noopener noreferrer" target="_blank">Instagram</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="page">
+    <header class="hero shell">
+        <div class="hero-copy">
+            <div class="kicker">Free 5-day watercolor bloom</div>
+            <h1>Five peaceful days. One flower at a time.</h1>
+            <p class="subhead">A gentle watercolor experience for anyone longing for a little more calm, joy, and creative space.</p>
+            <div class="calm-line">
+                <p>This is not about painting perfect flowers. It is about a few quiet minutes, a slower breath, and the simple pleasure of letting watercolor surprise you.</p>
+                <p>Over five days, we will paint five simple flowers together and make a little room to begin, play, notice, and bloom in your own way.</p>
+            </div>
+            <div class="hero-actions">
+                <a class="button" href="#signup">Join the Free Bloom</a>
+                <div class="trust-row" aria-label="Program highlights">
+                    <span>Free to join</span>
+                    <span>Beginner friendly</span>
+                    <span>5 gentle days</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="art-panel" aria-hidden="true">
+            <div class="photo-stack">
+                <div class="hero-photo main">
+                    <img src="images/signup/5floral/5-days/day1/_DSC0052.JPG" alt="">
+                </div>
+                <div class="hero-photo small">
+                    <img src="images/signup/5floral/5-days/day5/_DSC0048.JPG" alt="">
+                </div>
+            </div>
+            <div class="note">
+                <strong>Five flowers. Five quiet reminders.</strong>
+                <span>Yellow rose, pink lily, coneflower, cosmos, and lavender.</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="intro">
+        <div class="shell intro-grid">
+            <div>
+                <div class="eyebrow">A free creative pause</div>
+                <h2>Watercolor can be a place to breathe.</h2>
+            </div>
+            <div class="soft-copy body-large">
+                <p>If you have been wanting to reconnect with your creativity, this five-day experience is a gentle place to begin.</p>
+                <p>Each day gives you one simple flower and one quiet reminder. No pressure. No perfection. Just a small moment to slow down and create because it brings you joy.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="days">
+        <div class="shell">
+            <div class="section-top">
+                <div>
+                    <div class="eyebrow">What you will paint</div>
+                    <h2>Your 5-day flower journey</h2>
+                </div>
+                <p>Each lesson is designed to feel soft, beginner-friendly, and peaceful, with enough technique to help you feel supported.</p>
+            </div>
+            <div class="day-grid">
+                <article class="day-card" style="--day-color: #d8a44f;">
+                    <div class="day-slider" data-slider>
+                        <div class="day-slides">
+                            <img class="is-active" src="images/signup/5floral/5-days/day1/_DSC0050.JPG" alt="Yellow watercolor rose">
+                            <img src="images/signup/5floral/5-days/day1/_DSC0051.JPG" alt="Yellow rose watercolor lesson setup">
+                            <img src="images/signup/5floral/5-days/day1/_DSC0052.JPG" alt="Yellow rose watercolor painting close up">
+                            <img src="images/signup/5floral/5-days/day1/_DSC0053.JPG" alt="Finished yellow rose watercolor">
+                        </div>
+                        <div class="day-dots" aria-label="Yellow rose photos">
+                            <button class="day-dot is-active" type="button" aria-label="Show yellow rose photo 1"></button>
+                            <button class="day-dot" type="button" aria-label="Show yellow rose photo 2"></button>
+                            <button class="day-dot" type="button" aria-label="Show yellow rose photo 3"></button>
+                            <button class="day-dot" type="button" aria-label="Show yellow rose photo 4"></button>
+                        </div>
+                    </div>
+                    <div class="day-content">
+                        <div class="day-number">1</div>
+                        <h3>Yellow Rose</h3>
+                        <p>Begin before you feel ready and let the first wash be enough.</p>
+                    </div>
+                </article>
+                <article class="day-card" style="--day-color: #d9828d;">
+                    <div class="day-slider" data-slider>
+                        <div class="day-slides">
+                            <img class="is-active" src="images/signup/5floral/5-days/day2/_DSC0083.JPG" alt="Pink watercolor lily">
+                            <img src="images/signup/5floral/5-days/day2/_DSC0084.JPG" alt="Pink lily watercolor petals">
+                            <img src="images/signup/5floral/5-days/day2/_DSC0085.JPG" alt="Pink lily watercolor lesson setup">
+                            <img src="images/signup/5floral/5-days/day2/_DSC0094.JPG" alt="Finished pink lily watercolor">
+                        </div>
+                        <div class="day-dots" aria-label="Pink lily photos">
+                            <button class="day-dot is-active" type="button" aria-label="Show pink lily photo 1"></button>
+                            <button class="day-dot" type="button" aria-label="Show pink lily photo 2"></button>
+                            <button class="day-dot" type="button" aria-label="Show pink lily photo 3"></button>
+                            <button class="day-dot" type="button" aria-label="Show pink lily photo 4"></button>
+                        </div>
+                    </div>
+                    <div class="day-content">
+                        <div class="day-number">2</div>
+                        <h3>Pink Lily</h3>
+                        <p>Use the beautiful things today and enjoy the colors in front of you.</p>
+                    </div>
+                </article>
+                <article class="day-card" style="--day-color: #8a6b43;">
+                    <div class="day-slider" data-slider>
+                        <div class="day-slides">
+                            <img class="is-active" src="images/signup/5floral/5-days/day3/_DSC0127.JPG" alt="Watercolor coneflower">
+                            <img src="images/signup/5floral/5-days/day3/_DSC0128.JPG" alt="Coneflower watercolor painting close up">
+                            <img src="images/signup/5floral/5-days/day3/_DSC0129.JPG" alt="Coneflower watercolor lesson setup">
+                            <img src="images/signup/5floral/5-days/day3/_DSC0131.JPG" alt="Finished coneflower watercolor">
+                        </div>
+                        <div class="day-dots" aria-label="Coneflower photos">
+                            <button class="day-dot is-active" type="button" aria-label="Show coneflower photo 1"></button>
+                            <button class="day-dot" type="button" aria-label="Show coneflower photo 2"></button>
+                            <button class="day-dot" type="button" aria-label="Show coneflower photo 3"></button>
+                            <button class="day-dot" type="button" aria-label="Show coneflower photo 4"></button>
+                        </div>
+                    </div>
+                    <div class="day-content">
+                        <div class="day-number">3</div>
+                        <h3>Coneflower</h3>
+                        <p>Trust the process as pigment, water, and timing do their quiet work.</p>
+                    </div>
+                </article>
+                <article class="day-card" style="--day-color: #b88ec8;">
+                    <div class="day-slider" data-slider>
+                        <div class="day-slides">
+                            <img class="is-active" src="images/signup/5floral/5-days/day4/_DSC0008.JPG" alt="Watercolor cosmos">
+                            <img src="images/signup/5floral/5-days/day4/_DSC0009.JPG" alt="Cosmos watercolor petals">
+                            <img src="images/signup/5floral/5-days/day4/_DSC0010.JPG" alt="Cosmos watercolor lesson setup">
+                            <img src="images/signup/5floral/5-days/day4/_DSC0050.JPG" alt="Cosmos watercolor painting close up">
+                            <img src="images/signup/5floral/5-days/day4/_DSC0056.JPG" alt="Finished cosmos watercolor">
+                        </div>
+                        <div class="day-dots" aria-label="Cosmos photos">
+                            <button class="day-dot is-active" type="button" aria-label="Show cosmos photo 1"></button>
+                            <button class="day-dot" type="button" aria-label="Show cosmos photo 2"></button>
+                            <button class="day-dot" type="button" aria-label="Show cosmos photo 3"></button>
+                            <button class="day-dot" type="button" aria-label="Show cosmos photo 4"></button>
+                            <button class="day-dot" type="button" aria-label="Show cosmos photo 5"></button>
+                        </div>
+                    </div>
+                    <div class="day-content">
+                        <div class="day-number">4</div>
+                        <h3>Cosmos</h3>
+                        <p>Notice the little joys in soft edges, simple shapes, and small details.</p>
+                    </div>
+                </article>
+                <article class="day-card" style="--day-color: #7c75a8;">
+                    <div class="day-slider" data-slider>
+                        <div class="day-slides">
+                            <img class="is-active" src="images/signup/5floral/5-days/day5/_DSC0043.JPG" alt="Watercolor lavender">
+                            <img src="images/signup/5floral/5-days/day5/_DSC0045.JPG" alt="Lavender watercolor lesson setup">
+                            <img src="images/signup/5floral/5-days/day5/_DSC0046.JPG" alt="Lavender watercolor painting close up">
+                            <img src="images/signup/5floral/5-days/day5/_DSC0048.JPG" alt="Finished lavender watercolor">
+                        </div>
+                        <div class="day-dots" aria-label="Lavender photos">
+                            <button class="day-dot is-active" type="button" aria-label="Show lavender photo 1"></button>
+                            <button class="day-dot" type="button" aria-label="Show lavender photo 2"></button>
+                            <button class="day-dot" type="button" aria-label="Show lavender photo 3"></button>
+                            <button class="day-dot" type="button" aria-label="Show lavender photo 4"></button>
+                        </div>
+                    </div>
+                    <div class="day-content">
+                        <div class="day-number">5</div>
+                        <h3>Lavender</h3>
+                        <p>Bloom in your own way and let your painting feel like yours.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="perfect">
+        <div class="shell">
+            <div class="section-top">
+                <div>
+                    <div class="eyebrow">This is for you if</div>
+                    <h2>Your heart has been longing for a calmer way to create.</h2>
+                </div>
+                <p>You do not need fancy supplies, lots of time, or confidence. You only need a willingness to make one small beautiful pause.</p>
+            </div>
+            <div class="check-grid">
+                <div class="check-item">You want to slow down and make space for yourself.</div>
+                <div class="check-item">You have been curious about watercolor but feel unsure where to begin.</div>
+                <div class="check-item">You want creativity to feel relaxing instead of intimidating.</div>
+                <div class="check-item">You need a gentle break from screens, noise, and pressure.</div>
+                <div class="check-item">You love flowers, soft colors, and simple mindful projects.</div>
+                <div class="check-item">You want to create for joy, not because you have to be good at it.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="receive">
+        <div class="shell intro-grid">
+            <div>
+                <div class="eyebrow">What you will receive</div>
+                <h2>Everything you need for five gentle painting moments.</h2>
+                <div class="image" aria-hidden="true">
+                    <img src="images/signup/5floral/5-days/day2/_DSC0094.JPG" alt="">
+                </div>
+            </div>
+            <div class="receive-grid">
+                <div class="receive-item">5 guided watercolor flower lessons</div>
+                <div class="receive-item">Step-by-step videos for each day</div>
+                <div class="receive-item">Reference images for the five flowers</div>
+                <div class="receive-item">Simple beginner-friendly watercolor techniques</div>
+                <div class="receive-item">Gentle daily reminders to slow down and create</div>
+                <div class="receive-item">A peaceful practice you can return to anytime</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="permission">
+        <div class="shell quote-layout">
+            <div class="image" aria-hidden="true">
+                <img src="images/signup/5floral/5-days/day3/_DSC0128.JPG" alt="">
+            </div>
+            <div class="soft-copy body-large">
+                <div class="eyebrow">No perfect flowers required</div>
+                <h2>Maybe the most beautiful paintings are the ones where we are present.</h2>
+                <p>Watercolor does not always go exactly as planned. The water moves, the colors soften, and the edges bloom in unexpected ways.</p>
+                <p>That is part of the beauty. This experience is an invitation to play, explore, and let the process be gentle.</p>
+                <p>Five peaceful days. Five flowers. Five quiet moments to come back to yourself.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-signup" id="signup">
+        <div class="shell signup-box">
+            <div>
+                <div class="eyebrow">Ready to begin?</div>
+                <h2>Join 5-Day Watercolor Bloom for free.</h2>
+                <p>Sign up and I will send you the gentle five-day watercolor flower experience, one peaceful lesson at a time.</p>
+                <div class="trust-row" style="margin-top: 24px;">
+                    <span>Completely free</span>
+                    <span>Beginner friendly</span>
+                    <span>Calm and joyful</span>
+                </div>
+            </div>
+            <form id="signup-form">
+                <iframe width="540" height="305"
+                        src="https://72f31874.sibforms.com/v2/serve/MUIFAG0mhdT80oXeaLbDf8oQYesyQB8oaO5C8tObj9w-YDFgOqONX8UynxaXiqShnZtQJS3kqlaag0w0xJVmVEpDVQUv4Eu49Pk45sa5rPZgVavVrlSxzvX91MQqLSe_NKQek8ISks9-LoTfbdMxHQsVXir7gbVQWbu2dOFXpoxdSJdNJC81ZTztGXj_0If6-hlD65GvN7aq8qIQ"
+                        scrolling="auto" allowfullscreen></iframe>
+                <p class="form-note">No perfection required. Just five quiet inbox nudges to help you bloom.</p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="shell">
+        <a class="footer-brand" href="https://zenbeautiful.life/">zenbeautiful.life</a>
+        <ul class="footer-nav">
+            <li><a href="https://zenbeautiful.life/termsAndConditions.html">Terms and Conditions</a></li>
+            <li><a href="https://zenbeautiful.life/privacyPolicy.html">Privacy Policy</a></li>
+            <li><a href="https://zenbeautiful.life/contact.html">Contacts</a></li>
+        </ul>
+        <p class="rights">&copy; <span class="copyright-year"></span> zenbeautiful.life. <a
+                href="https://zenbeautiful.life/privacyPolicy.html">Privacy Policy</a></p>
+    </div>
+</footer>
+
+<script>
+    const copyrightYear = document.querySelector(".copyright-year");
+
+    if (copyrightYear) {
+      copyrightYear.textContent = new Date().getFullYear();
+    }
+
+    const sliders = document.querySelectorAll("[data-slider]");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    sliders.forEach((slider, sliderIndex) => {
+      const slides = slider.querySelectorAll(".day-slides img");
+      const dots = slider.querySelectorAll(".day-dot");
+      let activeIndex = 0;
+
+      const showSlide = (nextIndex) => {
+        activeIndex = nextIndex;
+        slides.forEach((slide, index) => {
+          slide.classList.toggle("is-active", index === activeIndex);
+        });
+        dots.forEach((dot, index) => {
+          dot.classList.toggle("is-active", index === activeIndex);
+        });
+      };
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => showSlide(index));
+      });
+
+      if (!reduceMotion && slides.length > 1) {
+        window.setInterval(() => {
+          showSlide((activeIndex + 1) % slides.length);
+        }, 4400 + sliderIndex * 350);
+      }
+    });
+</script>
+</body>
+</html>
