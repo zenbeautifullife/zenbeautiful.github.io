@@ -366,6 +366,60 @@
           gap: 18px;
         }
 
+        .expect {
+          background:
+            linear-gradient(180deg, rgba(255, 253, 248, 0.88), rgba(255, 250, 244, 0.7)),
+            linear-gradient(135deg, rgba(215, 229, 226, 0.42), rgba(242, 210, 207, 0.36));
+        }
+
+        .display-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 34px;
+        }
+
+        .display-item {
+          display: grid;
+          gap: 14px;
+        }
+
+        .display-item img {
+          display: block;
+          width: 100%;
+          max-height: 760px;
+          border: 10px solid rgba(255, 253, 248, 0.88);
+          border-radius: 8px;
+          aspect-ratio: 3 / 2;
+          object-fit: cover;
+          box-shadow: var(--shadow);
+        }
+
+        .display-caption {
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
+          gap: 16px;
+          padding: 0 4px;
+        }
+
+        .display-caption span {
+          display: block;
+          color: var(--green-dark);
+          font-size: 0.76rem;
+          font-weight: 850;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+        }
+
+        .display-caption h3 {
+          margin: 0;
+          font-family: Georgia, "Times New Roman", serif;
+          line-height: 1.04;
+          letter-spacing: 0;
+          font-weight: 600;
+          font-size: 1.32rem;
+        }
+
         .days {
           background: linear-gradient(180deg, rgba(242, 210, 207, 0.36), rgba(255, 250, 244, 0));
         }
@@ -684,6 +738,7 @@
             min-height: 590px;
           }
 
+          .display-grid,
           .day-grid,
           .check-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -737,6 +792,21 @@
             width: min(260px, 78%);
           }
 
+          .display-grid {
+            gap: 28px;
+          }
+
+          .display-item img {
+            border-width: 8px;
+          }
+
+          .display-caption {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 4px;
+          }
+
+          .display-grid,
           .day-grid,
           .check-grid,
           .receive-grid {
@@ -828,6 +898,55 @@
             <div class="soft-copy body-large">
                 <p>If you have been wanting to reconnect with your creativity, this five-day experience is a gentle place to begin.</p>
                 <p>Each day gives you one simple flower and one quiet reminder. No pressure. No perfection. Just a small moment to slow down and create because it brings you joy.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="expect">
+        <div class="shell">
+            <div class="section-top">
+                <div>
+                    <div class="eyebrow">What to expect each day</div>
+                    <h2>Five simple flowers, one gentle step at a time.</h2>
+                </div>
+                <p>Here is the full five-day bloom at a glance, so you can see the peaceful painting moment waiting for you each day.</p>
+            </div>
+            <div class="display-grid">
+                <article class="display-item">
+                    <img src="images/signup/5floral/display/day1-rose.JPG" alt="Day 1 yellow rose watercolor painting">
+                    <div class="display-caption">
+                        <span>Day 1</span>
+                        <h3>Yellow Rose</h3>
+                    </div>
+                </article>
+                <article class="display-item">
+                    <img src="images/signup/5floral/display/day2-lily.JPG" alt="Day 2 pink lily watercolor painting">
+                    <div class="display-caption">
+                        <span>Day 2</span>
+                        <h3>Pink Lily</h3>
+                    </div>
+                </article>
+                <article class="display-item">
+                    <img src="images/signup/5floral/display/day3-cone-flower.JPG" alt="Day 3 coneflower watercolor painting">
+                    <div class="display-caption">
+                        <span>Day 3</span>
+                        <h3>Coneflower</h3>
+                    </div>
+                </article>
+                <article class="display-item">
+                    <img src="images/signup/5floral/display/day4-cosmos.JPG" alt="Day 4 cosmos watercolor painting">
+                    <div class="display-caption">
+                        <span>Day 4</span>
+                        <h3>Cosmos</h3>
+                    </div>
+                </article>
+                <article class="display-item">
+                    <img src="images/signup/5floral/display/day5-lavender.JPG" alt="Day 5 lavender watercolor painting">
+                    <div class="display-caption">
+                        <span>Day 5</span>
+                        <h3>Lavender</h3>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
