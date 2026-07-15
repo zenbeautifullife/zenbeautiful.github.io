@@ -270,8 +270,8 @@
 .container .caption {
     line-height: 1;
     margin-top: 20px;
-    font-family: Roboto Slab, sans-serif;
-    font-weight: 300;
+    /*font-family: Roboto Slab, sans-serif;*/
+    font-weight: 400;
     color: #333333;
 
 }
