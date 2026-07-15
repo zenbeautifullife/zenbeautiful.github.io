@@ -51,6 +51,33 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
+
+         :root {
+          --ink: #26302c;
+          --muted: #657169;
+          --paper: #fffaf4;
+          --soft-paper: #f8efe8;
+          --green: #476d5d;
+          --green-dark: #26483d;
+          --cta: #9c6418;
+          --cta-hover: #805113;
+          --rose: #d9828d;
+          --rose-soft: #f2d2cf;
+          --lavender: #b6a7ce;
+          --gold: #d8a44f;
+          --sky: #d7e5e2;
+          --line: rgba(38, 48, 44, 0.15);
+          --shadow: 0 22px 70px rgba(72, 61, 52, 0.15);
+          font-family: Georgia, "Times New Roman", serif;
+        }
+         .eyebrow {
+          margin-bottom: 14px;
+          color: var(--green-dark);
+          font-size: 0.8rem;
+          font-weight: 850;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        }
         @keyframes spin { 0% { transform: rotate(0deg);} 100% { transform: rotate(360deg);} }
         .preloader p {
             margin-top: 15px;
@@ -63,26 +90,8 @@
         .ie-panel { display:none; background:#212121; padding:10px 0; box-shadow:3px 3px 5px rgba(0,0,0,.3); text-align:center; position:relative; z-index:1; }
         html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel { display:block; }
 
-        .main-container { padding-top: 48px; }
-        .announcement-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1100;
-            background: linear-gradient(90deg, #264c44 0%, #5d7b68 100%);
-            color: #fff;
-            text-align: center;
-            padding: 12px 18px;
-            font-size: 15px;
-            line-height: 1.4;
-            font-family: 'Poppins', sans-serif;
-        }
-        .announcement-bar a {
-            color: #fff;
-            text-decoration: underline;
-            font-weight: 600;
-        }
+
+
         .reset-landing {
             font-family: Raleway, sans-serif;
             background: linear-gradient(180deg, #f6f6ef 0%, #fbfaf4 100%);
@@ -142,6 +151,7 @@
             border-radius: 999px;
             font-weight: 600;
             transition: all .2s ease;
+            margin-right:20px;
         }
         .course-btn:hover {
             background: transparent;
@@ -232,6 +242,86 @@
             padding: 28px;
             margin-top: 18px;
         }
+
+
+        .final-signup {
+          padding: 92px 0 104px;
+          background:
+            linear-gradient(rgba(255, 253, 248, 0.82), rgba(255, 253, 248, 0.82)),
+            linear-gradient(135deg, var(--sky), var(--rose-soft), rgba(182, 167, 206, 0.55));
+        }
+
+          .signup-box {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+          gap: 42px;
+          align-items: center;
+          padding: clamp(28px, 5vw, 54px);
+          border: 1px solid rgba(38, 48, 44, 0.13);
+          border-radius: 8px;
+          background: rgba(255, 253, 248, 0.9);
+          box-shadow: var(--shadow);
+        }
+
+        .signup-box h2 {
+          max-width: 720px;
+        }
+
+        .signup-box p {
+          max-width: 620px;
+          margin-top: 18px;
+          font-size: 1.12rem;
+        }
+
+        form {
+          display: grid;
+          gap: 12px;
+        }
+
+        iframe {
+          width: 100%;
+          max-width: 100%;
+          border: 0;
+        }
+
+        .form-note {
+          color: var(--muted);
+          font-size: 0.9rem;
+        }
+
+
+   .trust-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          color: var(--green-dark);
+          font-size: 0.86rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+        }
+
+        .trust-row span {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+        }
+
+        .trust-row span::before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: var(--gold);
+        }
+        .shell {
+          width: min(1120px, calc(100% - 36px));
+          margin: 0 auto;
+        }
+          @media (max-width: 640px) {
+          .shell {
+            width: min(100% - 26px, 1120px);
+          }
         @media (max-width: 1199px) {
             .paint-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
         }
@@ -242,13 +332,132 @@
         }
         @media (max-width: 767px) {
             .main-container { padding-top: 58px; }
-            .announcement-bar { font-size: 13px; padding: 10px 14px; }
             .hero-title { font-size: 31px; }
             .hero-subtitle { font-size: 14px; }
             .paint-grid { grid-template-columns: 1fr; }
             .soft-panel { padding: 24px; }
             .section-title { font-size: 28px; }
             .price { font-size: 38px; }
+        }
+
+         @media (max-width: 980px) {
+          .site-nav {
+            align-items: flex-start;
+            flex-direction: column;
+          }
+
+          .site-links,
+          .site-social {
+            flex-wrap: wrap;
+          }
+
+          .hero,
+          .intro-grid,
+          .quote-layout,
+          .signup-box {
+            grid-template-columns: 1fr;
+          }
+
+          .hero {
+            min-height: auto;
+            padding-top: 34px;
+          }
+
+          .art-panel {
+            min-height: 590px;
+          }
+
+          .display-grid,
+          .day-grid,
+          .check-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          .section-top {
+            align-items: start;
+            flex-direction: column;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .shell {
+            width: min(100% - 26px, 1120px);
+          }
+
+          .site-nav {
+            min-height: auto;
+            gap: 14px;
+          }
+
+          .site-links {
+            gap: 12px 16px;
+          }
+
+          h1 {
+            font-size: clamp(2.55rem, 15vw, 4.18rem);
+          }
+
+          section,
+          .permission {
+            padding: 62px 0;
+          }
+
+          .art-panel {
+            min-height: 500px;
+          }
+
+          .hero-photo.main {
+            inset: 0 0 126px 0;
+          }
+
+          .hero-photo.small {
+            width: 56%;
+            height: 190px;
+          }
+
+          .note {
+            left: 12px;
+            bottom: 44px;
+            width: min(260px, 78%);
+          }
+
+          .display-grid {
+            gap: 28px;
+          }
+
+          .display-item img {
+            border-width: 8px;
+          }
+
+          .display-caption {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 4px;
+          }
+
+          .display-grid,
+          .day-grid,
+          .check-grid,
+          .receive-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .day-card {
+            min-height: auto;
+          }
+
+          .day-slider {
+            height: 230px;
+          }
+
+          .hero-actions {
+            align-items: stretch;
+            flex-direction: column;
+          }
+
+          .button {
+            width: 100%;
+          }
         }
     </style>
 </head>
@@ -260,9 +469,6 @@
     <p>Loading...</p>
 </div>
 
-<div class="announcement-bar">
-    New! Paint Away the Overwhelm - A 5-Day Watercolor Reset (Only $9) -> <a href="https://ko-fi.com/s/75b7f4b634" rel="noopener noreferrer" target="_blank">Join Here</a>
-</div>
 
 <div class="page main-container" style="display:none;">
     <!-- Header -->
@@ -293,7 +499,24 @@
             </div>
         </nav>
     </header>
+    <!-- 1.banner-->
+    <section class="section section-lg section-main-bunner section-main-bunner-filter text-center">
+        <div class="main-bunner-img" style="background-image: url(images/banner6.jpg);"></div>
+        <div class="main-bunner-inner">
+            <div class="container">
+                <div class="box-default">
+                    <h1 class="box-default-title">Find Calm Through Creativity</h1>
 
+                    <p class="big box-default-text">Gentle watercolor classes and creative rituals for busy adults who need a moment to slow down, breathe, and reconnect with themselves.</p>
+                    <div class="box-default-decor"></div>
+                    <a class="course-btn"  href="#signup">Join the Free Bloom</a>
+
+                    <a class="course-btn" href="https://www.youtube.com/@zenbeautifulart"  target="_blank">Watch on YouTube</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
     <main class="reset-landing">
         <section class="landing-section section-first">
             <div class="container">
@@ -318,13 +541,14 @@
 
         <section class="landing-section">
             <div class="container">
-                <div class="soft-panel">
-                    <h2 class="section-title">Feeling overwhelmed lately?</h2>
+                <div>
+                    <h2 class="section-title">Maybe you miss being creative...</h2>
                     <p class="section-text">
-                        When life feels busy or heavy, creativity often gets pushed aside.<br>
-                        But painting does not have to be complicated.<br><br>
-                        Sometimes all you need is a quiet moment, a brush in water, and permission to begin again.<br><br>
-                        That is why I created this gentle 5-day watercolor reset.
+                        Life feels busy and noisy. Work, family and responsibilities come first. <br>
+                        Somewhere along the way, you stopped creating. <br>
+                        Creativity isn't another task on your to-do list — it can become a small act of self-care.
+
+
                     </p>
                 </div>
             </div>
@@ -332,31 +556,31 @@
 
         <section class="landing-section">
             <div class="container">
-                <h2 class="section-title text-center">What You'll Paint in the 5-Day Reset</h2>
+                <h2 class="section-title text-center">What You'll Paint in the 5-Day Watercolor Bloom</h2>
                 <div class="paint-grid">
                     <article class="paint-card">
-                        <img alt="Day 1 One-Color Calm" src="images/home/5days/Day1–One-Color-Calm.jpg">
-                        <div class="caption"><strong>Day 1 - One-Color Calm</strong><br>Slow, calming brush strokes.</div>
+                        <img alt="Day 1 One-Color Calm" src="images/signup/5floral/5-days/day1/_DSC0053.JPG">
+                        <div class="caption"><strong>Day 1 - Yellow Rose</strong><br>Slow, calming brush strokes.</div>
                     </article>
                     <article class="paint-card">
-                        <img alt="Day 2 Two-Color Ocean" src="images/home/5days/Day2–Two-Color-Ocean.jpg">
-                        <div class="caption"><strong>Day 2 - Two-Color Ocean</strong><br>Simple layers for movement and flow.</div>
+                        <img alt="Day 2 Pink Lily" src="images/signup/5floral/5-days/day2/_DSC0083.JPG">
+                        <div class="caption"><strong>Day 2 - Pink Lily</strong><br>Simple layers for movement and flow.</div>
                     </article>
                     <article class="paint-card">
-                        <img alt="Day 3 Soft Cloudy Sky" src="images/home/5days/Day3–Cloudy-Sky.jpg">
-                        <div class="caption"><strong>Day 3 - Soft Cloudy Sky</strong><br>Relaxing wet-on-wet blending.</div>
+                        <img alt="Day 3 Coneflower" src="images/signup/5floral/5-days/day3/_DSC0127.JPG">
+                        <div class="caption"><strong>Day 3 - Coneflower</strong><br>Relaxing wet-on-wet blending.</div>
                     </article>
                     <article class="paint-card">
-                        <img alt="Day 4 Loose Eucalyptus" src="images/home/5days/Day4–Loose-Eucalyptus.jpg">
-                        <div class="caption"><strong>Day 4 - Loose Eucalyptus</strong><br>Loose leaves with soft color.</div>
+                        <img alt="Day 4 Cosmos" src="images/signup/5floral/5-days/day4/_DSC0008.JPG">
+                        <div class="caption"><strong>Day 4 - Cosmos</strong><br>Loose leaves with soft color.</div>
                     </article>
                     <article class="paint-card">
-                        <img alt="Day 5 Emotional Flower" src="images/home/5days/Day5–Emotional-Flower.jpg">
-                        <div class="caption"><strong>Day 5 - Emotional Flower</strong><br>Expressive painting to close your reset.</div>
+                        <img alt="Day 5 Lavender" src="images/signup/5floral/5-days/day5/_DSC0043.JPG">
+                        <div class="caption"><strong>Day 5 - Lavender</strong><br>Expressive painting to close your reset.</div>
                     </article>
                     </div>
                 <div class="text-center" style="margin-top: 26px;">
-                    <a class="course-btn" href="https://ko-fi.com/s/75b7f4b634" rel="noopener noreferrer" target="_blank">Start the 5-Day Reset</a>
+                    <a class="course-btn" href="#signup">Start the 5-Day Watercolor Bloom</a>
                 </div>
             </div>
         </section>
@@ -390,27 +614,22 @@
                 <div class="soft-panel">
                     <div class="row row-40">
                         <div class="col-md-12 col-lg-6">
-                            <h2 class="section-title">Inside the 5-Day Reset</h2>
-                            <ul class="check-list">
-                                <li>- 5 guided watercolor video lessons</li>
-                                <li>- Watch anytime at your own pace</li>
-                                <li>- Beginner-friendly paintings</li>
-                                <li>- A calm creative reset</li>
-                            </ul>
+                            <h2 class="section-title">Zen beautiful art</h2>
+                            <p>
+                                Slow down.<br>
+                                Breathe.<br>
+                                Create.<br>
+                            </p>
+                            <p>
+                                Wherever life takes you today,<br>
+                                I hope you carry a little of this peace with you.
+                            </p>
                         </div>
                         <div class="col-md-12 col-lg-6">
                             <h2 class="section-title" style="font-size: 29px;">Hi, I'm Lucy Lu</h2>
                             <p class="section-text">
-                                Watercolor has always been a quiet space for me — a place where I can slow down, breathe, and let go of the noise of everyday life.<br>
-
-                                I love creating simple paintings that feel calm, gentle, and expressive. Not perfect, just honest moments on paper.<br>
-
-                                Through this 5-day series, I hope to share that feeling with you<br>
-
-                                a small pause in your day where you can slow down and rediscover the joy of painting.<br>
-
-                                You don’t need perfect skills.<br>
-                                Just a little curiosity… and a brush.
+                                Watercolor became my way to slow down, breathe, and reconnect with myself.
+                                Today I help other busy adults discover that same feeling through gentle watercolor painting.
                             </p>
                         </div>
                     </div>
@@ -418,16 +637,24 @@
             </div>
         </section>
 
-        <section class="landing-section" id="join-reset">
-            <div class="container">
-                <div class="pricing-box">
-                    <h2 class="section-title" style="margin-bottom: 4px;">Join the 5-Day Watercolor Reset</h2>
-                    <p class="section-text">A gentle invitation to create one peaceful painting each day.</p>
-                    <p class="price">$9</p>
-                    <p class="section-text">All 5 lessons | Lifetime access | Paint anytime</p>
-                    <a class="course-btn" href="https://ko-fi.com/s/75b7f4b634" rel="noopener noreferrer" target="_blank">Start My Watercolor Reset</a>
-                    <p class="micro-copy">Less than the cost of a cup of coffee.</p>
+        <section class="final-signup" id="signup">
+            <div class="shell signup-box">
+                <div>
+                    <div class="eyebrow">Ready to begin?</div>
+                    <h2>Join 5-Day Watercolor Bloom for free.</h2>
+                    <p>Sign up and I will send you the gentle five-day watercolor flower experience, one peaceful lesson at a time.</p>
+                    <div class="trust-row" style="margin-top: 24px;">
+                        <span>Completely free</span>
+                        <span>Beginner friendly</span>
+                        <span>Calm and joyful</span>
+                    </div>
                 </div>
+                <form id="signup-form">
+                    <iframe width="540" height="305"
+                            src="https://72f31874.sibforms.com/v2/serve/MUIFAPp0Aq_M_5623NCZElirupA37TvYfm5J5qjjdkI71CCeJdC_duxErMCCkBnx-FWwvYyMReqaE81zjbZmhfVKsBB_yGcMlhMD_-P4ey9qJZXfR99AckICvs1uA64P2B1wux7uelIyalXOcV1zf_JT8Drq8mV7-3-bHgwrJeZSbje-GIrj93AbINJCQHR7YB-PG8nHBA-k8p85"
+                            scrolling="auto" allowfullscreen></iframe>
+                    <p class="form-note">No perfection required. Just five quiet inbox nudges to help you bloom.</p>
+                </form>
             </div>
         </section>
     </main>
