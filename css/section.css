@@ -297,7 +297,6 @@ html [class*='section-'].section-bottom-0 {
 .section-main-bunner .main-bunner-inner {
     position: relative;
     flex: 1;
-    margin-top: 300px;
     z-index: 1;
 }
 

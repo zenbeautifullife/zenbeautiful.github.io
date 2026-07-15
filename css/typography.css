@@ -2,10 +2,10 @@
 * Typography
 */
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 15px;
     line-height: 1.66667;
-    font-weight: 300;
+    font-weight: 400;
     color: rgba(21, 21, 21, 0.8);
     background-color: #ffffff;
     letter-spacing: -0.03em;
@@ -34,16 +34,16 @@ h1,
 .heading-1 {
     font-size: 32px;
     line-height: 1.5;
-    font-family: Britannic Bold;
+    font-family: Tenor Sans;
     /*text-transform: uppercase;*/
 }
 
 @media (min-width: 1200px) {
     h1,
     .heading-1 {
-        font-size: 80px;
+        font-size: 60px;
         line-height: 1.075;
-        font-family: Britannic Bold;
+        font-family: Tenor Sans;
 
     }
 }
@@ -52,7 +52,7 @@ h2,
 .heading-2 {
     font-size: 28px;
     line-height: 1.5;
-    font-family: Britannic Bold;
+    font-family: Tenor Sans;
 }
 
 @media (min-width: 1200px) {
