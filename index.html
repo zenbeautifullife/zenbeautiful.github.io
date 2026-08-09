@@ -204,6 +204,52 @@
             font-size: 14px;
             line-height: 1.5;
         }
+        .plan-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 28px;
+        }
+        .plan-step {
+            position: relative;
+            padding: 28px 24px 24px;
+            background: #fff;
+            border: 1px solid #e7e4d8;
+            border-radius: 14px;
+            box-shadow: 0 10px 24px rgba(34, 44, 41, .08);
+        }
+        .plan-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            margin-bottom: 14px;
+            border-radius: 50%;
+            background: #2f6d5a;
+            color: #fff;
+            font-family: Raleway, sans-serif;
+            font-weight: 700;
+        }
+        .plan-step h3 {
+            margin: 0 0 10px;
+            color: #1f3f38;
+            font-size: 20px;
+        }
+        .plan-step p {
+            margin: 0;
+        }
+        .stakes-panel {
+            background: #eef4ef;
+            border: 1px solid #d5e2d9;
+            border-radius: 18px;
+            padding: 32px 36px;
+        }
+        .stakes-panel h3 {
+            color: #1f3f38;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
         .check-list {
             list-style: none;
             padding: 0;
@@ -322,6 +368,7 @@
           .shell {
             width: min(100% - 26px, 1120px);
           }
+        }
         @media (max-width: 1199px) {
             .paint-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
         }
@@ -329,6 +376,7 @@
             .hero-title { font-size: 38px; }
             .landing-section { padding: 58px 0; }
             .paint-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .plan-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 767px) {
             .main-container { padding-top: 58px; }
@@ -505,13 +553,14 @@
         <div class="main-bunner-inner">
             <div class="container">
                 <div class="box-default">
-                    <h1 class="box-default-title">Find Calm Through Creativity</h1>
+                    <p class="eyebrow">A free 5-day watercolor reset for busy beginners</p>
+                    <h1 class="box-default-title">Feeling overwhelmed? Make space for yourself in five peaceful days.</h1>
 
-                    <p class="big box-default-text">Gentle watercolor classes and creative rituals for busy adults who need a moment to slow down, breathe, and reconnect with themselves.</p>
+                    <p class="big box-default-text">Paint one simple flower each day and enjoy a small, gentle moment to slow down, breathe, and reconnect with your creativity.</p>
                     <div class="box-default-decor"></div>
-                    <a class="course-btn"  href="#signup">Join the Free Bloom</a>
+                    <a class="course-btn" href="#signup">Start My Free 5-Day Reset</a>
 
-                    <a class="course-btn" href="https://www.youtube.com/@zenbeautifulart"  target="_blank">Watch on YouTube</a>
+                    <a class="course-btn" href="https://www.youtube.com/@zenbeautifulart" target="_blank">See a Lesson on YouTube</a>
 
                 </div>
             </div>
@@ -525,14 +574,14 @@
                         <img alt="Paint Away the Overwhelm watercolor preview" class="hero-image" src="images/signup/5floral/display/day1-rose.JPG">
                     </div>
                     <div class="col-md-12 col-lg-6">
-                        <h1 class="hero-title">Five peaceful days. <br>One flower at a time.</h1>
+                        <h2 class="hero-title">One simple flower a day. <br>One calmer week for you.</h2>
                         <p class="hero-subtitle">
-                            A gentle watercolor experience for anyone longing for a little more calm, joy, and creative space.
+                            The 5-Day Watercolor Bloom is a free, beginner-friendly experience for anyone longing for a little more calm, joy, and creative space.
                         </p>
                       <p class="hero-subtitle">
-                          Over five days, we will paint five simple flowers together and make a little room to begin, play, notice, and bloom in your own way.
+                          You will receive one short lesson each day, paint five simple flowers, and make a little room to begin, play, notice, and bloom in your own way.
                       </p>
-                        <a class="course-btn" href="https://ko-fi.com/s/75b7f4b634" rel="noopener noreferrer" target="_blank">Join the Free Bloom</a>
+                        <a class="course-btn" href="#signup">Start My Free 5-Day Reset</a>
                     </div>
 
                 </div>
@@ -542,14 +591,37 @@
         <section class="landing-section">
             <div class="container">
                 <div>
-                    <h2 class="section-title">Maybe you miss being creative...</h2>
+                    <h2 class="section-title">You miss being creative—but life keeps getting in the way.</h2>
                     <p class="section-text">
-                        Life feels busy and noisy. Work, family and responsibilities come first. <br>
-                        Somewhere along the way, you stopped creating. <br>
-                        Creativity isn't another task on your to-do list — it can become a small act of self-care.
+                        Work, family, and responsibilities come first. Somewhere along the way, you stopped creating. <br>
+                        You do not need another demanding course or a perfect result. You need a gentle place to begin. <br>
+                        Creativity can be a small act of self-care—not another task on your to-do list.
 
 
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="landing-section">
+            <div class="container">
+                <h2 class="section-title text-center">Your simple 3-step plan</h2>
+                <div class="plan-grid">
+                    <article class="plan-step">
+                        <span class="plan-number">1</span>
+                        <h3>Sign up for free</h3>
+                        <p>Join the 5-Day Watercolor Bloom in less than a minute.</p>
+                    </article>
+                    <article class="plan-step">
+                        <span class="plan-number">2</span>
+                        <h3>Open one daily lesson</h3>
+                        <p>Receive a short, gentle flower-painting prompt in your inbox each day.</p>
+                    </article>
+                    <article class="plan-step">
+                        <span class="plan-number">3</span>
+                        <h3>Paint and reset</h3>
+                        <p>Make five peaceful moments for yourself—without pressure or perfection.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -578,7 +650,7 @@
                         <img alt="Day 5 Lavender" src="images/signup/5floral/5-days/day5/_DSC0043.JPG">
                         <div class="caption"><strong>Day 5 - Lavender</strong><br>Expressive painting to close your reset.</div>
                     </article>
-                    </div>
+                </div>
                 <div class="text-center" style="margin-top: 26px;">
                     <a class="course-btn" href="#signup">Start the 5-Day Watercolor Bloom</a>
                 </div>
@@ -591,7 +663,7 @@
                     <div class="col-md-12 col-lg-6">
                         <h2 class="section-title">This is not a traditional art course</h2>
                         <p class="section-text">
-                            Instead of focusing on perfection, this series focuses on slowing down, enjoying the process,
+                            This is a reset, not a test. Instead of focusing on perfection, we focus on slowing down, enjoying the process,
                             and letting watercolor flow naturally.
                         </p>
                         <p class="section-text">No complicated techniques. No pressure. Just gentle painting moments.</p>
@@ -599,10 +671,10 @@
                     <div class="col-md-12 col-lg-6">
                         <h2 class="section-title">This reset is perfect for you if:</h2>
                         <ul class="check-list">
-                            <li>- You feel overwhelmed and need a creative pause</li>
-                            <li>- You want to paint but do not know where to start</li>
-                            <li>- You love calm watercolor videos</li>
-                            <li>- You want simple, relaxing art time</li>
+                            <li>- You feel overwhelmed and need a creative pause.</li>
+                            <li>- You want to paint but do not know where to start.</li>
+                            <li>- You love calm watercolor videos.</li>
+                            <li>- You want simple, relaxing art time.</li>
                         </ul>
                     </div>
                 </div>
@@ -614,23 +686,20 @@
                 <div class="soft-panel">
                     <div class="row row-40">
                         <div class="col-md-12 col-lg-6">
-                            <h2 class="section-title">Zen beautiful art</h2>
-                            <p>
-                                Slow down.<br>
-                                Breathe.<br>
-                                Create.<br>
-                            </p>
-                            <p>
-                                Wherever life takes you today,<br>
-                                I hope you carry a little of this peace with you.
+                            <h2 class="section-title">Hi, I'm Lucy Lu</h2>
+                            <p class="section-text">
+                                Watercolor became my way to slow down, breathe, and reconnect with myself.
+                                I created this gentle five-day experience to help busy adults find that same feeling—one simple flower at a time.
                             </p>
                         </div>
                         <div class="col-md-12 col-lg-6">
-                            <h2 class="section-title" style="font-size: 29px;">Hi, I'm Lucy Lu</h2>
+                            <div class="stakes-panel">
+                            <h2 class="section-title" style="font-size: 29px;">Make room for what matters</h2>
                             <p class="section-text">
-                                Watercolor became my way to slow down, breathe, and reconnect with myself.
-                                Today I help other busy adults discover that same feeling through gentle watercolor painting.
+                                By the end of the week, you will have five small paintings and a creative ritual that feels like yours.
+                                Without a simple place to start, creativity can keep being pushed to “someday.”
                             </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -641,8 +710,8 @@
             <div class="shell signup-box">
                 <div>
                     <div class="eyebrow">Ready to begin?</div>
-                    <h2>Join 5-Day Watercolor Bloom for free.</h2>
-                    <p>Sign up and I will send you the gentle five-day watercolor flower experience, one peaceful lesson at a time.</p>
+                    <h2>Start your free 5-Day Watercolor Bloom.</h2>
+                    <p>If you are overwhelmed and miss making time for yourself, this free watercolor reset is the right place to start.</p>
                     <div class="trust-row" style="margin-top: 24px;">
                         <span>Completely free</span>
                         <span>Beginner friendly</span>
@@ -653,7 +722,7 @@
                     <iframe width="540" height="305"
                             src="https://72f31874.sibforms.com/v2/serve/MUIFAPp0Aq_M_5623NCZElirupA37TvYfm5J5qjjdkI71CCeJdC_duxErMCCkBnx-FWwvYyMReqaE81zjbZmhfVKsBB_yGcMlhMD_-P4ey9qJZXfR99AckICvs1uA64P2B1wux7uelIyalXOcV1zf_JT8Drq8mV7-3-bHgwrJeZSbje-GIrj93AbINJCQHR7YB-PG8nHBA-k8p85"
                             scrolling="auto" allowfullscreen></iframe>
-                    <p class="form-note">No perfection required. Just five quiet inbox nudges to help you bloom.</p>
+                    <p class="form-note">No perfection required. Just five quiet inbox lessons to help you make space for yourself again.</p>
                 </form>
             </div>
         </section>
