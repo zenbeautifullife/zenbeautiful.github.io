@@ -337,7 +337,7 @@ html [class*='section-'].section-bottom-0 {
 }
 
 .section-main-bunner.section-main-bunner-filter .main-bunner-img {
-    opacity: 1;
+    opacity: 0.5;
 }
 
 .section-main-bunner.section-main-bunner-filter:before {
