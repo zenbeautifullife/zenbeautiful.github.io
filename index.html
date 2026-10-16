@@ -292,6 +292,86 @@
             padding: 28px;
             margin-top: 18px;
         }
+        .beginner-guide {
+            padding: 76px 0;
+            background: linear-gradient(135deg, #edf4ee 0%, #fffaf4 52%, #f3e7dc 100%);
+        }
+        .beginner-guide-card {
+            display: grid;
+            grid-template-columns: minmax(230px, 0.72fr) minmax(0, 1.28fr);
+            gap: clamp(28px, 5vw, 68px);
+            align-items: center;
+            max-width: 1030px;
+            margin: 0 auto;
+            padding: clamp(26px, 5vw, 52px);
+            background: rgba(255, 255, 255, .78);
+            border: 1px solid rgba(71, 109, 93, .2);
+            border-radius: 22px;
+            box-shadow: 0 18px 40px rgba(50, 63, 54, .1);
+        }
+        .beginner-guide-cover {
+            display: block;
+            width: 100%;
+            max-width: 360px;
+            margin: 0 auto;
+            border-radius: 7px;
+            box-shadow: 0 16px 30px rgba(38, 48, 44, .2);
+        }
+        .guide-label {
+            margin: 0 0 12px;
+            color: #476d5d;
+            font-family: Raleway, sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+        .beginner-guide h2 {
+            margin-bottom: 15px;
+            color: #1f3f38;
+            font-size: clamp(30px, 4vw, 42px);
+            line-height: 1.16;
+        }
+        .guide-copy {
+            margin-bottom: 19px;
+            color: #435950;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+        .guide-features {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px 20px;
+            margin: 0 0 25px;
+            padding: 0;
+            list-style: none;
+        }
+        .guide-features li {
+            color: #334b43;
+            font-size: 15px;
+            line-height: 1.45;
+        }
+        .guide-features li::before {
+            content: "✓";
+            display: inline-block;
+            margin-right: 8px;
+            color: #9c6418;
+            font-weight: 700;
+        }
+        .guide-price {
+            margin: 0 0 19px;
+            color: #1f3f38;
+            font-family: Raleway, sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .guide-price span {
+            margin-left: 7px;
+            color: #657169;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 14px;
+            font-weight: 400;
+        }
 
 
         .final-signup {
@@ -390,6 +470,9 @@
             .soft-panel { padding: 24px; }
             .section-title { font-size: 28px; }
             .price { font-size: 38px; }
+            .beginner-guide { padding: 56px 0; }
+            .beginner-guide-card { grid-template-columns: 1fr; }
+            .beginner-guide-cover { max-width: 300px; }
         }
 
          @media (max-width: 980px) {
@@ -465,6 +548,10 @@
           .hero-photo.small {
             width: 56%;
             height: 190px;
+          }
+
+          .guide-features {
+            grid-template-columns: 1fr;
           }
 
           .note {
@@ -680,6 +767,27 @@
                             <li>- You love calm watercolor videos.</li>
                             <li>- You want simple, relaxing art time.</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="beginner-guide" aria-labelledby="beginner-guide-title">
+            <div class="container">
+                <div class="beginner-guide-card">
+                    <img class="beginner-guide-cover" src="images/shop/watercolor-beginner-cheat-sheet.webp" alt="Watercolor Beginner Cheat Sheet cover">
+                    <div>
+                        <p class="guide-label">A gentle next step for beginners</p>
+                        <h2 id="beginner-guide-title">Watercolor Beginner Cheat Sheet</h2>
+                        <p class="guide-copy">A simple, practical PDF guide to help you move from watching tutorials to painting with confidence—one calm, focused practice at a time.</p>
+                        <ul class="guide-features">
+                            <li>Water and paint control</li>
+                            <li>5 essential techniques</li>
+                            <li>3 step-by-step exercises</li>
+                            <li>A gentle 7-day practice path</li>
+                        </ul>
+                        <p class="guide-price">NZ$9 <span>Digital PDF · Instant download</span></p>
+                        <a class="course-btn" href="https://ko-fi.com/s/7dd055caf6" target="_blank" rel="noopener noreferrer">Get the Beginner Cheat Sheet</a>
                     </div>
                 </div>
             </div>
