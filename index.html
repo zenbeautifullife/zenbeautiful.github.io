@@ -20,7 +20,7 @@
     <!-- Preload fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 
     <!-- Main CSS -->
     <link href="css/layout.css" rel="stylesheet">
@@ -68,13 +68,13 @@
           --sky: #e9ece6;
           --line: rgba(41, 58, 57, 0.15);
           --shadow: 0 22px 70px rgba(41, 58, 57, 0.12);
-          font-family: Georgia, "Times New Roman", serif;
+          font-family: Raleway, sans-serif;
         }
 
         @keyframes spin { 0% { transform: rotate(0deg);} 100% { transform: rotate(360deg);} }
         .preloader p {
             margin-top: 15px;
-            font-family: 'Poppins', sans-serif;
+            font-family: Raleway, sans-serif;
             color: #b76553;
             font-size: 16px;
         }
@@ -372,6 +372,32 @@
             font-size: 14px;
             font-weight: 400;
         }
+        .beginner-guide .guide-cta {
+            display: inline-flex;
+            min-height: 52px;
+            margin-right: 0;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--cta-hover);
+            border-radius: 4px;
+            background: var(--cta-hover);
+            box-shadow: 0 6px 16px rgba(159, 79, 64, .2);
+            color: #fff !important;
+            font-family: Raleway, sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: .06em;
+            line-height: 1.35;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .beginner-guide .guide-cta:hover { transform: translateY(-2px); color: #fff !important; box-shadow: 0 9px 20px rgba(159, 79, 64, .28); }
+        .beginner-guide .guide-cta:focus-visible { outline: 3px solid rgba(73, 107, 91, .55) !important; outline-offset: 3px; }
+        .guide-preview { margin: 20px 0; }
+        .guide-preview-title { margin: 0 0 9px; color: var(--green); font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+        .guide-preview-video { position: relative; overflow: hidden; width: 100%; aspect-ratio: 16 / 9; background: var(--ink); border-radius: 6px; }
+        .guide-preview-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
         .color-mixing-signup {
             padding: 72px 0;
             background: linear-gradient(135deg, #fbf8f1 0%, #f4e9e2 100%);
@@ -671,6 +697,73 @@
             width: 100%;
           }
         }
+
+        /* Carry the pre-sale page's typography and warm watercolor palette across the homepage. */
+        html { scroll-behavior: smooth; }
+        body, .page.main-container { background: var(--paper); color: var(--ink); font-family: Raleway, sans-serif; }
+        .page-header { background: var(--paper); border-bottom: 1px solid #e8e2d8; }
+        .rd-navbar-aside .rd-navbar-main-outer,
+        .rd-navbar-aside .rd-navbar-aside-outer { background: var(--paper) !important; }
+        .rd-navbar-aside .rd-navbar-brand .brand-title { color: var(--green); font-family: Raleway, sans-serif; font-size: 23px; font-weight: 500; }
+        .rd-navbar-aside .rd-navbar-panel .nav-list a,
+        .rd-navbar-aside .rd-navbar-panel .header-soc-list .icon { color: var(--ink) !important; font-family: Raleway, sans-serif; }
+        .rd-navbar-aside .rd-navbar-panel .nav-list a:hover,
+        .rd-navbar-aside .rd-navbar-panel .active a { color: var(--coral) !important; }
+        .rd-navbar-aside .rd-navbar-panel .nav-list a:hover,
+        .rd-navbar-aside .rd-navbar-panel .nav-list a:focus-visible {
+            text-decoration: underline;
+            text-decoration-color: var(--coral);
+            text-decoration-thickness: 2px;
+            text-underline-offset: 6px;
+        }
+        .rd-navbar-aside.rd-navbar-static.rd-navbar--is-stuck,
+        .rd-navbar-aside.rd-navbar-static.rd-navbar--is-clone { background: var(--paper) !important; border-bottom: 1px solid #e8e2d8; }
+        .rd-navbar-aside.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-main,
+        .rd-navbar-aside.rd-navbar-static.rd-navbar--is-clone .rd-navbar-main { background: var(--paper); }
+        .section-main-bunner .box-default-title { font-family: Raleway, sans-serif; font-weight: 600; text-shadow: 0 3px 12px rgba(41, 58, 57, .28); }
+        .section-main-bunner .box-default-text { font-family: Raleway, sans-serif; letter-spacing: 0; }
+        .section-main-bunner .box-default-decor::before { border-top-color: #d99580; }
+        .course-btn {
+            padding: 15px 28px;
+            border: 1px solid var(--coral);
+            border-radius: 4px;
+            background: var(--coral);
+            color: #fff !important;
+            font-family: Raleway, sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: .06em;
+            line-height: 1.35;
+            text-transform: uppercase;
+            transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease;
+        }
+        .course-btn:hover, .course-btn:focus { transform: translateY(-2px); background: var(--cta-hover); border-color: var(--cta-hover); color: #fff !important; box-shadow: 0 8px 18px rgba(159, 79, 64, .2); }
+        .reset-landing .reset-cta {
+            display: inline-flex;
+            min-height: 52px;
+            margin-right: 0;
+            align-items: center;
+            justify-content: center;
+            border-color: var(--cta-hover);
+            background: var(--cta-hover);
+            box-shadow: 0 6px 16px rgba(159, 79, 64, .2);
+        }
+        .reset-landing .reset-cta:hover, .reset-landing .reset-cta:focus { border-color: var(--cta-hover); background: var(--cta-hover); }
+        .reset-landing .reset-cta:focus-visible { outline: 3px solid rgba(73, 107, 91, .55) !important; outline-offset: 3px; }
+        .hero-title, .section-title, .plan-step h3, .beginner-guide h2, .signup-box h2,
+        .color-mixing-card h2, .landscape-copy h2 { color: var(--ink); font-family: Raleway, sans-serif; }
+        .hero-subtitle, .container p, .section-text, .plan-step p, .guide-copy, .signup-box p { color: var(--muted); }
+        .paint-card, .plan-step, .soft-panel, .stakes-panel, .pricing-box,
+        .beginner-guide-card, .signup-box { border-radius: 6px; border-color: #e8e2d8; }
+        .soft-panel, .paint-card, .plan-step { background-color: #fffdf9; }
+        .stakes-panel { background: #eef2ed; }
+        .pricing-box { background: #f8eee9; }
+        .plan-number { background: var(--green); }
+        .guide-features li::before { color: var(--coral); }
+        .final-signup { background: linear-gradient(135deg, #eef2ed 0%, var(--paper) 52%, #eedbd5 100%); }
+        @media (max-width: 767px) {
+            .rd-navbar-aside .rd-navbar-brand .brand-title { font-size: 20px; }
+        }
     </style>
 </head>
 <body>
@@ -692,7 +785,7 @@
                     <div class="rd-navbar-panel">
                         <div class="rd-navbar-brand">
                             <a href="index.html"><img alt="" height="57"
-                                                      src="images/logo-white.png" srcset="images/logo-white.png 2x" width="114"></a>
+                                                      src="images/logo.png" srcset="images/logo.png 2x" width="114"></a>
                             <h1 class="brand-title">Lucy Lu</h1>
                         </div>
                         <ul class="list-inline nav-list">
@@ -745,7 +838,7 @@
                       <p class="hero-subtitle">
                           You will receive one short lesson each day, paint five simple flowers, and make a little room to begin, play, notice, and bloom in your own way.
                       </p>
-                        <a class="course-btn" href="#signup">Start My Free 5-Day Reset</a>
+                        <a class="course-btn reset-cta" href="#signup">Start My Free 5-Day Reset</a>
                     </div>
 
                 </div>
@@ -890,8 +983,14 @@
                             <li>3 step-by-step exercises</li>
                             <li>A gentle 7-day practice path</li>
                         </ul>
+                        <div class="guide-preview">
+                            <p class="guide-preview-title">Preview the Beginner Cheat Sheet</p>
+                            <div class="guide-preview-video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/TrkGNc1R7aE?si=Zeh4Qa1eQjwJQkBY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
                         <p class="guide-price">NZ$9 <span>Digital PDF · Instant download</span></p>
-                        <a class="course-btn" href="https://ko-fi.com/s/7dd055caf6" target="_blank" rel="noopener noreferrer">Get the Beginner Cheat Sheet</a>
+                        <a class="course-btn guide-cta" href="https://ko-fi.com/s/7dd055caf6" target="_blank" rel="noopener noreferrer">Get the Beginner Cheat Sheet</a>
                     </div>
                 </div>
             </div>
