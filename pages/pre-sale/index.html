@@ -57,6 +57,18 @@
         .columns h3 { font-size: 24px; }
         .columns ul { padding-left: 20px; color: var(--muted); }
         .columns li { padding: 5px 0; }
+        .course-details { display: grid; gap: 42px; margin-top: 60px; }
+        .course-detail { display: grid; grid-template-columns: .95fr 1.05fr; gap: 42px; align-items: center; padding: 0 0 42px; border-bottom: 1px solid #dcd8cf; }
+        .course-detail:last-child { padding-bottom: 0; border-bottom: 0; }
+        .course-detail:nth-child(even) .course-detail-image { order: 2; }
+        .course-detail-image { margin: 0; }
+        .course-detail-image img { display: block; width: 100%; height: 340px; object-fit: cover; }
+        .course-detail-image figcaption { padding-top: 9px; color: var(--muted); font-size: 12px; }
+        .course-detail-copy h3 { margin: 8px 0 14px; font-size: 30px; }
+        .course-detail-copy > p { color: var(--muted); }
+        .course-detail-copy ul { padding-left: 21px; color: var(--muted); list-style: disc; }
+        .course-detail-copy li { display: list-item; padding: 5px 0; list-style: disc; }
+        .course-detail-copy li::marker { color: #b76553; }
         .fit-list { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px 22px; margin: 24px 0 0; padding: 0; list-style: none; }
         .fit-list li { position: relative; padding: 13px 16px 13px 40px; background: rgba(255,255,255,.75); color: var(--ink); }
         .fit-list li:before { content: '✓'; position: absolute; left: 16px; color: var(--coral); font-weight: 700; }
@@ -127,6 +139,10 @@
             .fit-list { grid-template-columns: 1fr; }
             .artist { grid-template-columns: 1fr; gap: 28px; }
             .artist img { height: auto; max-height: 380px; }
+            .course-detail { grid-template-columns: 1fr; gap: 22px; }
+            .course-detail:nth-child(even) .course-detail-image { order: 0; }
+            .course-detail-image img { height: 290px; }
+            .course-detail-copy h3 { font-size: 26px; }
             .gallery-grid { grid-template-columns: 1fr; }
             .gallery-card img { height: 320px; }
             .mockup-grid { grid-template-columns: 1fr; }
@@ -242,27 +258,41 @@
                     </div>
                     <p class="gallery-note">Temporary visual mockups from the existing gallery; these are not butterfly course lesson images.</p>
                 </div>
-                <div class="columns">
-                    <div>
-                        <h3>What you’ll learn</h3>
-                        <ul>
-                            <li>Sketch and plan your butterfly</li>
-                            <li>Control water and create soft color transitions</li>
-                            <li>Build transparent layers and add wing details</li>
-                            <li>Make your own choices as you paint</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>What’s included</h3>
-                        <ul>
-                            <li>Short step-by-step video lessons</li>
-                            <li>Printable butterfly outline</li>
-                            <li>Color mixing guide</li>
-                            <li>Butterfly painting practice sheet</li>
-                            <li>Personal feedback on one finished butterfly painting</li>
-                        </ul>
-                        <p class="small-note">Follow the lessons at your own pace and revisit the techniques whenever you need more practice.</p>
-                    </div>
+                <div class="course-details">
+                    <article class="course-detail">
+                        <figure class="course-detail-image">
+                            <img src="../arts/gallery/flower/Dream of White Magnolia-s.jpg" alt="Soft white magnolia watercolor used as a temporary example of transparent washes and layered color" loading="lazy">
+                            <figcaption>Temporary watercolor example from Lucy’s gallery</figcaption>
+                        </figure>
+                        <div class="course-detail-copy">
+                            <div class="eyebrow">What you’ll learn</div>
+                            <h3>What We’ll Explore Together</h3>
+                            <p>Follow a gentle, step-by-step path from a simple butterfly sketch to a finished painting, while learning how to make the watercolor decisions for yourself.</p>
+                            <ul>
+                                <li>Sketch and plan your butterfly, noticing the shapes and symmetry of its wings.</li>
+                                <li>Control water and create soft color transitions.</li>
+                                <li>Build transparent layers and add delicate wing details.</li>
+                                <li>Make your own choices as you paint, without needing to copy every brushstroke.</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="course-detail">
+                        <figure class="course-detail-image">
+                            <img src="../arts/gallery/bird/white-heron-s.jpg" alt="White heron watercolor painting used as a temporary example of Lucy’s artwork" loading="lazy">
+                            <figcaption>Temporary watercolor example from Lucy’s gallery</figcaption>
+                        </figure>
+                        <div class="course-detail-copy">
+                            <div class="eyebrow">What’s included</div>
+                            <h3>What’s Included When You Join</h3>
+                            <p>Everything is delivered digitally so you can follow along at your own pace and return to the techniques whenever you’d like more practice.</p>
+                            <ul>
+                                <li>Short, step-by-step video lessons.</li>
+                                <li>Printable butterfly outline and painting practice sheet.</li>
+                                <li>Color-mixing guide.</li>
+                                <li>Personal feedback on one finished butterfly painting.</li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
