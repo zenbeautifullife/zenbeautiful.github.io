@@ -468,6 +468,78 @@
         }
         .landscape-form iframe { display: block; width: 100%; height: 800px; border: 0; }
 
+        .butterfly-presale {
+            padding: 58px 0 68px;
+            background: linear-gradient(135deg, #e8dff0 0%, #f5e6dc 48%, #e8eee7 100%);
+        }
+        .butterfly-presale-inner {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr);
+            gap: clamp(30px, 5vw, 62px);
+            align-items: center;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: clamp(26px, 5vw, 48px);
+            border: 1px solid rgba(73, 107, 91, .22);
+            border-radius: 20px;
+            background: #fffdf9;
+            box-shadow: 0 20px 46px rgba(41, 58, 57, .15);
+        }
+        .butterfly-presale .eyebrow {
+            color: #7a665d;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+        .butterfly-presale .eyebrow::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin: 0 9px 1px 0;
+            border-radius: 50%;
+            background: var(--cta);
+        }
+        .butterfly-presale h2 {
+            margin: 16px 0 20px;
+            color: var(--ink);
+            font-family: Raleway, sans-serif;
+            font-size: clamp(34px, 4vw, 50px);
+            font-weight: 400;
+            line-height: 1.12;
+        }
+        .butterfly-presale h2 em { color: var(--cta); font-style: normal; font-weight: 600; }
+        .butterfly-presale-copy { color: var(--muted); font-size: 17px; line-height: 1.7; }
+        .butterfly-presale-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 25px; }
+        .butterfly-presale-button {
+            display: inline-flex;
+            min-height: 52px;
+            padding: 14px 23px;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--cta);
+            border-radius: 4px;
+            background: var(--cta);
+            color: #fff !important;
+            font-weight: 700;
+            letter-spacing: .055em;
+            text-align: center;
+            text-decoration: none;
+            transition: transform .2s ease, background-color .2s ease;
+        }
+        .butterfly-presale-button:hover { transform: translateY(-2px); background: var(--cta-hover); text-decoration: none; }
+        .butterfly-presale-link { color: var(--green-dark); font-size: 15px; text-underline-offset: 3px; }
+        .butterfly-presale-note { margin: 18px 0 0; padding-top: 14px; border-top: 1px solid #ddd8ce; color: var(--muted); font-size: 14px; line-height: 1.6; }
+        .butterfly-presale-art { margin: 0; }
+        .butterfly-presale-art img { display: block; width: 100%; max-height: 440px; object-fit: cover; border-radius: 12px; box-shadow: 0 16px 34px rgba(41, 58, 57, .16); }
+        .butterfly-presale-art figcaption { padding: 12px 4px 0; color: var(--muted); font-size: 14px; text-align: center; }
+        @media (max-width: 767px) {
+            .butterfly-presale-inner { grid-template-columns: 1fr; gap: 28px; }
+            .butterfly-presale h2 { font-size: clamp(34px, 9vw, 44px); }
+            .butterfly-presale-art img { max-height: 360px; }
+        }
+
 
         .final-signup {
           padding: 92px 0 104px;
@@ -824,6 +896,26 @@
         </div>
     </section>
     <main class="reset-landing">
+        <section class="butterfly-presale" aria-labelledby="butterfly-presale-title">
+            <div class="container">
+                <div class="butterfly-presale-inner">
+                    <div>
+                        <p class="eyebrow">Founding student presale</p>
+                        <h2 id="butterfly-presale-title">Paint Your Own Watercolor <em>Butterfly</em></h2>
+                        <p class="butterfly-presale-copy">Have you ever admired a delicate watercolor butterfly and wished you could paint one yourself? Perhaps you’ve followed tutorials but still feel unsure about how much water to use, how to blend colors, or when to add details. This mini-course will help you understand the techniques behind painting a watercolor butterfly, so you can make your own creative decisions instead of simply copying every brushstroke.</p>
+                        <div class="butterfly-presale-actions">
+                            <a class="butterfly-presale-button" href="https://ko-fi.com/s/5e06c6ecee" target="_blank" rel="noopener noreferrer">Join as a founding student</a>
+                            <a class="butterfly-presale-link" href="butterfly-watercolor-mini-class.html#course-outline">See the five lessons ↓</a>
+                        </div>
+                        <p class="butterfly-presale-note">The course is in development. Lessons and resources will be delivered digitally within 3–4 weeks of purchase.</p>
+                    </div>
+                    <figure class="butterfly-presale-art">
+                        <img src="images/presale-butterfly/6-finished4.jpeg" alt="Finished watercolor butterfly painting with colorful, softly blended wings" loading="lazy">
+                        <figcaption>A gentle study in color, water and wing shapes</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
         <section class="landing-section section-first">
             <div class="container">
                 <div class="row  row-40">
