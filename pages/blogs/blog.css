@@ -1,7 +1,7 @@
 /* Shared article styling for blog1.html, blog2.html, and future blog posts. */
 .blog-content-section { background: #ffffff !important; }
 .blog-content-section.section-top-bg::before { background: none; }
-.blog-article { max-width: 820px; margin: 0 auto; font-family: Raleway, sans-serif; font-size: 16px; }
+.blog-article { max-width: 820px; margin: 0 auto; font-family: Raleway, sans-serif; font-size: 16px; letter-spacing: 0.05em; }
 .blog-article h1, .blog-article h2, .blog-article p, .blog-article figcaption { font-family: Raleway, sans-serif; }
 .blog-article h2 { color: inherit; font-weight: 600; margin: 10px 0; }
 .blog-article p + p { margin-top: 8px; }
