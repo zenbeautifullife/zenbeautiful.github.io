@@ -773,25 +773,6 @@
         /* Carry the pre-sale page's typography and warm watercolor palette across the homepage. */
         html { scroll-behavior: smooth; }
         body, .page.main-container { background: var(--paper); color: var(--ink); font-family: Raleway, sans-serif; }
-        .page-header { background: var(--paper); border-bottom: 1px solid #e8e2d8; }
-        .rd-navbar-aside .rd-navbar-main-outer,
-        .rd-navbar-aside .rd-navbar-aside-outer { background: var(--paper) !important; }
-        .rd-navbar-aside .rd-navbar-brand .brand-title { color: var(--green); font-family: Raleway, sans-serif; font-size: 23px; font-weight: 500; }
-        .rd-navbar-aside .rd-navbar-panel .nav-list a,
-        .rd-navbar-aside .rd-navbar-panel .header-soc-list .icon { color: var(--ink) !important; font-family: Raleway, sans-serif; }
-        .rd-navbar-aside .rd-navbar-panel .nav-list a:hover,
-        .rd-navbar-aside .rd-navbar-panel .active a { color: var(--coral) !important; }
-        .rd-navbar-aside .rd-navbar-panel .nav-list a:hover,
-        .rd-navbar-aside .rd-navbar-panel .nav-list a:focus-visible {
-            text-decoration: underline;
-            text-decoration-color: var(--coral);
-            text-decoration-thickness: 2px;
-            text-underline-offset: 6px;
-        }
-        .rd-navbar-aside.rd-navbar-static.rd-navbar--is-stuck,
-        .rd-navbar-aside.rd-navbar-static.rd-navbar--is-clone { background: var(--paper) !important; border-bottom: 1px solid #e8e2d8; }
-        .rd-navbar-aside.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-main,
-        .rd-navbar-aside.rd-navbar-static.rd-navbar--is-clone .rd-navbar-main { background: var(--paper); }
         .section-main-bunner .box-default-title { font-family: Raleway, sans-serif; font-weight: 600; text-shadow: 0 3px 12px rgba(41, 58, 57, .28); }
         .section-main-bunner .box-default-text { font-family: Raleway, sans-serif; letter-spacing: 0; }
         .section-main-bunner .box-default-decor::before { border-top-color: #d99580; }
@@ -850,31 +831,52 @@
 <div class="page main-container" style="display:none;">
     <!-- Header -->
     <header class="section page-header">
-        <nav class="rd-navbar rd-navbar-aside" data-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
-             data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-            <div class="rd-navbar-main-outer">
-                <div class="rd-navbar-main">
-                    <div class="rd-navbar-panel">
-                        <div class="rd-navbar-brand">
-                            <a href="index.html"><img alt="" height="57"
-                                                      src="images/logo.png" srcset="images/logo.png 2x" width="114"></a>
-                            <h1 class="brand-title">Lucy Lu</h1>
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+            <nav class="rd-navbar rd-navbar-aside" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+                 data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed"
+                 data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static"
+                 data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static"
+                 data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px"
+                 data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+                <div class="rd-navbar-main-outer">
+                    <div class="rd-navbar-main">
+                        <!-- RD Navbar Panel-->
+                        <div class="rd-navbar-panel">
+                            <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light"
+                                                                                   src="images/logo-white.png" alt="" width="114" height="57"
+                                                                                   srcset="images/logo-white.png 2x" /></a>
+                                <h1 class="brand-title">Lucy Lu</h1>
+                            </div>
+                            <div class="block-right">
+                                <ul class="list-inline nav-list">
+                                    <li class="list-inline-item active"><a href="index.html">Home</a></li>
+                                    <li class="list-inline-item"><a href="vlogs.html">Vlogs</a></li>
+                                    <li class="list-inline-item"><a href="blog.html">Blog</a></li>
+                                    <li class="list-inline-item"><a href="podcast.html">Podcast</a></li>
+                                    <li class="list-inline-item"><a href="gallery.html">Gallery</a></li>
+                                    <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+                                    <li class="list-inline-item"><a href="about.html">About</a></li>
+                                </ul>
+                                <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1"
+                                     data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+                                <div class="rd-navbar-aside-outer rd-navbar-collapse">
+                                    <div class="rd-navbar-aside">
+                                        <ul class="list-inline header-soc-list">
+                                            <li><a class="icon fa-instagram"
+                                                   href="https://www.instagram.com/zenbeautifulart/"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                        <ul class="list-inline nav-list">
-                            <li class="list-inline-item active"><a href="index.html">Home</a></li>
-                            <li class="list-inline-item"><a href="vlogs.html">Vlogs</a></li>
-                            <li class="list-inline-item"><a href="podcast.html">Podcast</a></li>
-                            <li class="list-inline-item"><a href="gallery.html">Gallery</a></li>
-                            <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-                            <li class="list-inline-item"><a href="about.html">About</a></li>
-                        </ul>
-                        <ul class="list-inline header-soc-list">
-                            <li><a class="icon fa-instagram" href="https://www.instagram.com/zenbeautifulart/"></a></li>
-                        </ul>
+
+
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
     <!-- 1.banner-->
     <section class="section section-lg section-main-bunner section-main-bunner-filter text-center">
