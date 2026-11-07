@@ -30,3 +30,9 @@
 
 /* Welcome section typography */
 .welcome>.section-kicker,.welcome>p{font-size:16px}
+
+/* Brand message */
+.hero .hero-intro{font-size:16px}
+
+/* Make Daily Calm’s promise visible on the homepage */
+.hero-calm-value{font-size:16px;line-height:1.55;color:var(--green);font-weight:600;max-width:400px;margin:-10px 0 21px}

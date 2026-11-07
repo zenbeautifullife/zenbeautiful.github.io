@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6ef">
+  <meta name="description" content="One small, personal activity to help you find a little peace today.">
+  <title>Daily Calm — Little Moments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="daily-calm.css">
+</head>
+<body class="daily-page">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Little Moments home"><span class="brand-mark">✳</span><span>little moments<small>BY ZEN BEAUTIFUL</small></span></a>
+    <a class="back-link" href="index.html">← All little moments</a>
+  </header>
+
+  <main>
+    <section class="daily-hero">
+      <div class="daily-copy">
+        <div class="section-kicker">A little practice for right now</div>
+        <h1>Need a little<br><em>peace today?</em></h1>
+        <p>Tell us what today feels like. We’ll offer one small thing you can do, right where you are.</p>
+        <a href="#choose-feeling" class="button button-dark">Find my little moment <span>↓</span></a>
+        <div class="daily-promise">One gentle suggestion, just for today.</div>
+      </div>
+      <div class="daily-art" aria-hidden="true"><span class="daily-sun"></span><span class="daily-ripple ripple-one"></span><span class="daily-ripple ripple-two"></span><span class="daily-ripple ripple-three"></span><span class="daily-leaf">✳</span><span class="daily-art-note">you can<br>begin here</span></div>
+    </section>
+
+    <section class="feeling-section" id="choose-feeling">
+      <div class="section-kicker">Start with how you feel</div>
+      <h2>What would feel<br><em>kindest right now?</em></h2>
+      <p class="feeling-intro">There’s no wrong answer. Choose the feeling that’s closest today.</p>
+      <div class="mood-grid" role="group" aria-label="Choose how you feel today">
+        <button class="mood-option" data-mood="overwhelmed"><span>01</span><b>Overwhelmed</b><small>Everything feels like a lot</small><i>↗</i></button>
+        <button class="mood-option" data-mood="disconnected"><span>02</span><b>Disconnected</b><small>I need to feel present again</small><i>↗</i></button>
+        <button class="mood-option" data-mood="tired"><span>03</span><b>Tired</b><small>I could use a softer pace</small><i>↗</i></button>
+        <button class="mood-option" data-mood="restless"><span>04</span><b>Restless</b><small>I have energy with nowhere to go</small><i>↗</i></button>
+        <button class="mood-option" data-mood="lonely"><span>05</span><b>A little lonely</b><small>I’m longing for connection</small><i>↗</i></button>
+      </div>
+      <div class="suggestion" id="suggestion" aria-live="polite" aria-atomic="true" hidden>
+        <span class="section-kicker">Your little moment for today</span>
+        <h3 id="suggestion-title"></h3>
+        <p id="suggestion-text"></p>
+        <div class="suggestion-foot"><span>Small is more than enough.</span><span class="suggestion-spark">✳</span></div>
+      </div>
+      <p class="daily-limit" id="daily-limit" hidden>Your suggestion is saved on this device. Come back tomorrow for another little moment.</p>
+    </section>
+
+    <section class="collection-section">
+      <div class="collection-art" aria-hidden="true"><span>100</span><i>little<br>ways to<br>find calm</i></div>
+      <div class="collection-copy"><div class="section-kicker">For the days you need a few more ideas</div><h2>A little calm,<br>kept close.</h2><p>A thoughtful collection of 100 small activities for breathing room, fresh air, gentle movement and connection.</p><div class="collection-price"><strong>$4</strong><span>one-time download<br>keep it forever</span></div><button class="button collection-button" type="button" disabled aria-describedby="collection-status">The collection is coming soon <span>✳</span></button><p class="collection-status" id="collection-status">We’re getting this little collection ready.</p></div>
+    </section>
+  </main>
+  <footer><a class="footer-brand" href="index.html">little moments <span>BY ZEN BEAUTIFUL</span></a><span>Made with care, for the everyday.</span><a href="index.html">Back to Little Moments ↗</a></footer>
+  <script src="daily-calm.js"></script>
+</body>
+</html>
