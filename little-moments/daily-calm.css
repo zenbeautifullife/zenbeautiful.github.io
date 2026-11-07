@@ -200,6 +200,25 @@
     animation: arrive .3s ease-out
 }
 
+.suggestion { max-width: 760px; padding: 30px; background: #f3e3d9; border: 0; }
+.calm-card { display: grid; grid-template-columns: .85fr 1.15fr; min-height: 300px; margin: 18px 0 25px; overflow: hidden; background: #fffdf8; box-shadow: 0 16px 38px rgba(41,58,57,.12); }
+.calm-card>img { width: 100%; height: 100%; min-height: 300px; object-fit: cover; }
+.card-copy { display: flex; flex-direction: column; justify-content: center; padding: 30px; }
+.card-brand { color: var(--green); font-size: 10px; letter-spacing: 1.7px; font-weight: 700; }
+.calm-card h3 { font: 500 27px/1.3 var(--serif); margin: 15px 0 10px; }
+.calm-card p { color: #56645d; font-size: 15px; line-height: 1.7; margin: 0; }
+.card-signoff { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e5ddd3; padding-top: 14px; margin-top: 20px; color: #728078; font-size: 12px; }
+.card-signoff i { color: var(--rose); font-size: 18px; font-style: normal; }
+.card-email { padding: 20px 0 0; border-top: 1px solid #b7655333; }
+.card-email label { display: block; margin-bottom: 3px; font: 500 19px var(--serif); }
+.card-email>p { margin: 0 0 12px; color: #56645d; font-size: 13px; }
+.email-row { display: flex; gap: 10px; }
+.email-row input { min-width: 0; flex: 1; padding: 12px; border: 1px solid #c8c9bd; background: #fffdf9; color: var(--ink); }
+.email-row input:focus { outline: 2px solid #78917d; outline-offset: 1px; }
+.email-row .button { min-width: 210px; }
+.card-email small { display: block; margin-top: 9px; color: #687672; font-size: 11px; }
+.email-status { margin-top: 10px !important; color: var(--green) !important; }
+
 .suggestion[hidden],
 .daily-limit[hidden] {
     display: none
@@ -458,6 +477,13 @@
         margin-top: 30px;
         padding: 25px 22px 18px
     }
+
+    .suggestion { padding: 22px 16px; }
+    .calm-card { grid-template-columns: 1fr; }
+    .calm-card>img { height: 210px; min-height: 0; }
+    .card-copy { padding: 22px; }
+    .email-row { flex-direction: column; }
+    .email-row .button { width: 100%; }
 
     .suggestion h3 {
         font-size: 25px

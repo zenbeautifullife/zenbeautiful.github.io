@@ -43,8 +43,17 @@
       </div>
       <div class="suggestion" id="suggestion" aria-live="polite" aria-atomic="true" hidden>
         <span class="section-kicker">Your little moment for today</span>
-        <h3 id="suggestion-title"></h3>
-        <p id="suggestion-text"></p>
+        <article class="calm-card" id="calm-card" aria-label="Your Daily Calm card">
+          <img id="card-art" src="../pages/arts/gallery/flower/In%20Quiet%20Bloom-s.jpg" alt="Watercolor lotus flowers">
+          <div class="card-copy"><span class="card-brand">A LITTLE MOMENT · DAILY CALM</span><h3 id="suggestion-title"></h3><p id="suggestion-text"></p><span class="card-signoff">Small is more than enough. <i>✳</i></span></div>
+        </article>
+        <form class="card-email" id="card-email-form">
+          <label for="card-email-address">Want to keep this little reminder?</label>
+          <p>Enter your email to open a ready-to-send message with your suggestion and painting link.</p>
+          <div class="email-row"><input id="card-email-address" name="email" type="email" autocomplete="email" placeholder="you@example.com" required><button class="button button-dark" type="submit">Send card to my inbox <span>↗</span></button></div>
+          <small>Your email app will open so you can send it to yourself. Your address isn’t stored on this site.</small>
+          <p class="email-status" id="email-status" role="status" hidden></p>
+        </form>
         <div class="suggestion-foot"><span>Small is more than enough.</span><span class="suggestion-spark">✳</span></div>
       </div>
       <p class="daily-limit" id="daily-limit" hidden>Your suggestion is saved on this device. Come back tomorrow for another little moment.</p>
