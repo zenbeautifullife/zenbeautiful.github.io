@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6ef">
+  <meta name="description" content="Five minutes, one gentle creative prompt, and room to play. Find your way back to creativity with Little Moments.">
+  <title>5 Minutes to Feel Creative Again — Little Moments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="creative-reset.css">
+</head>
+<body class="creative-page">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Little Moments home"><span class="brand-mark">✳</span><span>little moments<small>BY ZEN BEAUTIFUL</small></span></a>
+    <a class="back-link" href="index.html">← All little moments</a>
+  </header>
+
+  <main>
+    <section class="creative-hero">
+      <div class="creative-hero-copy">
+        <div class="section-kicker">A tiny invitation to play</div>
+        <h1>5 minutes to feel<br><em>creative again.</em></h1>
+        <p>You don’t need more time, better supplies or a brilliant idea. Just five minutes to make a mark and see what happens.</p>
+        <a class="button button-dark" href="#choose-a-prompt">Find a little prompt <span>↓</span></a>
+        <span class="creative-hero-note">Nothing to finish. Nothing to get right.</span>
+      </div>
+      <div class="creative-hero-art" aria-hidden="true"><span class="brush-dab dab-rose"></span><span class="brush-dab dab-green"></span><span class="brush-dab dab-gold"></span><span class="creative-spark">✳</span><span class="art-note">let your<br>hands wander</span></div>
+    </section>
+
+    <section class="prompt-section" id="choose-a-prompt">
+      <div class="section-kicker">Pick what sounds good</div>
+      <h2>One small prompt.<br><em>Five unhurried minutes.</em></h2>
+      <p class="prompt-intro">Choose a starting point. There’s no special skill needed, and you can stop whenever you like.</p>
+      <div class="prompt-tabs" role="tablist" aria-label="Choose a creative activity">
+        <button class="prompt-tab active" id="tab-drawing" role="tab" aria-selected="true" aria-controls="prompt-panel" data-category="drawing">Simple drawing</button>
+        <button class="prompt-tab" id="tab-watercolor" role="tab" aria-selected="false" aria-controls="prompt-panel" data-category="watercolor">Beginner watercolor</button>
+        <button class="prompt-tab" id="tab-noticing" role="tab" aria-selected="false" aria-controls="prompt-panel" data-category="noticing">Mindful noticing</button>
+      </div>
+      <div class="prompt-panel" id="prompt-panel" role="tabpanel" aria-labelledby="tab-drawing" aria-live="polite">
+        <span class="prompt-count">PROMPT <b id="prompt-number">01</b> / 10</span>
+        <p id="prompt-text">Draw a tiny house for a very small creature. Add one window, one door, and anything else it might need.</p>
+        <div class="prompt-actions"><button id="another-prompt" class="button button-dark">Another little prompt <span>↻</span></button><button id="timer-toggle" class="timer-button" aria-label="Start five minute timer">Start 5-minute timer <span>05:00</span></button></div>
+      </div>
+      <details class="prompt-list"><summary>See all 10 prompts in this collection</summary><ol id="prompt-list-items"></ol></details>
+      <p class="prompt-footnote">A pencil, a paintbrush, or whatever is nearby. That’s enough.</p>
+    </section>
+
+    <section class="video-section">
+      <div class="video-heading"><div class="section-kicker">A little company while you create</div><h2>Watch, make,<br><em>and let go.</em></h2><p>Follow along with a few relaxed watercolor videos from Zen Beautiful. Dip in for an idea, or simply enjoy watching colour move.</p></div>
+      <div class="video-grid">
+        <article class="video-card"><div class="video-frame"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/R8TKJ3FZWBs" title="Find Your Inner Artist — loose watercolor flower and pen line art" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="video-meta"><span>LOOSE WATERCOLOR</span><h3>Find Your Inner Artist</h3><a href="https://youtu.be/R8TKJ3FZWBs" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></div></article>
+        <article class="video-card"><div class="video-frame"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/bHAqlfNUwlI" title="Feeling Stressed? Paint Loose Watercolor Roses" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="video-meta"><span>LOOSE FLOWERS</span><h3>Paint These Roses with Me</h3><a href="https://youtu.be/bHAqlfNUwlI" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></div></article>
+        <article class="video-card"><div class="video-frame"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/4XcHYUA4nSA" title="Sketching five unique coral shapes" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="video-meta"><span>SKETCHBOOK PLAY</span><h3>Sketch Five Unique Corals</h3><a href="https://youtu.be/4XcHYUA4nSA" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a></div></article>
+      </div>
+    </section>
+
+    <section class="creative-collection">
+      <div class="collection-mark" aria-hidden="true"><span>30</span><i>little ways<br>to begin</i></div>
+      <div class="creative-collection-copy"><div class="section-kicker">A little collection to keep</div><h2>Creativity, ready<br>when you are.</h2><p>Thirty five-minute starts: 10 drawing prompts, 10 beginner watercolor exercises and 10 mindful noticing practices. Save your favourite ideas for a day when you need a nudge.</p><div class="price-line"><strong>NZ$5–$12</strong><span>one-time digital collection</span></div><button class="button collection-button" type="button" disabled aria-describedby="creative-collection-status">The collection is coming soon <span>✳</span></button><p class="collection-status" id="creative-collection-status">We’re gathering the prompts and demonstrations into one lovely place.</p></div>
+    </section>
+  </main>
+  <footer><a class="footer-brand" href="index.html">little moments <span>BY ZEN BEAUTIFUL</span></a><span>Made with care, for the everyday.</span><a href="index.html">Back to Little Moments ↗</a></footer>
+  <script src="creative-reset.js"></script>
+</body>
+</html>

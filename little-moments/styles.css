@@ -36,3 +36,6 @@
 
 /* Make Daily Calm’s promise visible on the homepage */
 .hero-calm-value{font-size:16px;line-height:1.55;color:var(--green);font-weight:600;max-width:400px;margin:-10px 0 21px}
+
+/* Creative Reset homepage call to action */
+.creative-more-link{display:inline-flex;align-items:center;gap:10px;margin:2px 0 6px;color:var(--green);font-size:16px;font-weight:600;border-bottom:1px solid #b7655366;padding-bottom:5px}.creative-more-link span{color:var(--rose)}.creative-more-link:hover{color:var(--rose)}
