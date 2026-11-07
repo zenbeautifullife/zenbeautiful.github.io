@@ -1,0 +1,11 @@
+{
+  "name": "Little Moments by Zen Beautiful",
+  "short_name": "Little Moments",
+  "description": "A little calm, creativity and gratitude.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#f7f5ef",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f5ef">
+  <meta name="description" content="A little calm, creativity and gratitude. Find beauty in everyday life with Little Moments by Zen Beautiful.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Little Moments — by Zen Beautiful</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#home" data-view="home" aria-label="Little Moments home">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span><strong>Little Moments</strong><small>by Zen Beautiful</small></span>
+      </a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <button data-view="home" class="nav-link active">Home</button>
+        <button data-view="calm" class="nav-link">Daily Calm</button>
+        <button data-view="create" class="nav-link">Create</button>
+        <button data-view="journal" class="nav-link">Journal</button>
+      </nav>
+      <button class="saved-link" data-view="saved" aria-label="Your saved moments"><span aria-hidden="true">♡</span><span class="saved-label">Saved</span><b id="saved-count">0</b></button>
+    </header>
+
+    <main id="main-content">
+      <section class="view active" id="home" aria-labelledby="welcome-title">
+        <div class="welcome-grid">
+          <div class="welcome-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> A LITTLE SPACE TO BREATHE</p>
+            <h1 id="welcome-title">Make a little<br><em>space for yourself.</em></h1>
+            <p class="welcome-text">Slow down, reconnect with yourself and find beauty in everyday life.</p>
+            <button class="button button-dark" data-view="calm">Find your little moment <span aria-hidden="true">↗</span></button>
+            <div class="quiet-note"><span class="note-sparkle">✳</span><span>A little calm. A little creativity.<br>A little gratitude.</span></div>
+          </div>
+          <div class="hero-art" aria-label="A peaceful botanical illustration" role="img">
+            <div class="sun-disc"></div><div class="art-hill hill-back"></div><div class="art-hill hill-front"></div>
+            <svg viewBox="0 0 440 440" class="botanical" aria-hidden="true"><path d="M225 425C216 353 227 296 212 233c-9-39-31-72-67-100M221 322c39-50 72-76 117-92M217 270c-34-28-59-40-97-43M224 359c-30-30-52-41-83-49"/><path d="M152 133c-32-11-52 0-58 24 30 12 53 3 58-24ZM112 225c-21-22-45-20-59-2 18 24 42 26 59 2ZM309 221c22-29 47-34 66-18-13 31-39 42-66 18ZM339 168c8-30 29-42 53-32-5 32-25 49-53 32ZM144 305c-29-15-52-7-62 16 27 17 52 12 62-16ZM281 271c20-27 44-32 63-17-12 29-35 41-63 17Z"/><path d="M224 176c-29-15-34-40-14-62 23 17 29 40 14 62Z"/></svg>
+            <div class="art-caption">take a breath<br><span>you are right here</span></div>
+            <span class="art-doodle doodle-one">✳</span><span class="art-doodle doodle-two">·</span><span class="art-doodle doodle-three">✧</span>
+          </div>
+        </div>
+        <div class="section-heading home-heading"><div><p class="eyebrow">CHOOSE WHAT YOU NEED</p><h2>A moment for <em>you.</em></h2></div><span class="today-date" id="today-date"></span></div>
+        <div class="experience-grid">
+          <article class="experience-card calm-card"><div class="card-top"><span class="card-index">01 / PAUSE</span><span class="card-icon">☼</span></div><div class="card-illustration calm-illustration"><span class="calm-orbit"></span><span class="calm-center">✳</span><i>·</i></div><div><h3>Daily Calm</h3><p>Find a little moment of peace.</p><button class="text-button" data-view="calm">Find calm <span>→</span></button></div></article>
+          <article class="experience-card create-card"><div class="card-top"><span class="card-index">02 / MAKE</span><span class="card-icon">✳</span></div><div class="card-illustration create-illustration"><span class="paint p1"></span><span class="paint p2"></span><span class="paint p3"></span><span class="paint-brush">／</span></div><div><h3>Creative Reset</h3><p>Five minutes, just for making.</p><button class="text-button" data-view="create">Get creative <span>→</span></button></div></article>
+          <article class="experience-card journal-card"><div class="card-top"><span class="card-index">03 / NOTICE</span><span class="card-icon">♡</span></div><div class="card-illustration journal-illustration"><div class="paper-lines"><b>✳</b><i></i><i></i><i></i></div><span class="pressed-flower">✿</span></div><div><h3>Gratitude Journal</h3><p>Notice the little things that matter.</p><button class="text-button" data-view="journal">Reflect today <span>→</span></button></div></article>
+        </div>
+        <section class="daily-quote"><span class="quote-flower">✳</span><div><p class="eyebrow">A LITTLE REMINDER</p><blockquote id="daily-quote">“Sometimes, the smallest moments bring the greatest peace.”</blockquote></div><span class="quote-attribution">— a note to yourself</span></section>
+      </section>
+
+      <section class="view feature-view" id="calm" aria-labelledby="calm-title" hidden>
+        <div class="feature-intro"><p class="eyebrow">01 — A MOMENT OF STILLNESS</p><h1 id="calm-title">A little calm,<br><em>just for you.</em></h1><p>There is no right way to feel. Start wherever you are.</p></div>
+        <div class="feeling-panel"><div class="section-heading"><div><p class="eyebrow">TAKE A GENTLE PAUSE</p><h2>How are you feeling <em>today?</em></h2></div><span class="step-label">CHOOSE ONE</span></div><div class="feeling-grid" id="feeling-options"></div></div>
+        <div class="result-area" id="calm-result" aria-live="polite"></div>
+      </section>
+
+      <section class="view feature-view" id="create" aria-labelledby="create-title" hidden>
+        <div class="feature-intro create-intro"><p class="eyebrow">02 — A LITTLE CREATIVE SPACE</p><h1 id="create-title">Give yourself five<br><em>minutes to create.</em></h1><p>You don't need to be an artist. You just need a little curiosity.</p><span class="intro-flower">✿</span></div>
+        <div class="section-heading list-heading"><div><p class="eyebrow">FOLLOW YOUR CURIOSITY</p><h2>A small idea to <em>begin.</em></h2></div><button class="button button-light" id="another-creative">Surprise me <span>↻</span></button></div>
+        <div class="creative-current" id="creative-current"></div>
+        <div class="section-heading collection-heading"><div><p class="eyebrow">YOUR LITTLE PROMPT LIBRARY</p><h2>Choose a <em>prompt.</em></h2></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="creative-search" type="search" placeholder="Find an idea" aria-label="Search creative ideas"></label></div>
+        <div class="prompt-grid" id="prompt-grid"></div>
+      </section>
+
+      <section class="view feature-view journal-view" id="journal" aria-labelledby="journal-title" hidden>
+        <div class="journal-layout"><div class="journal-side"><p class="eyebrow">03 — A PLACE TO NOTICE</p><h1 id="journal-title">Notice the<br><em>little things.</em></h1><p>Take a moment to appreciate what made today special.</p><div class="journal-stamp">✳<span>YOUR PRIVATE<br>LITTLE NOTEBOOK</span></div><div class="privacy-note"><span>⌑</span><p>Your entries stay in this browser. They are never sent anywhere. Local storage is not a cloud backup.</p></div></div>
+        <div class="journal-paper"><div class="paper-head"><div><span class="paper-label">TODAY'S REFLECTION</span><h2 id="journal-date"></h2></div><span class="paper-flower">✿</span></div><form id="journal-form"><label class="journal-question"><span>01</span><span>What made me smile today?</span><textarea name="smile" rows="2" placeholder="It could be something small…"></textarea></label><label class="journal-question"><span>02</span><span>What is one little thing I appreciate?</span><textarea name="appreciate" rows="2" placeholder="Take your time…"></textarea></label><label class="journal-question"><span>03</span><span>What would I like to remember about today?</span><textarea name="remember" rows="2" placeholder="A moment worth keeping…"></textarea></label><div class="form-actions"><button class="button button-dark" type="submit">Save today's entry <span>↗</span></button><span id="save-message" role="status"></span></div></form></div></div>
+        <div class="journal-history"><div class="section-heading"><div><p class="eyebrow">YOUR MOMENTS, KEPT CLOSE</p><h2>Journal <em>history.</em></h2></div><div class="export-actions"><button class="text-button" id="export-json">Export JSON <span>↗</span></button><button class="text-button" id="export-text">Readable text <span>↗</span></button></div></div><div id="journal-entries" class="entry-list"></div></div>
+      </section>
+
+      <section class="view feature-view saved-view" id="saved" aria-labelledby="saved-title" hidden>
+        <div class="feature-intro"><p class="eyebrow">YOUR LITTLE COLLECTION</p><h1 id="saved-title">Moments to<br><em>come back to.</em></h1><p>Keep the ideas and activities that feel like yours.</p></div><div id="saved-content"></div>
+      </section>
+    </main>
+    <footer class="site-footer"><a class="footer-brand" href="#home" data-view="home">Little Moments <span>by Zen Beautiful</span></a><p>Find beauty in everyday life.</p><nav aria-label="About and policies"><a href="https://zenbeautiful.life/about.html">About Zen Beautiful</a><a href="https://zenbeautiful.life/privacyPolicy.html">Privacy</a><a href="https://zenbeautiful.life/about.html#contact">Contact</a></nav><small>Made with a little care · © <span id="year"></span> Zen Beautiful</small></footer>
+  </div>
+  <nav class="bottom-nav" aria-label="Mobile navigation"><button data-view="home" class="active"><span>⌂</span>Home</button><button data-view="calm"><span>☼</span>Calm</button><button data-view="create"><span>✳</span>Create</button><button data-view="journal"><span>♡</span>Journal</button></nav>
+  <div class="toast" role="status" aria-live="polite" id="toast"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
