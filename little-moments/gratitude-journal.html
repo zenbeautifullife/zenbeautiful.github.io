@@ -1,51 +1,86 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8f6ef">
-  <meta name="description" content="A gentle 30-day gratitude journal. Three small questions to notice what matters, one day at a time.">
-  <title>A Little Gratitude Journal — Little Moments</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="gratitude-journal.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8f6ef">
+    <meta name="description"
+          content="A gentle 30-day gratitude journal. Three small questions to notice what matters, one day at a time.">
+    <title>A Little Gratitude Journal — Little Moments</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gratitude-journal.css">
 </head>
 <body class="journal-page">
-  <header class="topbar">
+<header class="topbar">
     <a class="brand" href="index.html" aria-label="Little Moments home"><span class="brand-mark">✳</span><span>little moments<small>BY ZEN BEAUTIFUL</small></span></a>
     <a class="back-link" href="index.html">← All little moments</a>
-  </header>
+</header>
 
-  <main>
+<main>
     <section class="journal-hero">
-      <div class="journal-hero-copy"><div class="section-kicker">03 — A little gratitude journal</div><h1>Keep the good<br><em>close by.</em></h1><p>Three small questions. A few quiet minutes. A gentle way to notice the moments that make a life.</p><a class="button button-dark" href="#write-today">Write today’s little moments <span>↓</span></a></div>
-      <div class="journal-hero-art" aria-hidden="true"><span class="journal-sun"></span><span class="journal-stem"></span><span class="journal-flower flower-one">✿</span><span class="journal-flower flower-two">✿</span><span class="journal-note">the small<br>things count</span></div>
+        <div class="journal-hero-copy">
+            <div class="section-kicker">03 — A little gratitude journal</div>
+            <h1>Keep the good<br><em>close by.</em></h1>
+            <p>Three small questions. A few quiet minutes. A gentle way to notice the moments that make a life.</p><a
+                class="button button-dark" href="#write-today">Write today’s little moments <span>↓</span></a></div>
+        <div class="journal-hero-art" aria-hidden="true">
+            <img src="image/image4.jpg" alt="A watercolor brush painting a loose floral sketch"/>
+            <span class="journal-note">the small<br>things count</span></div>
     </section>
 
     <section class="journal-practice" id="write-today">
-      <div class="journal-intro"><div class="section-kicker">A 30-day gentle practice</div><h2>Just a little<br><em>space to notice.</em></h2><p>No long entries or perfect streaks. Write a word, a sentence, or leave a question for another day. Your reflections stay in this browser.</p></div>
-      <div class="journal-workspace">
-        <div class="day-toolbar"><button id="previous-day" class="day-arrow" aria-label="Previous day">←</button><div><span class="day-caption">YOUR JOURNAL</span><h3 id="day-heading">Day 01</h3></div><button id="next-day" class="day-arrow" aria-label="Next day">→</button></div>
-        <div class="progress-track" role="progressbar" aria-label="Journal days with at least one saved reflection" aria-valuemin="0" aria-valuemax="30" aria-valuenow="0"><span id="progress-fill"></span></div>
-        <p class="progress-label"><span id="progress-count">0</span> of 30 days with a little something saved</p>
-        <form id="journal-entry" autocomplete="off">
-          <label for="answer-smile"><span>01</span> What made me smile today?</label><textarea id="answer-smile" rows="2" maxlength="500" placeholder="A small thing is still a lovely thing…"></textarea>
-          <label for="answer-appreciate"><span>02</span> What is one thing I appreciate?</label><textarea id="answer-appreciate" rows="2" maxlength="500" placeholder="A person, a moment, or something ordinary…"></textarea>
-          <label for="answer-release"><span>03</span> What can I let go of today?</label><textarea id="answer-release" rows="2" maxlength="500" placeholder="You can set something down, just for now…"></textarea>
-          <div class="save-status" id="save-status" aria-live="polite">Your words save privately on this device.</div>
-        </form>
-        <div class="day-picker" id="day-picker" aria-label="Choose a journal day"></div>
-      </div>
+        <div class="journal-intro">
+            <div class="section-kicker">A 30-day gentle practice</div>
+            <h2>Just a little<br><em>space to notice.</em></h2>
+            <p>No long entries or perfect streaks. Write a word, a sentence, or leave a question for another day. Your
+                reflections stay in this browser.</p></div>
+        <div class="journal-workspace">
+            <div class="day-toolbar">
+                <button id="previous-day" class="day-arrow" aria-label="Previous day">←</button>
+                <div><span class="day-caption">YOUR JOURNAL</span>
+                    <h3 id="day-heading">Day 01</h3></div>
+                <button id="next-day" class="day-arrow" aria-label="Next day">→</button>
+            </div>
+            <div class="progress-track" role="progressbar" aria-label="Journal days with at least one saved reflection"
+                 aria-valuemin="0" aria-valuemax="30" aria-valuenow="0"><span id="progress-fill"></span></div>
+            <p class="progress-label"><span id="progress-count">0</span> of 30 days with a little something saved</p>
+            <form id="journal-entry" autocomplete="off">
+                <label for="answer-smile"><span>01</span> What made me smile today?</label><textarea id="answer-smile"
+                                                                                                     rows="2"
+                                                                                                     maxlength="500"
+                                                                                                     placeholder="A small thing is still a lovely thing…"></textarea>
+                <label for="answer-appreciate"><span>02</span> What is one thing I appreciate?</label><textarea
+                    id="answer-appreciate" rows="2" maxlength="500"
+                    placeholder="A person, a moment, or something ordinary…"></textarea>
+                <label for="answer-release"><span>03</span> What can I let go of today?</label><textarea
+                    id="answer-release" rows="2" maxlength="500"
+                    placeholder="You can set something down, just for now…"></textarea>
+                <div class="save-status" id="save-status" aria-live="polite">Your words save privately on this device.
+                </div>
+            </form>
+            <div class="day-picker" id="day-picker" aria-label="Choose a journal day"></div>
+        </div>
     </section>
 
     <section class="printable-section">
-      <div class="printable-cover" aria-hidden="true"><span>30</span><i>days of<br>little moments</i><b>✳</b></div>
-      <div class="printable-copy"><div class="section-kicker">A printable journal to keep</div><h2>Thirty days,<br>one gentle page at a time.</h2><p>Take the questions away from your screen with a minimalist printable journal. Each page offers the same three gentle reflections and room to write.</p><div class="journal-price"><strong>NZ$4–$9</strong><span>one-time printable PDF</span></div><button type="button" class="button printable-button" disabled aria-describedby="printable-status">The printable journal is coming soon <span>✳</span></button><p class="printable-status" id="printable-status">We’re preparing the 30-day journal for printing.</p></div>
+        <div class="printable-cover" aria-hidden="true"><span>30</span><i>days of<br>little moments</i><b>✳</b></div>
+        <div class="printable-copy">
+            <div class="section-kicker">A printable journal to keep</div>
+            <h2>Thirty days,<br>one gentle page at a time.</h2>
+            <p>Take the questions away from your screen with a minimalist printable journal. Each page offers the same
+                three gentle reflections and room to write.</p>
+            <div class="journal-price"><strong>NZ$4–$9</strong><span>one-time printable PDF</span></div>
+            <button type="button" class="button printable-button" disabled aria-describedby="printable-status">The
+                printable journal is coming soon <span>✳</span></button>
+            <p class="printable-status" id="printable-status">We’re preparing the 30-day journal for printing.</p></div>
     </section>
-  </main>
-  <footer><a class="footer-brand" href="index.html">little moments <span>BY ZEN BEAUTIFUL</span></a><span>Made with care, for the everyday.</span><a href="index.html">Back to Little Moments ↗</a></footer>
-  <script src="gratitude-journal.js"></script>
+</main>
+<footer><a class="footer-brand" href="index.html">little moments <span>BY ZEN BEAUTIFUL</span></a><span>Made with care, for the everyday.</span><a
+        href="index.html">Back to Little Moments ↗</a></footer>
+<script src="gratitude-journal.js"></script>
 </body>
 </html>

@@ -42,3 +42,14 @@
 
 /* Gratitude Journal homepage call to action */
 .journal-more-link{display:inline-flex;align-items:center;gap:10px;margin-top:18px;color:var(--green);font-size:16px;font-weight:600;border-bottom:1px solid #b7655366;padding-bottom:5px}.journal-more-link span{color:var(--rose)}.journal-more-link:hover{color:var(--rose)}
+
+/* Homepage hero photograph */
+.hero-art>img{position:absolute;z-index:0;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 48%}.hero-art:before{z-index:1;pointer-events:none}.hero-art:after{content:"";position:absolute;z-index:1;inset:48% 0 0;background:linear-gradient(transparent,rgba(28,43,34,.52));pointer-events:none}.hero-art .art-caption{z-index:2}
+
+/* Keep hero introduction clear of the hero image */
+.hero .hero-intro{max-width:min(34vw,430px)}
+@media(max-width:620px){.hero .hero-intro{max-width:100%}}
+
+/* Homepage Creative Reset photograph */
+.creative-art{background:none;border-radius:48% 48% 4px 4px;overflow:hidden}.creative-art>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:58% 50%}.creative-art .brush-note{z-index:1;background:rgba(251,249,243,.88);padding:8px 11px;border-radius:2px}
+@media(max-width:620px){.creative-art>img{object-position:61% 50%}}
