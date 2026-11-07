@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6ef">
+  <meta name="description" content="A little calm, creativity and gratitude for finding beauty in everyday life.">
+  <title>Little Moments — Find beauty in everyday life</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Little Moments home"><span class="brand-mark">✳</span><span>little moments<small>BY ZEN BEAUTIFUL</small></span></a>
+    <nav aria-label="Main navigation"><a href="#calm">Daily calm</a><a href="#create">Creative reset</a><a href="#journal">Gratitude journal</a></nav>
+    <a class="nav-cta" href="#calm">Find a moment <span>↗</span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><i></i> A softer space for your everyday</span>
+        <h1>Find beauty in<br>everyday <em>life.</em></h1>
+        <p class="hero-intro">A little calm. A little creativity. A little gratitude.<br>Small moments can make a big difference.</p>
+        <a class="button button-dark" href="#calm">Find your little moment <span>↓</span></a>
+        <p class="made-with">A gentle corner of <a href="https://zenbeautiful.life">Zen Beautiful</a></p>
+      </div>
+      <div class="hero-art" aria-label="Abstract watercolor landscape with a rising sun">
+        <div class="sun"></div><div class="hill hill-back"></div><div class="hill hill-front"></div>
+        <div class="art-note">pause<br>and notice</div><div class="art-caption">a moment<br>just for you</div>
+        <span class="sparkle sparkle-one">✳</span><span class="sparkle sparkle-two">✳</span>
+      </div>
+      <div class="hero-foot"><span>01 / SLOW DOWN</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+
+    <section class="welcome section-wrap">
+      <div class="section-kicker">A small invitation</div>
+      <h2>You don’t need to do more.<br><em>Just be here, for a moment.</em></h2>
+      <p>Choose what you need today. There’s no perfect way to begin, and no pressure to keep up.</p>
+      <div class="path-grid">
+        <a class="path-card calm-card" href="#calm"><span class="path-number">01</span><span class="path-icon">☼</span><h3>Daily Calm</h3><p>Find a little space to breathe, reset and return to yourself.</p><span class="path-link">Make a little space <b>↗</b></span></a>
+        <a class="path-card create-card" href="#create"><span class="path-number">02</span><span class="path-icon">✎</span><h3>Creative Reset</h3><p>Follow a five-minute prompt and see where your hands take you.</p><span class="path-link">Make something small <b>↗</b></span></a>
+        <a class="path-card journal-card" href="#journal"><span class="path-number">03</span><span class="path-icon">♡</span><h3>Gratitude Journal</h3><p>Keep the little things that made today feel like yours.</p><span class="path-link">Save a good moment <b>↗</b></span></a>
+      </div>
+    </section>
+
+    <section class="experience calm-section" id="calm">
+      <div class="experience-copy"><div class="section-kicker">01 — Daily calm</div><h2>Meet yourself<br>where you <em>are.</em></h2><p>No need to feel a certain way. Choose what’s closest, and we’ll find a small practice for right now.</p>
+        <div class="feeling-label">How are you feeling today?</div>
+        <div class="feeling-options" role="group" aria-label="Choose how you feel">
+          <button class="feeling" data-feeling="stretched">A little stretched</button><button class="feeling" data-feeling="restless">Restless</button><button class="feeling" data-feeling="tired">Low on energy</button><button class="feeling" data-feeling="okay">Mostly okay</button>
+        </div>
+        <div class="calm-result" aria-live="polite"><span class="result-label">YOUR LITTLE MOMENT</span><h3>Start with one slow breath.</h3><p>Choose how you feel and we’ll find a gentle place to begin.</p></div>
+      </div>
+      <div class="calm-art"><div class="breath-orb"><span>inhale<br><b>softly</b></span></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="calm-star">✳</span><p>There is time<br>for this breath.</p></div>
+    </section>
+
+    <section class="experience creative-section" id="create">
+      <div class="creative-art"><div class="paper"><span class="paper-sun"></span><span class="paper-stem"></span><span class="paper-leaf leaf-a"></span><span class="paper-leaf leaf-b"></span><span class="paper-leaf leaf-c"></span></div><span class="brush-note">no rules<br>no wrong turns</span></div>
+      <div class="experience-copy"><div class="section-kicker">02 — The five-minute creative reset</div><h2>Make a little<br>room to <em>wonder.</em></h2><p>Creativity doesn’t need a plan. Give yourself five minutes and follow one small idea.</p>
+        <div class="prompt-box"><span class="result-label">YOUR FIVE-MINUTE PROMPT</span><p id="creative-prompt">Draw a tiny garden using only circles and lines. Let it grow in any direction.</p><button id="new-prompt" class="text-button">Give me another prompt <span>↻</span></button></div>
+        <p class="tiny-note">Paper, a pen, a paintbrush—or just your imagination. That’s plenty.</p>
+      </div>
+    </section>
+
+    <section class="journal-section" id="journal">
+      <div class="journal-heading"><div class="section-kicker">03 — A little gratitude journal</div><h2>Keep the good<br><em>close by.</em></h2><p>Little things count. Gather a few from today, and let them be enough.</p></div>
+      <form id="journal-form" class="journal-form">
+        <label for="moment-one">What made you smile today?</label><input id="moment-one" maxlength="180" placeholder="A warm cup, a kind message…">
+        <label for="moment-two">What felt good in your body or mind?</label><input id="moment-two" maxlength="180" placeholder="A deep breath, a stretch in the sun…">
+        <label for="moment-three">What would you like to remember?</label><input id="moment-three" maxlength="180" placeholder="A small moment worth keeping…">
+        <button class="button button-dark" type="submit">Save today’s little moments <span>↗</span></button><p class="privacy-note">Your entries stay in this browser, just for you.</p>
+      </form>
+      <div class="saved-moments" id="saved-moments" aria-live="polite"></div>
+    </section>
+
+    <section class="closing"><span class="closing-mark">✳</span><p>Little moments can make<br><em>a big difference.</em></p><a href="#home">Take another little moment ↑</a></section>
+  </main>
+  <footer><a class="footer-brand" href="#home">little moments <span>BY ZEN BEAUTIFUL</span></a><span>Made with care, for the everyday.</span><a href="https://zenbeautiful.life">Visit Zen Beautiful ↗</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
