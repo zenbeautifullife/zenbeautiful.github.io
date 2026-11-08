@@ -10,3 +10,17 @@
 .footer-brand,.footer-brand span,.site-footer>p,.site-footer nav a,.site-footer small{font-size:16px}
 .bottom-nav button{font-size:16px}
 .card-index,.text-button{font-size:14px}
+.feeling-option span:last-child{font-size:14px}
+.prompt-card h3,.prompt-card p,.prompt-card .prompt-foot,.prompt-card button{font-size:14px}
+.prompt-progress{margin:7px 0 0;color:var(--muted);font-size:13px}
+.prompt-card{position:relative;overflow:hidden;border-radius:12px;border-color:#e8e4d9;box-shadow:0 4px 14px rgba(62,69,55,.045);transition:transform .2s,box-shadow .2s,border-color .2s}
+.prompt-card:before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:linear-gradient(180deg,#d6a68e,#a7b5a0)}
+.prompt-card:hover{transform:translateY(-5px) rotate(-.4deg);border-color:#a7b5a0;box-shadow:0 12px 26px rgba(62,69,55,.12)}
+.prompt-card .prompt-symbol{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:#eee9dd;color:var(--forest);font-size:20px}
+.prompt-card .prompt-foot button{padding:7px 10px;border-radius:20px;background:#e8e9df;transition:background .2s,transform .2s}
+.prompt-card .prompt-foot button:hover{background:#d9e0d3;transform:translateX(2px)}
+.prompt-card.is-complete{background:#edf1e9;border-color:#c5d0bd}
+.prompt-card.is-complete .prompt-symbol{background:#dce7d5;color:#435b4a}
+.current-prompt{border-radius:12px;background:linear-gradient(120deg,#e8ebdf,#f1e5df);box-shadow:0 8px 22px rgba(62,69,55,.08)}
+.current-prompt .button-dark{border-radius:24px}
+@media(prefers-reduced-motion:reduce){.prompt-card,.prompt-card .prompt-foot button{transition:none}}
