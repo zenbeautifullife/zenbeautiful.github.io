@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gifts.css">
   <title>Little Moments — by Zen Beautiful</title>
 </head>
 <body>
@@ -25,6 +26,7 @@
         <button data-view="calm" class="nav-link">Calm</button>
         <button data-view="create" class="nav-link">Create</button>
         <button data-view="journal" class="nav-link">Journal</button>
+        <button data-view="gift" class="nav-link">A Little Gift</button>
       </nav>
       <button class="saved-link" data-view="saved" aria-label="Your saved moments"><span aria-hidden="true">♡</span><span class="saved-label">Saved</span><b id="saved-count">0</b></button>
     </header>
@@ -51,6 +53,7 @@
           <article class="experience-card calm-card"><div class="card-top"><span class="card-index">01 / PAUSE</span><span class="card-icon">☼</span></div><div class="card-illustration calm-illustration"><span class="calm-orbit"></span><span class="calm-center">✳</span><i>·</i></div><div><h3>Daily Calm</h3><p>Find a little moment of peace.</p><button class="text-button" data-view="calm">Find calm <span>→</span></button></div></article>
           <article class="experience-card create-card"><div class="card-top"><span class="card-index">02 / MAKE</span><span class="card-icon">✳</span></div><div class="card-illustration create-illustration"><span class="paint p1"></span><span class="paint p2"></span><span class="paint p3"></span><span class="paint-brush">／</span></div><div><h3>Creative Reset</h3><p>Five minutes, just for making.</p><button class="text-button" data-view="create">Get creative <span>→</span></button></div></article>
           <article class="experience-card journal-card"><div class="card-top"><span class="card-index">03 / NOTICE</span><span class="card-icon">♡</span></div><div class="card-illustration journal-illustration"><div class="paper-lines"><b>✳</b><i></i><i></i><i></i></div><span class="pressed-flower">✿</span></div><div><h3>Gratitude Journal</h3><p>Notice the little things that matter.</p><button class="text-button" data-view="journal">Reflect today <span>→</span></button></div></article>
+          <article class="experience-card gift-home-card"><div class="card-top"><span class="card-index">04 / RECEIVE</span><span class="card-icon">✿</span></div><div class="gift-home-art" aria-hidden="true"><span>✳</span></div><div><h3>A Little Gift</h3><p>A small surprise, just for you.</p><button class="text-button" data-view="gift">Open your gift <span>→</span></button></div></article>
         </div>
         <section class="daily-quote"><span class="quote-flower">✳</span><div><p class="eyebrow">A LITTLE REMINDER</p><blockquote id="daily-quote">“Sometimes, the smallest moments bring the greatest peace.”</blockquote></div><span class="quote-attribution">— a note to yourself</span></section>
       </section>
@@ -75,14 +78,27 @@
         <div class="journal-history"><div class="section-heading"><div><p class="eyebrow">YOUR MOMENTS, KEPT CLOSE</p><h2>Journal <em>history.</em></h2></div><div class="export-actions"><button class="text-button" id="export-json">Export JSON <span>↗&#xFE0E;</span></button><button class="text-button" id="export-text">Readable text <span>↗&#xFE0E;</span></button></div></div><div id="journal-entries" class="entry-list"></div></div>
       </section>
 
+      <section class="view feature-view gift-view" id="gift" aria-labelledby="gift-title" hidden>
+        <div class="feature-intro gift-intro"><p class="eyebrow">A LITTLE SURPRISE FOR YOU</p><h1 id="gift-title">A Little <em>Gift.</em></h1><p>A little surprise. A little beauty. A little moment just for you.</p></div>
+        <div class="gift-experience" id="gift-experience">
+          <div class="gift-opening" id="gift-opening">
+            <div class="gift-scene" id="gift-scene" aria-hidden="true"><span class="gift-leaf leaf-a">✿</span><span class="gift-leaf leaf-b">✧</span><span class="gift-leaf leaf-c">·</span><div class="gift-box"><span class="gift-box-lid"></span><span class="gift-box-body"></span><span class="gift-ribbon ribbon-vertical"></span><span class="gift-ribbon ribbon-horizontal"></span><span class="gift-bow bow-left"></span><span class="gift-bow bow-right"></span></div></div>
+            <p class="eyebrow gift-label">A LITTLE MOMENT IS WAITING</p><h2>Sometimes, the smallest moments<br><em>bring the greatest joy.</em></h2><p class="gift-prompt">There's a little something waiting for you. Take a moment to open it.</p><button class="button button-dark gift-open-button" id="open-gift">Open My Gift <span aria-hidden="true">✳</span></button>
+          </div>
+          <article class="gift-card" id="gift-card" aria-live="polite" hidden></article>
+        </div>
+      </section>
+
       <section class="view feature-view saved-view" id="saved" aria-labelledby="saved-title" hidden>
         <div class="feature-intro"><p class="eyebrow">YOUR LITTLE COLLECTION</p><h1 id="saved-title">Moments to<br><em>come back to.</em></h1><p>Keep the ideas and activities that feel like yours.</p></div><div id="saved-content"></div>
       </section>
     </main>
     <footer class="site-footer"><a class="footer-brand" href="#home" data-view="home">Little Moments <span>by Zen Beautiful</span></a><p>Find beauty in everyday life.</p><nav aria-label="About and policies"><a href="https://zenbeautiful.life/about.html">About Zen Beautiful</a><a href="https://zenbeautiful.life/privacyPolicy.html">Privacy</a><a href="https://zenbeautiful.life/about.html#contact">Contact</a></nav><small>Made with a little care · © <span id="year"></span> Zen Beautiful</small></footer>
   </div>
-  <nav class="bottom-nav" aria-label="Mobile navigation"><button data-view="home" class="active"><span>⌂</span>Home</button><button data-view="calm"><span>☼</span>Calm</button><button data-view="create"><span>✳</span>Create</button><button data-view="journal"><span>♡</span>Journal</button></nav>
+  <nav class="bottom-nav" aria-label="Mobile navigation"><button data-view="home" class="active"><span>⌂</span>Home</button><button data-view="calm"><span>☼</span>Calm</button><button data-view="create"><span>✳</span>Create</button><button data-view="journal"><span>♡</span>Journal</button><button data-view="gift"><span>✿</span>Gift</button></nav>
   <div class="toast" role="status" aria-live="polite" id="toast"></div>
   <script src="app.js" defer></script>
+  <script src="gifts-data.js" defer></script>
+  <script src="gifts.js" defer></script>
 </body>
 </html>
