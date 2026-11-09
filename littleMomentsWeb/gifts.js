@@ -1,6 +1,15 @@
 let currentLittleGift=null;
 let lastLittleGiftId=null;
 let littleGiftIsOpen=false;
+let giftOpening=false;
+let automaticGiftPending=false;
+let automaticGiftTimer=null;
+
+function setGiftOpenButton(label,disabled){
+  const button=document.querySelector('#open-gift');
+  button.disabled=disabled;
+  button.firstChild.textContent=`${label} `;
+}
 
 function chooseLittleGift(){
   const choices=window.littleGiftCollection.filter(gift=>gift.id!==lastLittleGiftId);
@@ -14,15 +23,24 @@ function renderGiftOpening(){
   const card=document.querySelector('#gift-card');
   if(littleGiftIsOpen&&currentLittleGift){opening.hidden=true;renderLittleGiftCard();return}
   opening.hidden=false;card.hidden=true;
+  if(automaticGiftPending)setGiftOpenButton('Opening next gift',true);
+  else if(giftOpening)setGiftOpenButton('Opening your gift',true);
+  else setGiftOpenButton('Open My Gift',false);
 }
 
 function openLittleGift(){
+  if(giftOpening||littleGiftIsOpen)return;
+  if(automaticGiftTimer){window.clearTimeout(automaticGiftTimer);automaticGiftTimer=null}
+  automaticGiftPending=false;
+  giftOpening=true;
+  setGiftOpenButton('Opening your gift',true);
   if(!currentLittleGift)chooseLittleGift();
   const scene=document.querySelector('#gift-scene');
   scene.classList.remove('is-opening');
   requestAnimationFrame(()=>scene.classList.add('is-opening'));
   const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
   window.setTimeout(()=>{
+    giftOpening=false;
     littleGiftIsOpen=true;
     document.querySelector('#gift-opening').hidden=true;
     renderLittleGiftCard();
@@ -42,8 +60,10 @@ function renderLittleGiftCard(){
     chooseLittleGift();littleGiftIsOpen=false;
     card.hidden=true;document.querySelector('#gift-opening').hidden=false;
     const scene=document.querySelector('#gift-scene');scene.classList.remove('is-opening');
+    automaticGiftPending=true;
+    setGiftOpenButton('Opening next gift',true);
     const pause=matchMedia('(prefers-reduced-motion: reduce)').matches?0:1180;
-    window.setTimeout(openLittleGift,pause);
+    automaticGiftTimer=window.setTimeout(()=>{automaticGiftTimer=null;openLittleGift()},pause);
   };
   document.querySelector('#save-little-gift').onclick=()=>{
     state.giftSaved??=[];
