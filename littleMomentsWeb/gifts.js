@@ -14,7 +14,8 @@ function setGiftOpenButton(label,disabled){
 function chooseLittleGift(){
   const choices=window.littleGiftCollection.filter(gift=>gift.id!==lastLittleGiftId);
   const pool=choices.length?choices:window.littleGiftCollection;
-  currentLittleGift=pool[Math.floor(Math.random()*pool.length)];
+  const selected=pool[Math.floor(Math.random()*pool.length)];
+  currentLittleGift={...selected,image:pickLittleMomentImage(currentLittleGift?.image)};
   lastLittleGiftId=currentLittleGift.id;
 }
 
@@ -34,7 +35,8 @@ function openLittleGift(){
   automaticGiftPending=false;
   giftOpening=true;
   setGiftOpenButton('Opening your gift',true);
-  if(!currentLittleGift)chooseLittleGift();
+  // Every opening gets a fresh gift and an image different from the last one.
+  chooseLittleGift();
   const scene=document.querySelector('#gift-scene');
   scene.classList.remove('is-opening');
   requestAnimationFrame(()=>scene.classList.add('is-opening'));
@@ -57,7 +59,7 @@ function renderLittleGiftCard(){
   card.classList.remove('gift-card-reveal');
   requestAnimationFrame(()=>card.classList.add('gift-card-reveal'));
   document.querySelector('#open-another-gift').onclick=()=>{
-    chooseLittleGift();littleGiftIsOpen=false;
+    littleGiftIsOpen=false;
     card.hidden=true;document.querySelector('#gift-opening').hidden=false;
     const scene=document.querySelector('#gift-scene');scene.classList.remove('is-opening');
     automaticGiftPending=true;
@@ -86,7 +88,7 @@ async function shareLittleGift(gift){
 
 function renderGiftSavedGroup(){
   const gifts=(state.giftSaved||[]).map(id=>window.littleGiftCollection.find(gift=>gift.id===id)).filter(Boolean);
-  return `<section class="saved-group"><h2>My Little Gifts</h2>${gifts.length?`<div class="gift-saved-grid">${gifts.map(gift=>`<article class="gift-saved-card"><img src="${esc(gift.image)}" alt="" loading="lazy" onerror="this.hidden=true"><div><span class="result-meta">${esc(gift.category)}</span><h3>${esc(gift.title)}</h3><p>${esc(gift.message)}</p>${gift.activity?`<p class="reflection">${esc(gift.activity)}</p>`:''}<button data-unsave="gift:${gift.id}">Remove from saved</button></div></article>`).join('')}</div>`:'<p class="empty-state">Your little gifts will be kept here when you save one.</p>'}</section>`;
+  return `<section class="saved-group"><h2>My Little Gifts</h2>${gifts.length?`<div class="gift-saved-grid">${gifts.map(gift=>`<article class="gift-saved-card"><img src="${esc(pickLittleMomentImage())}" alt="" loading="lazy" onerror="this.hidden=true"><div><span class="result-meta">${esc(gift.category)}</span><h3>${esc(gift.title)}</h3><p>${esc(gift.message)}</p>${gift.activity?`<p class="reflection">${esc(gift.activity)}</p>`:''}<button data-unsave="gift:${gift.id}">Remove from saved</button></div></article>`).join('')}</div>`:'<p class="empty-state">Your little gifts will be kept here when you save one.</p>'}</section>`;
 }
 
 document.querySelector('#open-gift').addEventListener('click',openLittleGift);
