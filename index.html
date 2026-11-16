@@ -806,6 +806,39 @@
         .hero-title, .section-title, .plan-step h3, .beginner-guide h2, .signup-box h2,
         .color-mixing-card h2, .landscape-copy h2 { color: var(--ink); font-family: Raleway, sans-serif; }
         .hero-subtitle, .container p, .section-text, .plan-step p, .guide-copy, .signup-box p { color: var(--muted); }
+        .little-moments { padding: 38px 0 54px; }
+        .little-moments-card { padding: 30px; border: 1px solid #e8e2d8; border-radius: 8px; background: #fffdf9; }
+        .little-moments .eyebrow { color: var(--green) !important; }
+        .little-moments-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 22px; }
+        .little-moments-heading h2 { margin: 6px 0 0; font-size: 30px; }
+        .little-moments-heading p { max-width: 380px; margin: 0 !important; font-size: 14px !important; }
+        .little-moments-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 10px; }
+        .little-moment-day { min-width: 0; height: 138px; padding: 0; border: 0; border-radius: 8px; background: transparent; text-align: center; cursor: pointer; perspective: 700px; }
+        .little-moment-inner { position: relative; display: block; width: 100%; height: 100%; border-radius: 8px; transform-style: preserve-3d; transition: transform .5s ease; }
+        .little-moment-day.is-flipped .little-moment-inner { transform: rotateY(180deg); }
+        .little-moment-face { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px; border: 1px solid #e8ece4; border-radius: 8px; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+        .little-moment-front { background: #f4f5ef; }
+        .little-moment-day:nth-child(3n+2) .little-moment-front { background: #f8efeb; border-color: #f0e1db; }
+        .little-moment-day:nth-child(3n) .little-moment-front { background: #f5f0e4; border-color: #eee5d2; }
+        .little-moment-face b { margin-bottom: 8px; color: var(--green); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+        .little-moment-face span { font: 500 14px/1.35 Georgia, serif; }
+        .little-moment-front small { margin-top: 9px; color: #849189; font-size: 10px; }
+        .little-moment-back { transform: rotateY(180deg); background: var(--green); color: white; }
+        .little-moment-back b { color: #f4dba4; }
+        .little-moment-day:focus-visible { outline: 3px solid #54736388; outline-offset: 3px; }
+        .little-moments-note { margin: 16px 0 0 !important; text-align: center; font-size: 13px !important; }
+        .little-moments-signup { margin-top: 28px; padding: 26px 20px 10px; border-radius: 8px; background: #eef2ed; text-align: center; }
+        .little-moments-signup h3 { margin: 6px 0 8px; color: var(--ink); font-size: 25px; }
+        .little-moments-signup p { max-width: 560px; margin: 0 auto 16px !important; font-size: 14px !important; }
+        .little-moments-signup iframe { display: block; width: min(540px, 100%); height: 400px; margin: 0 auto; border: 0; background: transparent; }
+        @media (max-width: 767px) {
+            .little-moments-card { padding: 24px 18px; }
+            .little-moments-heading { display: block; }
+            .little-moments-heading h2 { font-size: 26px; }
+            .little-moments-heading p { margin-top: 8px !important; }
+            .little-moments-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .little-moment-day:last-child { grid-column: 1 / -1; }
+        }
         .paint-card, .plan-step, .soft-panel, .stakes-panel, .pricing-box,
         .beginner-guide-card, .signup-box { border-radius: 6px; border-color: #e8e2d8; }
         .soft-panel, .paint-card, .plan-step { background-color: #fffdf9; }
@@ -935,6 +968,38 @@
                         <a class="course-btn reset-cta" href="#signup">Start My Free 5-Day Reset</a>
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+        <section class="little-moments" aria-labelledby="little-moments-title">
+            <div class="container">
+                <div class="little-moments-card">
+                    <div class="little-moments-heading">
+                        <div>
+                            <p class="eyebrow">Seven days · seven little moments</p>
+                            <h2 id="little-moments-title">7-Day Little Watercolor Challenge</h2>
+                        </div>
+                        <p>Simple creative invitations to help you make painting part of everyday life. Start with five minutes; stay longer if you feel like it.</p>
+                    </div>
+                    <div class="little-moments-grid" aria-label="Seven day watercolor challenge preview. Select a day to see when it is coming.">
+                        <button class="little-moment-day" type="button" aria-pressed="false" aria-label="Day 1: A Little Flower. See when it is coming."><span class="little-moment-inner"><span class="little-moment-face little-moment-front"><b>Day 1</b><span>A Little Flower</span><small>Tap to see ✿</small></span><span class="little-moment-face little-moment-back" aria-hidden="true"><b>Coming soon</b><span>This little activity is on its way.</span></span></span></button>
+                        <button class="little-moment-day" type="button" aria-pressed="false" aria-label="Day 2: Play with Colour. See when it is coming."><span class="little-moment-inner"><span class="little-moment-face little-moment-front"><b>Day 2</b><span>Play with Colour</span><small>Tap to see ✿</small></span><span class="little-moment-face little-moment-back" aria-hidden="true"><b>Coming soon</b><span>This little activity is on its way.</span></span></span></button>
+                        <button class="little-moment-day" type="button" aria-pressed="false" aria-label="Day 3: A Little Leaf. See when it is coming."><span class="little-moment-inner"><span class="little-moment-face little-moment-front"><b>Day 3</b><span>A Little Leaf</span><small>Tap to see ✿</small></span><span class="little-moment-face little-moment-back" aria-hidden="true"><b>Coming soon</b><span>This little activity is on its way.</span></span></span></button>
+                        <button class="little-moment-day" type="button" aria-pressed="false" aria-label="Day 4: A Little Sky. See when it is coming."><span class="little-moment-inner"><span class="little-moment-face little-moment-front"><b>Day 4</b><span>A Little Sky</span><small>Tap to see ✿</small></span><span class="little-moment-face little-moment-back" aria-hidden="true"><b>Coming soon</b><span>This little activity is on its way.</span></span></span></button>
+                        <button class="little-moment-day" type="button" aria-pressed="false" aria-label="Day 5: Wild and Free. See when it is coming."><span class="little-moment-inner"><span class="little-moment-face little-moment-front"><b>Day 5</b><span>Wild and Free</span><small>Tap to see ✿</small></span><span class="little-moment-face little-moment-back" aria-hidden="true"><b>Coming soon</b><span>This little activity is on its way.</span></span></span></button>
+                        <button class="little-moment-day" type="button" aria-pressed="false" aria-label="Day 6: Notice the Beauty. See when it is coming."><span class="little-moment-inner"><span class="little-moment-face little-moment-front"><b>Day 6</b><span>Notice the Beauty</span><small>Tap to see ✿</small></span><span class="little-moment-face little-moment-back" aria-hidden="true"><b>Coming soon</b><span>This little activity is on its way.</span></span></span></button>
+                        <button class="little-moment-day" type="button" aria-pressed="false" aria-label="Day 7: Your Little Creation. See when it is coming."><span class="little-moment-inner"><span class="little-moment-face little-moment-front"><b>Day 7</b><span>Your Little Creation</span><small>Tap to see ✿</small></span><span class="little-moment-face little-moment-back" aria-hidden="true"><b>Coming soon</b><span>This little activity is on its way.</span></span></span></button>
+                    </div>
+                    <p class="little-moments-note">These are little invitations, not tests. Your painting doesn’t have to look like anyone else’s.</p>
+                    <div class="little-moments-signup" id="little-moments-signup">
+                        <p class="eyebrow">Free early access</p>
+                        <h3>Get the challenge details when it begins.</h3>
+                        <p>Sign up for the 7-Day Little Watercolor Challenge and make a little space for creativity.</p>
+                        <iframe title="Join the 7-Day Little Watercolor Challenge email list"
+                                src="https://72f31874.sibforms.com/v2/serve/MUIFAB3MekIpQExF2AAqY07vTDg8WkkRpIcXgrng9SJ-nHt-YIox1sqgoCg0V2ayKi8JKA3QHne4uCqVPkalTB_WumtYtfwsvnS5rHBRWR8drwniBBrLAXpWJnj2M0h_9vX3MWyUYi9K1QuObb63lUaEFTMIH3eQDQ_XPhvO77SFUL9E3uzp4ieLpEYQ-l9V1qUMZMZ8ethNWiFy"
+                                frameborder="0" scrolling="auto" loading="lazy"></iframe>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1163,6 +1228,20 @@
         // Hide preloader and show page
         document.querySelector('.preloader').style.display = 'none';
         document.querySelector('.page.main-container').style.display = 'block';
+
+        document.querySelectorAll('.little-moment-day').forEach(function(card) {
+            var front = card.querySelector('.little-moment-front');
+            var back = card.querySelector('.little-moment-back');
+            var title = front.querySelector('span').textContent;
+            var day = front.querySelector('b').textContent;
+            card.addEventListener('click', function() {
+                var flipped = card.classList.toggle('is-flipped');
+                card.setAttribute('aria-pressed', String(flipped));
+                card.setAttribute('aria-label', day + ': ' + title + '. ' + (flipped ? 'Hide' : 'See') + ' when it is coming.');
+                front.setAttribute('aria-hidden', String(flipped));
+                back.setAttribute('aria-hidden', String(!flipped));
+            });
+        });
     });
 </script>
 </body>
